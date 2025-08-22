@@ -5,14 +5,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pypipr.core.pupil_measurement &mdash; Pypipr 0.0.12</title>
+  <title>pypipr.core.pupil_measurement &mdash; Pypipr 0.0.13</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=3bbcec59"></script>
+      <script src="../../../_static/documentation_options.js?v=9fc46840"></script>
       <script src="../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -577,9 +577,17 @@
 
 <div class="viewcode-block" id="PupilMeasurement.apply_baseline_correction">
 <a class="viewcode-back" href="../../../api/core.html#pypipr.PupilMeasurement.apply_baseline_correction">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">apply_baseline_correction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">baseline</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Wrapper for apply baseline correction method. See `pupil_metrics.apply_baseline_correction` for details.&quot;&quot;&quot;</span>
-        <span class="n">pupil_metrics</span><span class="o">.</span><span class="n">apply_baseline_correction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">baseline</span><span class="p">)</span></div>
+    <span class="k">def</span><span class="w"> </span><span class="nf">apply_baseline_correction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">duration</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Apply baseline correction to pupil size data.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            pupil (PupilMeasurement): The pupil measurement object to correct</span>
+<span class="sd">            duration (float): Duration for baseline calculation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">baseline</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calculate_baseline</span><span class="p">(</span><span class="n">duration</span><span class="p">)</span>
+        <span class="n">size_relative</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span> <span class="o">/</span> <span class="n">baseline</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_time_and_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_time</span><span class="p">(),</span> <span class="n">size_relative</span><span class="p">)</span></div>
+
 
 
     <span class="c1"># ============================================================================</span>

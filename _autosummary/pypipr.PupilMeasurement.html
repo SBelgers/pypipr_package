@@ -6,14 +6,14 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pypipr.PupilMeasurement &mdash; Pypipr 0.0.12</title>
+  <title>pypipr.PupilMeasurement &mdash; Pypipr 0.0.13</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=3bbcec59"></script>
+      <script src="../_static/documentation_options.js?v=9fc46840"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -390,8 +390,8 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="../api/core.html#pypipr.PupilMeasurement.__init__" title="pypipr.PupilMeasurement.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(time_data, size)</p></td>
 <td><p>Initialize PupilMeasurement with time and size data.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../api/core.html#pypipr.PupilMeasurement.apply_baseline_correction" title="pypipr.PupilMeasurement.apply_baseline_correction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_baseline_correction</span></code></a>(baseline)</p></td>
-<td><p>Wrapper for apply baseline correction method.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/core.html#pypipr.PupilMeasurement.apply_baseline_correction" title="pypipr.PupilMeasurement.apply_baseline_correction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_baseline_correction</span></code></a>([duration])</p></td>
+<td><p>Apply baseline correction to pupil size data.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../api/core.html#pypipr.PupilMeasurement.calculate_baseline" title="pypipr.PupilMeasurement.calculate_baseline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_baseline</span></code></a>([duration])</p></td>
 <td><p>Wrapper for calculate baseline method.</p></td>
@@ -586,8 +586,16 @@ Can be used to shift the time data by a certain amount.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pypipr.PupilMeasurement.apply_baseline_correction">
-<span class="sig-name descname"><span class="pre">apply_baseline_correction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baseline</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.apply_baseline_correction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.apply_baseline_correction" title="Link to this definition"></a></dt>
-<dd><p>Wrapper for apply baseline correction method. See <cite>pupil_metrics.apply_baseline_correction</cite> for details.</p>
+<span class="sig-name descname"><span class="pre">apply_baseline_correction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.apply_baseline_correction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.apply_baseline_correction" title="Link to this definition"></a></dt>
+<dd><p>Apply baseline correction to pupil size data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pupil</strong> (<a class="reference internal" href="../api/core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><em>PupilMeasurement</em></a>) – The pupil measurement object to correct</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Duration for baseline calculation</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
