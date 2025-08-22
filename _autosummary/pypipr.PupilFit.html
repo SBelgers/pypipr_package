@@ -384,11 +384,29 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="../api/analysis.html#pypipr.PupilFit.__init__" title="pypipr.PupilFit.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(pupil_measurement)</p></td>
 <td><p>Initialize the PupilFit class.</p></td>
 </tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_baseline_correction</span></code>(baseline)</p></td>
+<td><p>Wrapper for apply baseline correction method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_baseline</span></code>([duration])</p></td>
+<td><p>Wrapper for calculate baseline method.</p></td>
+</tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code>()</p></td>
 <td><p>Create a deep copy of this object.</p></td>
 </tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">drop_nan</span></code>()</p></td>
+<td><p>Remove NaN values from the time and size data.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_blinks</span></code>()</p></td>
+<td><p>Find blinks in the pupil size data.</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../api/analysis.html#pypipr.PupilFit.get_all_params" title="pypipr.PupilFit.get_all_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_params</span></code></a>()</p></td>
 <td><p>Get all fitted parameters organized by phase.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_average_size</span></code>(start_time, end_time)</p></td>
+<td><p>Wrapper for get average size method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_blinks</span></code>()</p></td>
+<td><p>Get the blink periods.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../api/analysis.html#pypipr.PupilFit.get_formula_strings" title="pypipr.PupilFit.get_formula_strings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_formula_strings</span></code></a>()</p></td>
 <td><p>Get formula strings for all fitted models.</p></td>
@@ -399,26 +417,56 @@
 <tr class="row-even"><td><p><a class="reference internal" href="../api/analysis.html#pypipr.PupilFit.get_param" title="pypipr.PupilFit.get_param"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_param</span></code></a>(phase_name, param_name)</p></td>
 <td><p>Get a specific parameter from a specific phase.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/analysis.html#pypipr.PupilFit.get_size" title="pypipr.PupilFit.get_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_size</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_rate_of_change</span></code>([n_back])</p></td>
+<td><p>Wrapper for get rate of change method.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/analysis.html#pypipr.PupilFit.get_size" title="pypipr.PupilFit.get_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_size</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../api/analysis.html#pypipr.PupilFit.get_time" title="pypipr.PupilFit.get_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../api/analysis.html#pypipr.PupilFit.get_time" title="pypipr.PupilFit.get_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code>([ax, show, scatter])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code>(new_time)</p></td>
+<td><p>Interpolate pupil size data to a new time array using np.interp.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">limit_rate_of_change</span></code>(max_rate_of_change[, ...])</p></td>
+<td><p>Wrapper for limit rate of change method.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code>([ax, show, scatter])</p></td>
 <td><p>Plot pupil size over time.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_light_stimulus</span></code>([ax, show])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_light_stimulus</span></code>([ax, show])</p></td>
 <td><p>Plot the light stimulus period.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../api/analysis.html#pypipr.PupilFit.predict" title="pypipr.PupilFit.predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></a>(time_data)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../api/analysis.html#pypipr.PupilFit.predict" title="pypipr.PupilFit.predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></a>(time_data)</p></td>
 <td><p>Predict pupil size for given time points using the fitted models.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_light_stimulus</span></code>(start, end)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_filter</span></code>(func, time_window)</p></td>
+<td><p>Wrapper for rolling filter method.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_mean</span></code>(time_window)</p></td>
+<td><p>Wrapper for rolling mean method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_median</span></code>(time_window)</p></td>
+<td><p>Wrapper for rolling median method.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_blinks</span></code>(blink_list)</p></td>
+<td><p>Set the blink periods.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_light_stimulus</span></code>(start, end)</p></td>
 <td><p>Set the light stimulus period.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_and_size</span></code>(time_data, size)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_and_size</span></code>(time_data, size)</p></td>
 <td><p>Set time and size arrays with validation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_offset</span></code>(offset)</p></td>
+<td><p>Set a time offset for the measurement.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_size</span></code>(min_size, max_size, *[, ...])</p></td>
+<td><p>Trim the size data to a specific range.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_time</span></code>(start, end[, drop])</p></td>
+<td><p>Trim the time and size data to a specific interval.</p></td>
 </tr>
 </tbody>
 </table>

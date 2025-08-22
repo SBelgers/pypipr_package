@@ -14,18 +14,34 @@
    .. autosummary::
    
       ~PupilFit.__init__
+      ~PupilFit.apply_baseline_correction
+      ~PupilFit.calculate_baseline
       ~PupilFit.copy
+      ~PupilFit.drop_nan
+      ~PupilFit.find_blinks
       ~PupilFit.get_all_params
+      ~PupilFit.get_average_size
+      ~PupilFit.get_blinks
       ~PupilFit.get_formula_strings
       ~PupilFit.get_light_stimulus
       ~PupilFit.get_param
+      ~PupilFit.get_rate_of_change
       ~PupilFit.get_size
       ~PupilFit.get_time
+      ~PupilFit.interpolate
+      ~PupilFit.limit_rate_of_change
       ~PupilFit.plot
       ~PupilFit.plot_light_stimulus
       ~PupilFit.predict
+      ~PupilFit.rolling_filter
+      ~PupilFit.rolling_mean
+      ~PupilFit.rolling_median
+      ~PupilFit.set_blinks
       ~PupilFit.set_light_stimulus
       ~PupilFit.set_time_and_size
+      ~PupilFit.set_time_offset
+      ~PupilFit.trim_size
+      ~PupilFit.trim_time
    
    
 
