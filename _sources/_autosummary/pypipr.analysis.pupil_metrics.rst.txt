@@ -1,4 +1,4 @@
-pypipr.analysis.pupil\_metrics
+﻿pypipr.analysis.pupil\_metrics
 ==============================
 
 .. automodule:: pypipr.analysis.pupil_metrics
@@ -8,7 +8,6 @@ pypipr.analysis.pupil\_metrics
 
    .. autosummary::
    
-      apply_baseline_correction
       auc_early
       auc_late
       baseline

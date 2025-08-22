@@ -5,14 +5,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pypipr.analysis.pupil_metrics &mdash; Pypipr 0.0.11</title>
+  <title>pypipr.analysis.pupil_metrics &mdash; Pypipr 0.0.12</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
 
   
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../../_static/documentation_options.js?v=0c446633"></script>
+      <script src="../../../_static/documentation_options.js?v=3bbcec59"></script>
       <script src="../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -229,7 +229,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.analysis.pupil_metrics.html#pypipr.analysis.pupil_metrics.net_pipr"><code class="docutils literal notranslate"><span class="pre">net_pipr()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.analysis.pupil_metrics.html#pypipr.analysis.pupil_metrics.get_average_size"><code class="docutils literal notranslate"><span class="pre">get_average_size()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.analysis.pupil_metrics.html#pypipr.analysis.pupil_metrics.calculate_baseline"><code class="docutils literal notranslate"><span class="pre">calculate_baseline()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.analysis.pupil_metrics.html#pypipr.analysis.pupil_metrics.apply_baseline_correction"><code class="docutils literal notranslate"><span class="pre">apply_baseline_correction()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -426,21 +425,8 @@
 <span class="sd">    Returns:</span>
 <span class="sd">        float: The average pupil size during the baseline period.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">light_stimulus</span> <span class="o">=</span> <span class="n">pupil_measurement</span><span class="o">.</span><span class="n">get_light_stimulus</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">light_stimulus</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Light stimulus not set. Cannot find baseline.&quot;</span><span class="p">)</span>
-    <span class="n">stimulus_start</span><span class="p">,</span> <span class="n">stimulus_end</span> <span class="o">=</span> <span class="n">light_stimulus</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span>
-    <span class="n">baseline_start</span> <span class="o">=</span> <span class="n">stimulus_start</span> <span class="o">-</span> <span class="n">duration</span>
-    <span class="n">baseline_end</span> <span class="o">=</span> <span class="n">stimulus_end</span>
-    <span class="n">time_data</span> <span class="o">=</span> <span class="n">pupil_measurement</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">baseline_start</span> <span class="o">&lt;</span> <span class="n">time_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">or</span> <span class="n">baseline_end</span> <span class="o">&gt;</span> <span class="n">time_data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-            <span class="sa">f</span><span class="s2">&quot;Baseline period of (</span><span class="si">{</span><span class="n">baseline_start</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">baseline_end</span><span class="si">}</span><span class="s2">) is outside the time range (</span><span class="si">{</span><span class="n">time_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">time_data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">) of the measurement.&quot;</span>
-        <span class="p">)</span>
-    <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_data</span> <span class="o">&gt;=</span> <span class="n">baseline_start</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">time_data</span> <span class="o">&lt;=</span> <span class="n">baseline_end</span><span class="p">)</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">mask</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No data points in the specified baseline period.&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmean</span><span class="p">(</span><span class="n">pupil_measurement</span><span class="o">.</span><span class="n">get_size</span><span class="p">()[</span><span class="n">mask</span><span class="p">])</span>  <span class="c1"># type: ignore</span></div>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;This is a double implementation and will be deprecated.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">calculate_baseline</span><span class="p">(</span><span class="n">pupil_measurement</span><span class="p">,</span> <span class="n">duration</span><span class="p">)</span></div>
 
 
 
@@ -824,6 +810,11 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">time_data</span> <span class="o">=</span> <span class="n">pupil</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span>
     <span class="n">size</span> <span class="o">=</span> <span class="n">pupil</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">min</span><span class="p">(</span><span class="n">time_data</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">start_time</span><span class="p">:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Start time is before the first data point.&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">max</span><span class="p">(</span><span class="n">time_data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">end_time</span><span class="p">:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;End time is after the last data point.&quot;</span><span class="p">)</span>
+
     <span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">time_data</span> <span class="o">&gt;=</span> <span class="n">start_time</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">time_data</span> <span class="o">&lt;=</span> <span class="n">end_time</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">any</span><span class="p">(</span><span class="n">mask</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;No data points in the specified time range.&quot;</span><span class="p">)</span>
@@ -855,18 +846,15 @@
 
 
 
-<div class="viewcode-block" id="apply_baseline_correction">
-<a class="viewcode-back" href="../../../api/analysis.html#pypipr.analysis.pupil_metrics.apply_baseline_correction">[docs]</a>
-<span class="k">def</span><span class="w"> </span><span class="nf">apply_baseline_correction</span><span class="p">(</span><span class="n">pupil</span><span class="p">:</span> <span class="n">PupilMeasurement</span><span class="p">,</span> <span class="n">baseline</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Apply baseline correction to pupil size data.</span>
+<span class="c1"># def apply_baseline_correction(pupil: PupilMeasurement, baseline: float) -&gt; None:</span>
+<span class="c1">#     &quot;&quot;&quot;Apply baseline correction to pupil size data.</span>
 
-<span class="sd">    Args:</span>
-<span class="sd">        pupil (PupilMeasurement): The pupil measurement object to correct</span>
-<span class="sd">        baseline (float): Baseline value for normalization</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">size_relative</span> <span class="o">=</span> <span class="n">pupil</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span> <span class="o">/</span> <span class="n">baseline</span>
-    <span class="n">pupil</span><span class="o">.</span><span class="n">set_time_and_size</span><span class="p">(</span><span class="n">pupil</span><span class="o">.</span><span class="n">get_time</span><span class="p">(),</span> <span class="n">size_relative</span><span class="p">)</span></div>
-
+<span class="c1">#     Args:</span>
+<span class="c1">#         pupil (PupilMeasurement): The pupil measurement object to correct</span>
+<span class="c1">#         baseline (float): Baseline value for normalization</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
+<span class="c1">#     size_relative = pupil.get_size() / baseline</span>
+<span class="c1">#     pupil.set_time_and_size(pupil.get_time(), size_relative)</span>
 </pre></div>
 
            </div>
