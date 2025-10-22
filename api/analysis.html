@@ -366,7 +366,7 @@
 <span id="pupil-metrics"></span><h2>Pupil Metrics<a class="headerlink" href="#module-pypipr.analysis.pupil_metrics" title="Link to this heading"></a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.baseline">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">baseline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#baseline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.baseline" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">baseline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#baseline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.baseline" title="Link to this definition"></a></dt>
 <dd><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
 <div class="line">Shorthand Name     | Full Metric Name                    | Description                                                       | Unit             |</div>
@@ -377,28 +377,28 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pupil_measurement</strong> (<a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><em>PupilMeasurement</em></a>) – The pupil measurement data.</p></li>
-<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>, </em><em>optional</em>) – The duration of the baseline period in seconds. Defaults to 10.</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a><em>, </em><em>optional</em>) – The duration of the baseline period in seconds. Defaults to 10.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the light stimulus is not set.</p></li>
-<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the baseline period is outside the time range of the measurement.</p></li>
-<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If there are no data points in the specified baseline period.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If the light stimulus is not set.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If the baseline period is outside the time range of the measurement.</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If there are no data points in the specified baseline period.</p></li>
 </ul>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The average pupil size during the baseline period.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.transient_plr">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">transient_plr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#transient_plr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.transient_plr" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">transient_plr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#transient_plr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.transient_plr" title="Link to this definition"></a></dt>
 <dd><blockquote>
 <div><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
@@ -412,20 +412,20 @@
 <dd class="field-odd"><p><strong>pupil_measurement</strong> (<a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><em>PupilMeasurement</em></a>) – The pupil measurement data.</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.13)"><strong>NotImplementedError</strong></a> – _description_</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.14)"><strong>NotImplementedError</strong></a> – _description_</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>_description_</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.plr_latency">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">plr_latency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#plr_latency"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.plr_latency" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">plr_latency</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#plr_latency"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.plr_latency" title="Link to this definition"></a></dt>
 <dd><blockquote>
 <div><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
@@ -439,20 +439,20 @@
 <dd class="field-odd"><p><strong>pupil_measurement</strong> (<a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><em>PupilMeasurement</em></a>) – The pupil measurement data.</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.13)"><strong>NotImplementedError</strong></a> – _description_</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.14)"><strong>NotImplementedError</strong></a> – _description_</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>_description_</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.constriction_v">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">constriction_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PupilFit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pypipr.PupilFit" title="pypipr.PupilFit"><span class="pre">PupilFit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#constriction_v"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.constriction_v" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">constriction_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PupilFit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pypipr.PupilFit" title="pypipr.PupilFit"><span class="pre">PupilFit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#constriction_v"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.constriction_v" title="Link to this definition"></a></dt>
 <dd><blockquote>
 <div><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
@@ -466,20 +466,20 @@
 <dd class="field-odd"><p><strong>PupilFit</strong> (<a class="reference internal" href="#pypipr.PupilFit" title="pypipr.PupilFit"><em>PupilFit</em></a>) – The pupil fit data.</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.13)"><strong>NotImplementedError</strong></a> – _description_</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.14)"><strong>NotImplementedError</strong></a> – _description_</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>_description_</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.peak_constriction">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">peak_constriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#peak_constriction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.peak_constriction" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">peak_constriction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#peak_constriction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.peak_constriction" title="Link to this definition"></a></dt>
 <dd><blockquote>
 <div><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
@@ -493,20 +493,20 @@
 <dd class="field-odd"><p><strong>pupil_measurement</strong> (<a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><em>PupilMeasurement</em></a>) – The pupil measurement data.</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the light stimulus is not set.</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If the light stimulus is not set.</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The peak constriction amplitude.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.time_to_peak">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">time_to_peak</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#time_to_peak"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.time_to_peak" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">time_to_peak</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#time_to_peak"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.time_to_peak" title="Link to this definition"></a></dt>
 <dd><blockquote>
 <div><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
@@ -520,20 +520,20 @@
 <dd class="field-odd"><p><strong>pupil_measurement</strong> (<a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><em>PupilMeasurement</em></a>) – The pupil measurement data.</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the light stimulus is not set.</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If the light stimulus is not set.</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The time to peak pupil constriction.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.pupil_escape">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">pupil_escape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PupilFit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pypipr.PupilFit" title="pypipr.PupilFit"><span class="pre">PupilFit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#pupil_escape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.pupil_escape" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">pupil_escape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PupilFit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pypipr.PupilFit" title="pypipr.PupilFit"><span class="pre">PupilFit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#pupil_escape"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.pupil_escape" title="Link to this definition"></a></dt>
 <dd><dl>
 <dt>_summary_</dt><dd><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
@@ -548,20 +548,20 @@
 <dd class="field-odd"><p><strong>PupilFit</strong> (<a class="reference internal" href="#pypipr.PupilFit" title="pypipr.PupilFit"><em>PupilFit</em></a>) – The pupil fit data.</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.13)"><strong>NotImplementedError</strong></a> – _description_</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.14)"><strong>NotImplementedError</strong></a> – _description_</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>_description_</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.redilation_v">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">redilation_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PupilFit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pypipr.PupilFit" title="pypipr.PupilFit"><span class="pre">PupilFit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#redilation_v"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.redilation_v" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">redilation_v</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PupilFit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pypipr.PupilFit" title="pypipr.PupilFit"><span class="pre">PupilFit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#redilation_v"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.redilation_v" title="Link to this definition"></a></dt>
 <dd><dl>
 <dt>_summary_</dt><dd><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
@@ -576,44 +576,44 @@
 <dd class="field-odd"><p><strong>PupilFit</strong> (<a class="reference internal" href="#pypipr.PupilFit" title="pypipr.PupilFit"><em>PupilFit</em></a>) – _description_</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.13)"><strong>NotImplementedError</strong></a> – _description_</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.14)"><strong>NotImplementedError</strong></a> – _description_</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>_description_</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.pipr_xs">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">pipr_xs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#pipr_xs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.pipr_xs" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">pipr_xs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#pipr_xs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.pipr_xs" title="Link to this definition"></a></dt>
 <dd><p>The x second PIPR amplitude between start and end time after light offset.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pupil_measurement</strong> (<a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><em>PupilMeasurement</em></a>) – The pupil measurement data.</p></li>
-<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – The start time (in seconds) for the PIPR calculation.</p></li>
-<li><p><strong>end</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – The end time (in seconds) for the PIPR calculation.</p></li>
+<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The start time (in seconds) for the PIPR calculation.</p></li>
+<li><p><strong>end</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The end time (in seconds) for the PIPR calculation.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the light stimulus is not set.</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If the light stimulus is not set.</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The x second PIPR amplitude.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.pipr_6s">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">pipr_6s</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#pipr_6s"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.pipr_6s" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">pipr_6s</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#pipr_6s"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.pipr_6s" title="Link to this definition"></a></dt>
 <dd><blockquote>
 <div><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
@@ -630,14 +630,14 @@
 <dd class="field-even"><p>The 6 second PIPR amplitude.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.plateau">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">plateau</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PupilFit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pypipr.PupilFit" title="pypipr.PupilFit"><span class="pre">PupilFit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#plateau"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.plateau" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">plateau</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PupilFit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pypipr.PupilFit" title="pypipr.PupilFit"><span class="pre">PupilFit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#plateau"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.plateau" title="Link to this definition"></a></dt>
 <dd><blockquote>
 <div><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
@@ -654,14 +654,14 @@
 <dd class="field-even"><p>_description_</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.auc_early">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">auc_early</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#auc_early"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.auc_early" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">auc_early</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#auc_early"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.auc_early" title="Link to this definition"></a></dt>
 <dd><blockquote>
 <div><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
@@ -675,20 +675,20 @@
 <dd class="field-odd"><p><strong>pupil_measurement</strong> (<a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><em>PupilMeasurement</em></a>) – _description_</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.13)"><strong>NotImplementedError</strong></a> – _description_</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.14)"><strong>NotImplementedError</strong></a> – _description_</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>_description_</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.auc_late">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">auc_late</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#auc_late"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.auc_late" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">auc_late</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#auc_late"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.auc_late" title="Link to this definition"></a></dt>
 <dd><dl>
 <dt>_summary_</dt><dd><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
@@ -703,20 +703,20 @@
 <dd class="field-odd"><p><strong>pupil_measurement</strong> (<a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><em>PupilMeasurement</em></a>) – _description_</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.13)"><strong>NotImplementedError</strong></a> – _description_</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.14)"><strong>NotImplementedError</strong></a> – _description_</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>_description_</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.pipr_duration">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">pipr_duration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#pipr_duration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.pipr_duration" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">pipr_duration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#pipr_duration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.pipr_duration" title="Link to this definition"></a></dt>
 <dd><dl>
 <dt>_summary_</dt><dd><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
@@ -731,20 +731,20 @@
 <dd class="field-odd"><p><strong>pupil_measurement</strong> (<a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><em>PupilMeasurement</em></a>) – _description_</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.13)"><strong>NotImplementedError</strong></a> – _description_</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.14)"><strong>NotImplementedError</strong></a> – _description_</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>_description_</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.net_pipr">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">net_pipr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pupil_measurement2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#net_pipr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.net_pipr" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">net_pipr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">pupil_measurement2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#net_pipr"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.net_pipr" title="Link to this definition"></a></dt>
 <dd><blockquote>
 <div><p>Metrics as described by Adhikari et al. (2015), table 2:</p>
 <div class="line-block">
@@ -761,60 +761,60 @@
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.13)"><strong>NotImplementedError</strong></a> – _description_</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError" title="(in Python v3.14)"><strong>NotImplementedError</strong></a> – _description_</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>_description_</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.get_average_size">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">get_average_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#get_average_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.get_average_size" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">get_average_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#get_average_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.get_average_size" title="Link to this definition"></a></dt>
 <dd><p>Calculate average pupil size within a time range.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pupil</strong> (<a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><em>PupilMeasurement</em></a>) – The pupil measurement object</p></li>
-<li><p><strong>start_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – Start time for averaging window</p></li>
-<li><p><strong>end_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a>) – End time for averaging window</p></li>
+<li><p><strong>start_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Start time for averaging window</p></li>
+<li><p><strong>end_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – End time for averaging window</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If no data points are found in the specified time range.</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If no data points are found in the specified time range.</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Average pupil size in the specified time range</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pypipr.analysis.pupil_metrics.calculate_baseline">
-<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">calculate_baseline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#calculate_baseline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.calculate_baseline" title="Link to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pypipr.analysis.pupil_metrics.</span></span><span class="sig-name descname"><span class="pre">calculate_baseline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><span class="pre">PupilMeasurement</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/pupil_metrics.html#calculate_baseline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.analysis.pupil_metrics.calculate_baseline" title="Link to this definition"></a></dt>
 <dd><p>Calculate baseline pupil diameter from prestimulus period.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>pupil</strong> (<a class="reference internal" href="core.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><em>PupilMeasurement</em></a>) – The pupil measurement object</p></li>
-<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><em>float</em></a><em>, </em><em>optional</em>) – Duration of prestimulus period to use for baseline calculation. Defaults to 10.</p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a><em>, </em><em>optional</em>) – Duration of prestimulus period to use for baseline calculation. Defaults to 10.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.13)"><strong>ValueError</strong></a> – If the light stimulus is not set.</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If the light stimulus is not set.</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Average baseline pupil diameter</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -829,7 +829,7 @@
 <p>Fit a model to the pupil measurement data.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pypipr.PupilFit.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.core.pupil_base.PupilBase" title="pypipr.core.pupil_base.PupilBase"><span class="pre">PupilBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/fitting/pupil_fit.html#PupilFit.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilFit.__init__" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pupil_measurement</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="core.html#pypipr.core.pupil_base.PupilBase" title="pypipr.core.pupil_base.PupilBase"><span class="pre">PupilBase</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/fitting/pupil_fit.html#PupilFit.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilFit.__init__" title="Link to this definition"></a></dt>
 <dd><p>Initialize the PupilFit class.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -881,7 +881,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pypipr.PupilFit.get_param">
-<span class="sig-name descname"><span class="pre">get_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phase_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/fitting/pupil_fit.html#PupilFit.get_param"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilFit.get_param" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_param</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">phase_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">param_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/fitting/pupil_fit.html#PupilFit.get_param"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilFit.get_param" title="Link to this definition"></a></dt>
 <dd><p>Get a specific parameter from a specific phase.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -898,28 +898,28 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pypipr.PupilFit.get_all_params">
-<span class="sig-name descname"><span class="pre">get_all_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/pypipr/analysis/fitting/pupil_fit.html#PupilFit.get_all_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilFit.get_all_params" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_all_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/pypipr/analysis/fitting/pupil_fit.html#PupilFit.get_all_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilFit.get_all_params" title="Link to this definition"></a></dt>
 <dd><p>Get all fitted parameters organized by phase.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Dictionary with phase names as keys and parameter dictionaries as values</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)">dict</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.13)">dict</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.13)">float</a>]]</p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)">dict</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)">dict</a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)">float</a>]]</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pypipr.PupilFit.get_formula_strings">
-<span class="sig-name descname"><span class="pre">get_formula_strings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/fitting/pupil_fit.html#PupilFit.get_formula_strings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilFit.get_formula_strings" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_formula_strings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="reference internal" href="../_modules/pypipr/analysis/fitting/pupil_fit.html#PupilFit.get_formula_strings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilFit.get_formula_strings" title="Link to this definition"></a></dt>
 <dd><p>Get formula strings for all fitted models.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Formatted string</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)">str</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)">str</a></p>
 </dd>
 </dl>
 </dd></dl>
