@@ -8,6 +8,7 @@
   <title>pypipr.core.pupil_series &mdash; Pypipr 0.0.13</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
 
   
       <script src="../../../_static/jquery.js?v=5d32c60e"></script>
@@ -15,7 +16,6 @@
       <script src="../../../_static/documentation_options.js?v=9fc46840"></script>
       <script src="../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" /> 
@@ -225,7 +225,7 @@
 
 
 <div class="viewcode-block" id="PupilSeries">
-<a class="viewcode-back" href="../../../api/core.html#pypipr.PupilSeries">[docs]</a>
+<a class="viewcode-back" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">PupilSeries</span><span class="p">(</span><span class="n">PupilMeasurement</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A class representing a series of pupil measurements with multiple light stimuli.</span>
@@ -239,7 +239,7 @@
     <span class="c1"># ============================================================================</span>
 
 <div class="viewcode-block" id="PupilSeries.__init__">
-<a class="viewcode-back" href="../../../api/core.html#pypipr.PupilSeries.__init__">[docs]</a>
+<a class="viewcode-back" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">time_data</span><span class="p">:</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">],</span>
@@ -263,7 +263,7 @@
     <span class="c1"># ============================================================================</span>
 
 <div class="viewcode-block" id="PupilSeries.set_light_stimulus">
-<a class="viewcode-back" href="../../../api/core.html#pypipr.PupilSeries.set_light_stimulus">[docs]</a>
+<a class="viewcode-back" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.set_light_stimulus">[docs]</a>
     <span class="nd">@override</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">set_light_stimulus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Override single stimulus method - use set_light_stimuli_list instead.&quot;&quot;&quot;</span>
@@ -271,7 +271,7 @@
 
 
 <div class="viewcode-block" id="PupilSeries.get_light_stimulus">
-<a class="viewcode-back" href="../../../api/core.html#pypipr.PupilSeries.get_light_stimulus">[docs]</a>
+<a class="viewcode-back" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.get_light_stimulus">[docs]</a>
     <span class="nd">@override</span>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_light_stimulus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Override single stimulus method - use get_light_stimuli_list instead.&quot;&quot;&quot;</span>
@@ -279,7 +279,7 @@
 
 
 <div class="viewcode-block" id="PupilSeries.set_light_stimuli_from_list">
-<a class="viewcode-back" href="../../../api/core.html#pypipr.PupilSeries.set_light_stimuli_from_list">[docs]</a>
+<a class="viewcode-back" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.set_light_stimuli_from_list">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">set_light_stimuli_from_list</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">light_stimuli_list</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -294,7 +294,7 @@
 
 
 <div class="viewcode-block" id="PupilSeries.get_light_stimuli">
-<a class="viewcode-back" href="../../../api/core.html#pypipr.PupilSeries.get_light_stimuli">[docs]</a>
+<a class="viewcode-back" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.get_light_stimuli">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_light_stimuli</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LightStimuliSeries</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the light stimuli series object.</span>
 
@@ -313,7 +313,7 @@
     <span class="c1"># SERIES PROCESSING METHODS</span>
     <span class="c1"># ============================================================================</span>
 <div class="viewcode-block" id="PupilSeries.split">
-<a class="viewcode-back" href="../../../api/core.html#pypipr.PupilSeries.split">[docs]</a>
+<a class="viewcode-back" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.split">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">split</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">prepulse_duration</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">postpulse_duration</span><span class="p">:</span> <span class="nb">float</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">PupilMeasurement</span><span class="p">]:</span>
@@ -360,7 +360,7 @@
     <span class="c1"># ============================================================================</span>
 
 <div class="viewcode-block" id="PupilSeries.plot_light_stimulus">
-<a class="viewcode-back" href="../../../api/core.html#pypipr.PupilSeries.plot_light_stimulus">[docs]</a>
+<a class="viewcode-back" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.plot_light_stimulus">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">plot_light_stimulus</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
         <span class="n">ax</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Axes</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>

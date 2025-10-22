@@ -8,6 +8,7 @@
   <title>pypipr.analysis.fitting.pupil_fit &mdash; Pypipr 0.0.13</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
 
   
       <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
@@ -15,7 +16,6 @@
       <script src="../../../../_static/documentation_options.js?v=9fc46840"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
@@ -223,12 +223,12 @@
 
 
 <div class="viewcode-block" id="PupilFit">
-<a class="viewcode-back" href="../../../../api/analysis.html#pypipr.PupilFit">[docs]</a>
+<a class="viewcode-back" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">PupilFit</span><span class="p">(</span><span class="n">PupilMeasurement</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Fit a model to the pupil measurement data.&quot;&quot;&quot;</span>
 
 <div class="viewcode-block" id="PupilFit.__init__">
-<a class="viewcode-back" href="../../../../api/analysis.html#pypipr.PupilFit.__init__">[docs]</a>
+<a class="viewcode-back" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pupil_measurement</span><span class="p">:</span> <span class="n">PupilBase</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize the PupilFit class.</span>
 
@@ -249,13 +249,13 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">time_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">time_data</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
 
 <div class="viewcode-block" id="PupilFit.get_time">
-<a class="viewcode-back" href="../../../../api/analysis.html#pypipr.PupilFit.get_time">[docs]</a>
+<a class="viewcode-back" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_time">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_time</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_data</span></div>
 
     
 <div class="viewcode-block" id="PupilFit.get_size">
-<a class="viewcode-back" href="../../../../api/analysis.html#pypipr.PupilFit.get_size">[docs]</a>
+<a class="viewcode-back" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_size">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_size</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_time</span><span class="p">())</span></div>
 
@@ -264,7 +264,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">stimulus</span> <span class="o">=</span> <span class="n">stimulus</span>
 
 <div class="viewcode-block" id="PupilFit.get_light_stimulus">
-<a class="viewcode-back" href="../../../../api/analysis.html#pypipr.PupilFit.get_light_stimulus">[docs]</a>
+<a class="viewcode-back" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_light_stimulus">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_light_stimulus</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">LightStimulus</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stimulus</span></div>
 
@@ -309,7 +309,7 @@
         <span class="p">)</span>
 
 <div class="viewcode-block" id="PupilFit.predict">
-<a class="viewcode-back" href="../../../../api/analysis.html#pypipr.PupilFit.predict">[docs]</a>
+<a class="viewcode-back" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.predict">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">predict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_data</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Predict pupil size for given time points using the fitted models.</span>
 
@@ -361,7 +361,7 @@
 
 
 <div class="viewcode-block" id="PupilFit.get_param">
-<a class="viewcode-back" href="../../../../api/analysis.html#pypipr.PupilFit.get_param">[docs]</a>
+<a class="viewcode-back" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_param">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_param</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">phase_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">param_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get a specific parameter from a specific phase.</span>
@@ -387,7 +387,7 @@
 
 
 <div class="viewcode-block" id="PupilFit.get_all_params">
-<a class="viewcode-back" href="../../../../api/analysis.html#pypipr.PupilFit.get_all_params">[docs]</a>
+<a class="viewcode-back" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_all_params">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_all_params</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get all fitted parameters organized by phase.</span>
 
@@ -418,7 +418,7 @@
 
 
 <div class="viewcode-block" id="PupilFit.get_formula_strings">
-<a class="viewcode-back" href="../../../../api/analysis.html#pypipr.PupilFit.get_formula_strings">[docs]</a>
+<a class="viewcode-back" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_formula_strings">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_formula_strings</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Get formula strings for all fitted models.</span>
 
