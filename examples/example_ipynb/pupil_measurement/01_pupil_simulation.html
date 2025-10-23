@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pupillary Light Response Simulation &mdash; Pypipr 0.0.13</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=9fc46840"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Data Loading Techniques" href="02_data_loading.html" />
+    <link rel="prev" title="Pupil Measurement Examples" href="../../pupil_measurement.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Pypipr
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Examples:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../pupil_measurement.html">Pupil Measurement Examples</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../pupil_measurement.html#overview">Overview</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Pupillary Light Response Simulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basic-pupil-response-simulation">1. Basic Pupil Response Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customizing-simulation-parameters">2. Customizing Simulation Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#customizing-response-parameters">3. Customizing Response Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#comparing-different-stimulus-conditions">4. Comparing Different Stimulus Conditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#adding-realistic-noise-and-variations">5. Adding Realistic Noise and Variations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html">Data Loading Techniques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html">Preprocessing and Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html">Baseline Correction Techniques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html">Pupil Metrics Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="09_blue_vs_red_light.html">Blue vs Red Light Comparison</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../pupil_series.html">Pupil Series Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../pupil_series.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pupil_series.html#workflow">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing.html#development-setup">Development Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing.html#running-tests">Running Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing.html#code-style">Code Style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing.html#submitting-changes">Submitting Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing.html#pull-request-guidelines">Pull Request Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing.html#bug-reports">Bug Reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing.html#feature-requests">Feature Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing.html#code-of-conduct">Code of Conduct</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../changelog.html">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-0-0-10-current">Version 0.0.10 (Current)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#future-releases">Future Releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../changelog.html#version-history">Version History</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../license.html#copyright-information">Copyright Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../license.html#license-terms">License Terms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../license.html#mit-license">MIT License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../license.html#third-party-dependencies">Third-Party Dependencies</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Main Classes and Functions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html">pypipr.PupilMeasurement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.__init__"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#id0"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_time_offset"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_time_offset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.interpolate"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.interpolate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.drop_nan"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.drop_nan()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.trim_time"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.trim_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.trim_size"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.trim_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.rolling_filter"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.rolling_filter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.rolling_mean"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.rolling_mean()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.rolling_median"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.rolling_median()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.get_rate_of_change"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_rate_of_change()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.limit_rate_of_change"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.limit_rate_of_change()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.get_average_size"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_average_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.calculate_baseline"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.calculate_baseline()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.apply_baseline_correction"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.apply_baseline_correction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.find_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.find_blinks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_blinks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.get_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_blinks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.remove_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.remove_blinks()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_autosummary/pypipr.PupilSeries.html">pypipr.PupilSeries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries"><code class="docutils literal notranslate"><span class="pre">PupilSeries</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.__init__"><code class="docutils literal notranslate"><span class="pre">PupilSeries.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilSeries.html#id0"><code class="docutils literal notranslate"><span class="pre">PupilSeries.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.set_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilSeries.set_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.get_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilSeries.get_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.set_light_stimuli_from_list"><code class="docutils literal notranslate"><span class="pre">PupilSeries.set_light_stimuli_from_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.get_light_stimuli"><code class="docutils literal notranslate"><span class="pre">PupilSeries.get_light_stimuli()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.split"><code class="docutils literal notranslate"><span class="pre">PupilSeries.split()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.plot_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilSeries.plot_light_stimulus()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html">pypipr.PupilFit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit"><code class="docutils literal notranslate"><span class="pre">PupilFit</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.__init__"><code class="docutils literal notranslate"><span class="pre">PupilFit.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#id0"><code class="docutils literal notranslate"><span class="pre">PupilFit.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_time"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_size"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.predict"><code class="docutils literal notranslate"><span class="pre">PupilFit.predict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_param"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_param()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_all_params"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_all_params()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_formula_strings"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_formula_strings()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimulus.html">pypipr.LightStimulus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus"><code class="docutils literal notranslate"><span class="pre">LightStimulus</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.__init__"><code class="docutils literal notranslate"><span class="pre">LightStimulus.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimulus.html#id0"><code class="docutils literal notranslate"><span class="pre">LightStimulus.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.get_time"><code class="docutils literal notranslate"><span class="pre">LightStimulus.get_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.get_color"><code class="docutils literal notranslate"><span class="pre">LightStimulus.get_color()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.set_time_offset"><code class="docutils literal notranslate"><span class="pre">LightStimulus.set_time_offset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.plot"><code class="docutils literal notranslate"><span class="pre">LightStimulus.plot()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimuliSeries.html">pypipr.LightStimuliSeries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.__init__"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimuliSeries.html#id0"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.add_stimulus"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.add_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.get_stimuli"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.get_stimuli()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.get_times"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.get_times()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.get_colors"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.get_colors()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.set_time_offset"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.set_time_offset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.plot"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.plot()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_autosummary/pypipr.load_simulated_pupil.html">pypipr.load_simulated_pupil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_autosummary/pypipr.load_simulated_pupil.html#pypipr.load_simulated_pupil"><code class="docutils literal notranslate"><span class="pre">load_simulated_pupil()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_autosummary/pypipr.load_real_series.html">pypipr.load_real_series</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_autosummary/pypipr.load_real_series.html#pypipr.load_real_series"><code class="docutils literal notranslate"><span class="pre">load_real_series()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_autosummary/pypipr.simulate_pupil_measurement.html">pypipr.simulate_pupil_measurement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_autosummary/pypipr.simulate_pupil_measurement.html#pypipr.simulate_pupil_measurement"><code class="docutils literal notranslate"><span class="pre">simulate_pupil_measurement()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../_autosummary/pypipr.check_time_series.html">pypipr.check_time_series</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../_autosummary/pypipr.check_time_series.html#pypipr.check_time_series"><code class="docutils literal notranslate"><span class="pre">check_time_series()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Pypipr</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../pupil_measurement.html">Pupil Measurement Examples</a></li>
+      <li class="breadcrumb-item active">Pupillary Light Response Simulation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/examples/example_ipynb/pupil_measurement/01_pupil_simulation.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="pupillary-light-response-simulation">
+<h1>Pupillary Light Response Simulation<a class="headerlink" href="#pupillary-light-response-simulation" title="Link to this heading"></a></h1>
+<p>This notebook demonstrates how to simulate realistic pupillary light responses using the <code class="docutils literal notranslate"><span class="pre">simulate_pupil_measurement</span></code> function:</p>
+<ul class="simple">
+<li><p>Creating basic simulated traces</p></li>
+<li><p>Customizing simulation parameters</p></li>
+<li><p>Understanding pupil response phases</p></li>
+<li><p>Comparing different stimulus conditions</p></li>
+<li><p>Adding noise and realistic variations</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pypipr</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="basic-pupil-response-simulation">
+<h2>1. Basic Pupil Response Simulation<a class="headerlink" href="#basic-pupil-response-simulation" title="Link to this heading"></a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">simulate_pupil_measurement</span></code> function creates a realistic pupillary light response with different phases:</p>
+<ul class="simple">
+<li><p><strong>Baseline</strong>: Stable pupil size before light onset</p></li>
+<li><p><strong>Latency</strong>: Brief delay after light onset (Currently undefined)</p></li>
+<li><p><strong>Constriction</strong>: Rapid pupil size reduction</p></li>
+<li><p><strong>Sustained</strong>: Maintained constriction during light exposure</p></li>
+<li><p><strong>Redilation</strong>: Exponential recovery after light offset</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a basic simulated pupil measurement with default parameters</span>
+<span class="n">pupil_measurement</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">()</span>
+
+<span class="c1"># Plot the simulated pupil response</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Pupil Size&quot;</span><span class="p">)</span>
+<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimulus&quot;</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Simulated Pupil Response&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x219715c9810&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/22c11dee7923103e458eefb83463e8e80443b7abdec19cd128b36c1ec5fc43de.png" src="../../../_images/22c11dee7923103e458eefb83463e8e80443b7abdec19cd128b36c1ec5fc43de.png" />
+</div>
+</div>
+</section>
+<section id="customizing-simulation-parameters">
+<h2>2. Customizing Simulation Parameters<a class="headerlink" href="#customizing-simulation-parameters" title="Link to this heading"></a></h2>
+<p>The simulation function allows you to control various aspects of the pupil response:</p>
+<section id="timing-parameters">
+<h3>Timing Parameters:<a class="headerlink" href="#timing-parameters" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">t_start</span></code>, <code class="docutils literal notranslate"><span class="pre">t_end</span></code>: Overall simulation time window</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t_light_onset</span></code>, <code class="docutils literal notranslate"><span class="pre">t_light_offset</span></code>: Light stimulus timing</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_samples</span></code>: Number of data samples</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a simulation with custom timing parameters</span>
+<span class="n">pupil_measurement</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span>
+    <span class="n">t_start</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">t_end</span><span class="o">=</span><span class="mf">16.0</span><span class="p">,</span> <span class="n">t_light_onset</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">t_light_offset</span><span class="o">=</span><span class="mf">6.0</span><span class="p">,</span> <span class="n">num_samples</span><span class="o">=</span><span class="mi">1000</span>
+<span class="p">)</span>
+
+<span class="c1"># Plot the simulated pupil response</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Pupil Size&quot;</span><span class="p">)</span>
+<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimulus&quot;</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Simulated Pupil Response with Custom Timing&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x21971659e50&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/aff59c506a6b6882575ac2f07bf3333f369c629df7d7209325f1d7d3ded24e4a.png" src="../../../_images/aff59c506a6b6882575ac2f07bf3333f369c629df7d7209325f1d7d3ded24e4a.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="customizing-response-parameters">
+<h2>3. Customizing Response Parameters<a class="headerlink" href="#customizing-response-parameters" title="Link to this heading"></a></h2>
+<p>You can control the shape and magnitude of the pupil response by adjusting physiological parameters:</p>
+<section id="response-shape-parameters">
+<h3>Response Shape Parameters:<a class="headerlink" href="#response-shape-parameters" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">baseline_param_y0</span></code>: Initial pupil diameter (typical range: 4-8 mm)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">constrict_param_cv</span></code>: Constriction velocity - how fast the pupil contracts (negative values, typical: -20 to -30 mm/s)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sustained_param_m</span></code>: Sustained phase slope - gradual change during light exposure</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sustained_param_c</span></code>: Sustained phase offset</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redilation_param_s</span></code>: Redilation amplitude scaling</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redilation_param_k</span></code>: Redilation rate constant (negative values for exponential recovery)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">redilation_param_p</span></code>: Redilation phase parameter</p></li>
+</ul>
+<p>Let’s create a simulation with custom response parameters:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a simulation with custom response parameters</span>
+<span class="n">pupil_measurement</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span>
+    <span class="n">baseline_param_y0</span><span class="o">=</span><span class="mf">7.5</span><span class="p">,</span>  <span class="c1"># Larger baseline pupil size</span>
+    <span class="n">constrict_param_cv</span><span class="o">=-</span><span class="mf">24.0</span><span class="p">,</span>  <span class="c1"># Moderate constriction speed</span>
+    <span class="n">sustained_param_m</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>  <span class="c1"># Slight upward drift during sustained phase</span>
+    <span class="n">redilation_param_k</span><span class="o">=-</span><span class="mf">0.5</span><span class="p">,</span>  <span class="c1"># Redilation rate</span>
+    <span class="n">redilation_param_p</span><span class="o">=</span><span class="mf">6.2</span><span class="p">,</span>  <span class="c1"># Redilation shape parameter</span>
+<span class="p">)</span>
+
+<span class="c1"># Plot the simulated pupil response</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Pupil Size&quot;</span><span class="p">)</span>
+<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimulus&quot;</span>
+<span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Simulated Pupil Response with Custom Parameters&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x21971b78cd0&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/1b3be72fcfa16f0ebc2e2d20a6b18b552d6fcd36789f94e6f47f69b8753ca07e.png" src="../../../_images/1b3be72fcfa16f0ebc2e2d20a6b18b552d6fcd36789f94e6f47f69b8753ca07e.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="comparing-different-stimulus-conditions">
+<h2>4. Comparing Different Stimulus Conditions<a class="headerlink" href="#comparing-different-stimulus-conditions" title="Link to this heading"></a></h2>
+<p>Let’s simulate and compare different light stimulus conditions to understand how parameters affect the pupil response:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create simulations with different stimulus durations and intensities</span>
+<span class="n">red_stim</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span>
+    <span class="n">constrict_param_cv</span><span class="o">=-</span><span class="mf">2.9</span><span class="p">,</span>
+    <span class="n">t_peak_constrict_rel_to_light_onset</span><span class="o">=</span><span class="mf">0.22</span><span class="p">,</span>
+    <span class="n">redilation_param_k</span><span class="o">=-</span><span class="mf">0.8</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">blue_stim</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">()</span>
+
+<span class="c1"># Plot comparison</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Short stimulus</span>
+<span class="n">red_stim</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Red stimulus&quot;</span><span class="p">)</span>
+<span class="n">red_stim</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Long stimulus</span>
+<span class="n">blue_stim</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Blue stimulus&quot;</span><span class="p">)</span>
+<span class="n">blue_stim</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Light Stimulus comparison&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stimulus comparison:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Short stimulus - Max constriction: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">red_stim</span><span class="o">.</span><span class="n">get_size</span><span class="p">())</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Long stimulus - Max constriction: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">blue_stim</span><span class="o">.</span><span class="n">get_size</span><span class="p">())</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Stimulus comparison:
+Short stimulus - Max constriction: 0.65 mm
+Long stimulus - Max constriction: 0.55 mm
+</pre></div>
+</div>
+<img alt="../../../_images/4ad6cff5ccc617cad96d6d1e9cc72c009199768cde6ba4388b2dafc36ae48d7f.png" src="../../../_images/4ad6cff5ccc617cad96d6d1e9cc72c009199768cde6ba4388b2dafc36ae48d7f.png" />
+</div>
+</div>
+</section>
+<section id="adding-realistic-noise-and-variations">
+<h2>5. Adding Realistic Noise and Variations<a class="headerlink" href="#adding-realistic-noise-and-variations" title="Link to this heading"></a></h2>
+<p>Real pupillometry measurements contain noise from various sources. The simulation function allows you to add realistic noise components:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># Create simulations with different noise levels</span>
+<span class="n">clean_signal</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span><span class="n">noise_std</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">trend_std</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="n">clean_signal</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;No noise&quot;</span><span class="p">)</span>
+<span class="n">clean_signal</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">noisy_signal</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span><span class="n">noise_std</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">trend_std</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>
+<span class="n">noisy_signal</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Moderate noise&quot;</span><span class="p">)</span>
+
+<span class="n">very_noisy_signal</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span><span class="n">noise_std</span><span class="o">=</span><span class="mf">0.005</span><span class="p">,</span> <span class="n">trend_std</span><span class="o">=</span><span class="mf">0.005</span><span class="p">)</span>
+<span class="n">very_noisy_signal</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;High noise&quot;</span><span class="p">)</span>
+<span class="c1"># Plot noise comparison</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x21975cb4e10&gt;
+</pre></div>
+</div>
+<img alt="../../../_images/357797af642c368428f64a350e0d03d2ba3512859e1e4b97e2e942b14c03a491.png" src="../../../_images/357797af642c368428f64a350e0d03d2ba3512859e1e4b97e2e942b14c03a491.png" />
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../../pupil_measurement.html" class="btn btn-neutral float-left" title="Pupil Measurement Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="02_data_loading.html" class="btn btn-neutral float-right" title="Data Loading Techniques" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, S. Belgers.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

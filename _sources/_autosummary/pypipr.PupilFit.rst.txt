@@ -33,6 +33,7 @@
       ~PupilFit.plot
       ~PupilFit.plot_light_stimulus
       ~PupilFit.predict
+      ~PupilFit.remove_blinks
       ~PupilFit.rolling_filter
       ~PupilFit.rolling_mean
       ~PupilFit.rolling_median

@@ -30,6 +30,7 @@
       ~PupilSeries.limit_rate_of_change
       ~PupilSeries.plot
       ~PupilSeries.plot_light_stimulus
+      ~PupilSeries.remove_blinks
       ~PupilSeries.rolling_filter
       ~PupilSeries.rolling_mean
       ~PupilSeries.rolling_median

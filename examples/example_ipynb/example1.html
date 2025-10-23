@@ -1,0 +1,846 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PyPIPR Package Examples &mdash; Pypipr 0.0.13</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=9fc46840"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Pypipr
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Examples:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pupil_measurement.html">Pupil Measurement Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pupil_measurement.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pupil_measurement/01_pupil_simulation.html">Pupillary Light Response Simulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pupil_measurement/01_pupil_simulation.html#basic-pupil-response-simulation">1. Basic Pupil Response Simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pupil_measurement/01_pupil_simulation.html#customizing-simulation-parameters">2. Customizing Simulation Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pupil_measurement/01_pupil_simulation.html#customizing-response-parameters">3. Customizing Response Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pupil_measurement/01_pupil_simulation.html#comparing-different-stimulus-conditions">4. Comparing Different Stimulus Conditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pupil_measurement/01_pupil_simulation.html#adding-realistic-noise-and-variations">5. Adding Realistic Noise and Variations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pupil_measurement/02_data_loading.html">Data Loading Techniques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pupil_measurement/04_preprocessing_filtering.html">Preprocessing and Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pupil_measurement/05_baseline_correction.html">Baseline Correction Techniques</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pupil_measurement/07_pupil_metrics.html">Pupil Metrics Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pupil_measurement/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pupil_measurement/09_blue_vs_red_light.html">Blue vs Red Light Comparison</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../pupil_series.html">Pupil Series Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pupil_series.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pupil_series.html#workflow">Workflow</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#development-setup">Development Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#running-tests">Running Tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#code-style">Code Style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#documentation">Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#submitting-changes">Submitting Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#pull-request-guidelines">Pull Request Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#bug-reports">Bug Reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#feature-requests">Feature Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing.html#code-of-conduct">Code of Conduct</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-0-0-10-current">Version 0.0.10 (Current)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#future-releases">Future Releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#version-history">Version History</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../license.html#copyright-information">Copyright Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license.html#license-terms">License Terms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license.html#mit-license">MIT License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../license.html#third-party-dependencies">Third-Party Dependencies</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Main Classes and Functions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html">pypipr.PupilMeasurement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.__init__"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#id0"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_time_offset"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_time_offset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.interpolate"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.interpolate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.drop_nan"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.drop_nan()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.trim_time"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.trim_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.trim_size"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.trim_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.rolling_filter"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.rolling_filter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.rolling_mean"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.rolling_mean()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.rolling_median"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.rolling_median()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.get_rate_of_change"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_rate_of_change()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.limit_rate_of_change"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.limit_rate_of_change()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.get_average_size"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_average_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.calculate_baseline"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.calculate_baseline()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.apply_baseline_correction"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.apply_baseline_correction()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.find_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.find_blinks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_blinks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.get_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_blinks()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.remove_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.remove_blinks()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_autosummary/pypipr.PupilSeries.html">pypipr.PupilSeries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries"><code class="docutils literal notranslate"><span class="pre">PupilSeries</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.__init__"><code class="docutils literal notranslate"><span class="pre">PupilSeries.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilSeries.html#id0"><code class="docutils literal notranslate"><span class="pre">PupilSeries.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.set_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilSeries.set_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.get_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilSeries.get_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.set_light_stimuli_from_list"><code class="docutils literal notranslate"><span class="pre">PupilSeries.set_light_stimuli_from_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.get_light_stimuli"><code class="docutils literal notranslate"><span class="pre">PupilSeries.get_light_stimuli()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.split"><code class="docutils literal notranslate"><span class="pre">PupilSeries.split()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.plot_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilSeries.plot_light_stimulus()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_autosummary/pypipr.PupilFit.html">pypipr.PupilFit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit"><code class="docutils literal notranslate"><span class="pre">PupilFit</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.__init__"><code class="docutils literal notranslate"><span class="pre">PupilFit.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilFit.html#id0"><code class="docutils literal notranslate"><span class="pre">PupilFit.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_time"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_size"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.predict"><code class="docutils literal notranslate"><span class="pre">PupilFit.predict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_param"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_param()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_all_params"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_all_params()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_formula_strings"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_formula_strings()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_autosummary/pypipr.LightStimulus.html">pypipr.LightStimulus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus"><code class="docutils literal notranslate"><span class="pre">LightStimulus</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.__init__"><code class="docutils literal notranslate"><span class="pre">LightStimulus.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimulus.html#id0"><code class="docutils literal notranslate"><span class="pre">LightStimulus.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.get_time"><code class="docutils literal notranslate"><span class="pre">LightStimulus.get_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.get_color"><code class="docutils literal notranslate"><span class="pre">LightStimulus.get_color()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.set_time_offset"><code class="docutils literal notranslate"><span class="pre">LightStimulus.set_time_offset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.plot"><code class="docutils literal notranslate"><span class="pre">LightStimulus.plot()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_autosummary/pypipr.LightStimuliSeries.html">pypipr.LightStimuliSeries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.__init__"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimuliSeries.html#id0"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.add_stimulus"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.add_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.get_stimuli"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.get_stimuli()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.get_times"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.get_times()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.get_colors"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.get_colors()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.set_time_offset"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.set_time_offset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.plot"><code class="docutils literal notranslate"><span class="pre">LightStimuliSeries.plot()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_autosummary/pypipr.load_simulated_pupil.html">pypipr.load_simulated_pupil</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/pypipr.load_simulated_pupil.html#pypipr.load_simulated_pupil"><code class="docutils literal notranslate"><span class="pre">load_simulated_pupil()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_autosummary/pypipr.load_real_series.html">pypipr.load_real_series</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/pypipr.load_real_series.html#pypipr.load_real_series"><code class="docutils literal notranslate"><span class="pre">load_real_series()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_autosummary/pypipr.simulate_pupil_measurement.html">pypipr.simulate_pupil_measurement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/pypipr.simulate_pupil_measurement.html#pypipr.simulate_pupil_measurement"><code class="docutils literal notranslate"><span class="pre">simulate_pupil_measurement()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../_autosummary/pypipr.check_time_series.html">pypipr.check_time_series</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../_autosummary/pypipr.check_time_series.html#pypipr.check_time_series"><code class="docutils literal notranslate"><span class="pre">check_time_series()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Pypipr</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">PyPIPR Package Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/examples/example_ipynb/example1.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="pypipr-package-examples">
+<h1>PyPIPR Package Examples<a class="headerlink" href="#pypipr-package-examples" title="Link to this heading"></a></h1>
+<p>This directory contains specialized examples demonstrating different aspects of the PyPIPR package:</p>
+<section id="available-examples">
+<h2>Available Examples:<a class="headerlink" href="#available-examples" title="Link to this heading"></a></h2>
+<section id="example-measurement-ipynb">
+<h3>📊 <a class="reference internal" href="example_measurement.html"><span class="std std-doc">example_measurement.ipynb</span></a><a class="headerlink" href="#example-measurement-ipynb" title="Link to this heading"></a></h3>
+<p><strong>Individual Pupil Measurement Analysis</strong></p>
+<ul class="simple">
+<li><p>Single trial analysis and fitting</p></li>
+<li><p>Baseline correction techniques</p></li>
+<li><p>Comprehensive phase fitting with PupilFit</p></li>
+<li><p>Preprocessing pipeline demonstration</p></li>
+<li><p>Method comparison (comprehensive vs traditional vs custom)</p></li>
+<li><p>Perfect for detailed single-response analysis</p></li>
+</ul>
+</section>
+<section id="example-series-ipynb">
+<h3>📈 <a class="reference internal" href="example_series.html"><span class="std std-doc">example_series.ipynb</span></a><a class="headerlink" href="#example-series-ipynb" title="Link to this heading"></a></h3>
+<p><strong>Pupil Series Analysis Pipeline</strong></p>
+<ul class="simple">
+<li><p>Continuous recording analysis with multiple stimuli</p></li>
+<li><p>Series preprocessing and artifact removal</p></li>
+<li><p>Automated measurement extraction from continuous data</p></li>
+<li><p>Batch processing and cross-trial consistency analysis</p></li>
+<li><p>Statistical reliability assessment</p></li>
+<li><p>Perfect for experimental sessions with multiple trials</p></li>
+</ul>
+</section>
+</section>
+<section id="quick-start">
+<h2>Quick Start:<a class="headerlink" href="#quick-start" title="Link to this heading"></a></h2>
+<p>Choose the example that best fits your analysis needs:</p>
+<ul class="simple">
+<li><p><strong>Single measurements/trials</strong> → Use <code class="docutils literal notranslate"><span class="pre">example_measurement.ipynb</span></code></p></li>
+<li><p><strong>Multiple trials/series data</strong> → Use <code class="docutils literal notranslate"><span class="pre">example_series.ipynb</span></code></p></li>
+</ul>
+<p>Both examples use the reorganized PyPIPR package structure with <code class="docutils literal notranslate"><span class="pre">core</span></code>, <code class="docutils literal notranslate"><span class="pre">analysis</span></code>, <code class="docutils literal notranslate"><span class="pre">preprocessing</span></code>, and <code class="docutils literal notranslate"><span class="pre">data</span></code> modules.</p>
+<p>Happy analyzing! 🚀</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load sample data using the new data module</span>
+<span class="n">blue_pupil</span> <span class="o">=</span> <span class="n">load_simulated_trace</span><span class="p">(</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+<span class="n">red_pupil</span> <span class="o">=</span> <span class="n">load_simulated_trace</span><span class="p">(</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Blue pupil data: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">blue_pupil</span><span class="o">.</span><span class="n">get_time</span><span class="p">())</span><span class="si">}</span><span class="s2"> time points&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Red pupil data: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">red_pupil</span><span class="o">.</span><span class="n">get_time</span><span class="p">())</span><span class="si">}</span><span class="s2"> time points&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Time range: </span><span class="si">{</span><span class="n">blue_pupil</span><span class="o">.</span><span class="n">get_time</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">s to </span><span class="si">{</span><span class="n">blue_pupil</span><span class="o">.</span><span class="n">get_time</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">s&quot;</span><span class="p">)</span>
+
+<span class="c1"># The simulated data already has light stimulus set from -1.0 to 0.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Blue pupil light stimulus: </span><span class="si">{</span><span class="n">blue_pupil</span><span class="o">.</span><span class="n">get_light_stimulus</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Red pupil light stimulus: </span><span class="si">{</span><span class="n">red_pupil</span><span class="o">.</span><span class="n">get_light_stimulus</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="step-2-load-and-explore-simulated-data">
+<h1>Step 2: Load and Explore Simulated Data<a class="headerlink" href="#step-2-load-and-explore-simulated-data" title="Link to this heading"></a></h1>
+<p>We’ll start with simulated pupil response data for blue and red light stimuli. This data is included with the package for testing and demonstration purposes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax_abs</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ax_rel</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Plot absolute pupil size</span>
+<span class="n">ax_abs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">blue_pupil</span><span class="o">.</span><span class="n">get_time</span><span class="p">(),</span> <span class="n">blue_pupil</span><span class="o">.</span><span class="n">get_size</span><span class="p">(),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Blue Light Response&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span>
+<span class="p">)</span>
+<span class="n">ax_abs</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">red_pupil</span><span class="o">.</span><span class="n">get_time</span><span class="p">(),</span> <span class="n">red_pupil</span><span class="o">.</span><span class="n">get_size</span><span class="p">(),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Red Light Response&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span>
+<span class="p">)</span>
+<span class="n">ax_abs</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Absolute Pupil Size&quot;</span><span class="p">)</span>
+<span class="n">ax_abs</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Pupil Diameter (mm)&quot;</span><span class="p">)</span>
+<span class="n">ax_abs</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax_abs</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Add light stimulus visualization</span>
+<span class="n">blue_pupil</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_abs</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimulus&quot;</span><span class="p">)</span>
+
+<span class="c1"># Calculate relative pupil size (baseline correction)</span>
+<span class="n">blue_pupil_rel</span> <span class="o">=</span> <span class="n">blue_pupil</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">blue_baseline</span> <span class="o">=</span> <span class="n">blue_pupil_rel</span><span class="o">.</span><span class="n">find_baseline</span><span class="p">(</span><span class="n">duration</span><span class="o">=</span><span class="mf">4.0</span><span class="p">)</span>
+<span class="n">blue_pupil_rel</span><span class="o">.</span><span class="n">apply_baseline</span><span class="p">(</span><span class="n">blue_baseline</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Blue Light Baseline: </span><span class="si">{</span><span class="n">blue_baseline</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+
+<span class="n">red_pupil_rel</span> <span class="o">=</span> <span class="n">red_pupil</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">red_baseline</span> <span class="o">=</span> <span class="n">red_pupil_rel</span><span class="o">.</span><span class="n">find_baseline</span><span class="p">(</span><span class="n">duration</span><span class="o">=</span><span class="mf">4.0</span><span class="p">)</span>
+<span class="n">red_pupil_rel</span><span class="o">.</span><span class="n">apply_baseline</span><span class="p">(</span><span class="n">red_baseline</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Red Light Baseline: </span><span class="si">{</span><span class="n">red_baseline</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+
+<span class="c1"># Plot relative pupil size (baseline-corrected)</span>
+<span class="n">ax_rel</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">blue_pupil_rel</span><span class="o">.</span><span class="n">get_time</span><span class="p">(),</span>
+    <span class="n">blue_pupil_rel</span><span class="o">.</span><span class="n">get_size</span><span class="p">(),</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Blue Light (Baseline Corrected)&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">ax_rel</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">red_pupil_rel</span><span class="o">.</span><span class="n">get_time</span><span class="p">(),</span>
+    <span class="n">red_pupil_rel</span><span class="o">.</span><span class="n">get_size</span><span class="p">(),</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Red Light (Baseline Corrected)&quot;</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Add light stimulus to relative plot</span>
+<span class="n">blue_pupil_rel</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax_rel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimulus&quot;</span><span class="p">)</span>
+
+<span class="n">ax_rel</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Baseline-Corrected Pupil Size&quot;</span><span class="p">)</span>
+<span class="n">ax_rel</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span>
+<span class="n">ax_rel</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Relative Pupil Size&quot;</span><span class="p">)</span>
+<span class="n">ax_rel</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax_rel</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">ax_rel</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Baseline&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Blue Pupil Baseline: 8.097948260220635
+Red Pupil Baseline: 8.098275265309942
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: &gt;
+</pre></div>
+</div>
+<img alt="../../_images/fe7ed90288bb065589fe84cdb700694318f78092d98a5ace4306550ade08d6e2.png" src="../../_images/fe7ed90288bb065589fe84cdb700694318f78092d98a5ace4306550ade08d6e2.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="step-3-visualization-and-baseline-correction">
+<h1>Step 3: Visualization and Baseline Correction<a class="headerlink" href="#step-3-visualization-and-baseline-correction" title="Link to this heading"></a></h1>
+<p>Let’s visualize the raw data and apply baseline correction to normalize the pupil responses.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Demonstrate the new comprehensive PupilFit class</span>
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Plot the data</span>
+<span class="n">blue_pupil_rel</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Blue Light Response&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">blue_pupil_rel</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimulus&quot;</span><span class="p">)</span>
+
+<span class="c1"># Create a comprehensive fit using the new PupilFit class</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Creating comprehensive fit for blue light response...&quot;</span><span class="p">)</span>
+<span class="n">blue_fit</span> <span class="o">=</span> <span class="n">PupilFit</span><span class="o">.</span><span class="n">from_measurement</span><span class="p">(</span><span class="n">blue_pupil_rel</span><span class="p">)</span>
+
+<span class="c1"># Fit all phases automatically</span>
+<span class="n">blue_fit</span><span class="o">.</span><span class="n">fit_all</span><span class="p">()</span>
+
+<span class="c1"># Get all fitted parameters</span>
+<span class="n">all_params</span> <span class="o">=</span> <span class="n">blue_fit</span><span class="o">.</span><span class="n">get_all_params</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Fitted Parameters:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">phase</span><span class="p">,</span> <span class="n">params</span> <span class="ow">in</span> <span class="n">all_params</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">phase</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">params</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Plot predictions from each phase</span>
+<span class="n">time_fine</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">blue_pupil_rel</span><span class="o">.</span><span class="n">get_time</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">blue_pupil_rel</span><span class="o">.</span><span class="n">get_time</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="n">predicted_response</span> <span class="o">=</span> <span class="n">blue_fit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">time_fine</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_fine</span><span class="p">,</span> <span class="n">predicted_response</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Complete Fit&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Blue Light Response with Comprehensive Fit&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Relative Pupil Size&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Plot individual phase fits</span>
+<span class="n">blue_pupil_rel</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Data&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1"># Plot each phase prediction separately</span>
+<span class="n">phases</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;baseline&#39;</span><span class="p">,</span> <span class="s1">&#39;constrict&#39;</span><span class="p">,</span> <span class="s1">&#39;sustain&#39;</span><span class="p">,</span> <span class="s1">&#39;redilation&#39;</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">phase</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">phases</span><span class="p">,</span> <span class="n">colors</span><span class="p">):</span>
+    <span class="n">phase_prediction</span> <span class="o">=</span> <span class="n">blue_fit</span><span class="o">.</span><span class="n">predict_phases</span><span class="p">(</span><span class="n">time_fine</span><span class="p">,</span> <span class="p">[</span><span class="n">phase</span><span class="p">])</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_fine</span><span class="p">,</span> <span class="n">phase_prediction</span><span class="p">,</span> <span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> 
+             <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">phase</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="si">}</span><span class="s2"> Fit&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Individual Phase Fits&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Relative Pupil Size&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Baseline formula: y = 0.9987635891400932
+Constrict formula: y = nan * (x + nan) + nan
+Sustain formula: y = -0.002842070135002047 * (x + 0.0) + 0.5012672351380064
+Redilation formula: y = -0.5514570839653807 * exp(-0.2005446288962007 * (x + 0.0)) + 0.9529155251625446
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\20182727\OneDrive - TU Eindhoven\Documents\Tools\pypipr_package\pypipr\pupil_fit.py:124: UserWarning: Baseline measurement is often 10 seconds long. If this is not the case, results may be inaccurate.
+  warnings.warn(
+C:\Users\20182727\OneDrive - TU Eindhoven\Documents\Tools\pypipr_package\pypipr\pupil_fit.py:169: UserWarning: There is an issue with the implementation of this fit. Defaulting to NaN.
+  warnings.warn(&quot;There is an issue with the implementation of this fit. Defaulting to NaN.&quot;)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;Relative Pupil Size (mm)&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/d3f958cec197d1dbff53df5d313e2e90b6fba854ace056c9f2a0cbaa6e447ca9.png" src="../../_images/d3f958cec197d1dbff53df5d313e2e90b6fba854ace056c9f2a0cbaa6e447ca9.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="step-4-comprehensive-phase-fitting-with-pupilfit">
+<h1>Step 4: Comprehensive Phase Fitting with PupilFit<a class="headerlink" href="#step-4-comprehensive-phase-fitting-with-pupilfit" title="Link to this heading"></a></h1>
+<p>Now we’ll use the new PupilFit class to automatically fit all phases of the pupillary light response: baseline, constriction, sustained response, and redilation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load real pupillometry series data with multiple stimuli</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Loading real pupil series data...&quot;</span><span class="p">)</span>
+<span class="n">series</span> <span class="o">=</span> <span class="n">load_real_series</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Series data: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">get_time</span><span class="p">())</span><span class="si">}</span><span class="s2"> time points&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Time range: </span><span class="si">{</span><span class="n">series</span><span class="o">.</span><span class="n">get_time</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">s to </span><span class="si">{</span><span class="n">series</span><span class="o">.</span><span class="n">get_time</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">s&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of light stimuli: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">get_light_stimuli</span><span class="p">()</span><span class="o">.</span><span class="n">get_times</span><span class="p">())</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Show stimulus timing</span>
+<span class="n">stimuli_times</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">get_light_stimuli</span><span class="p">()</span><span class="o">.</span><span class="n">get_times</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">stimuli_times</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Stimulus </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">start</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">s - </span><span class="si">{</span><span class="n">end</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">s (duration: </span><span class="si">{</span><span class="n">end</span><span class="o">-</span><span class="n">start</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">s)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4.1503906e-03 9.1552730e-03 1.4160156e-02 ... 3.5998743e+02 3.5999243e+02
+ 3.5999744e+02] [6.4049864 6.408661  6.371914  ... 6.1661315 6.0779386 6.096312 ] [[  8.061082   9.228092]
+ [ 68.41221   69.57923 ]
+ [128.73001  129.89702 ]
+ [189.08115  190.24815 ]
+ [249.39893  250.56595 ]
+ [309.75006  310.91708 ]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="step-5-real-data-series-analysis">
+<h1>Step 5: Real Data Series Analysis<a class="headerlink" href="#step-5-real-data-series-analysis" title="Link to this heading"></a></h1>
+<p>Now let’s work with real pupillometry data that contains multiple light stimuli in a continuous recording.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Demonstrate preprocessing pipeline</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Original data</span>
+<span class="n">series</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Raw Pupil Trace&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkblue&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Step 1: Raw Data&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Pupil Size (mm)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Step 2: Rate limiting (remove artifacts)</span>
+<span class="n">series_step2</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">series_step2</span><span class="o">.</span><span class="n">limit_rate_of_change</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>  <span class="c1"># Remove points with &gt;2 mm/s change</span>
+<span class="n">series_step2</span><span class="o">.</span><span class="n">drop_nan</span><span class="p">()</span>
+<span class="n">series_step2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Rate Limited (&lt; 2 mm/s)&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Step 2: Rate Limiting (Artifact Removal)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Pupil Size (mm)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Step 3: Smoothing</span>
+<span class="n">series_step3</span> <span class="o">=</span> <span class="n">series_step2</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">series_step3</span><span class="o">.</span><span class="n">rolling_mean</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>  <span class="c1"># 0.5 second rolling mean</span>
+<span class="n">series_step3</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Smoothed (0.5s window)&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;purple&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Step 3: Smoothing Filter&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Pupil Size (mm)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Step 4: Final with light stimuli</span>
+<span class="n">series_final</span> <span class="o">=</span> <span class="n">series_step3</span>
+<span class="n">series_final</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Processed Data&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;darkgreen&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">series_final</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimuli&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Step 4: Final Processed Data with Light Stimuli&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Pupil Size (mm)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Data points removed by rate limiting: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">get_time</span><span class="p">())</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">series_step2</span><span class="o">.</span><span class="n">get_time</span><span class="p">())</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Percentage of data retained: </span><span class="si">{</span><span class="mi">100</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">series_step2</span><span class="o">.</span><span class="n">get_time</span><span class="p">())</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">get_time</span><span class="p">())</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: &gt;
+</pre></div>
+</div>
+<img alt="../../_images/61a7f0258f0553b30e7651ec03c2b87c9078f5233dea963b65fefbf2918fc471.png" src="../../_images/61a7f0258f0553b30e7651ec03c2b87c9078f5233dea963b65fefbf2918fc471.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="step-6-data-preprocessing-pipeline">
+<h1>Step 6: Data Preprocessing Pipeline<a class="headerlink" href="#step-6-data-preprocessing-pipeline" title="Link to this heading"></a></h1>
+<p>Real pupillometry data often contains artifacts and noise. Let’s apply a preprocessing pipeline to clean the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start with the real data that has some artifacts</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original data range:&quot;</span><span class="p">,</span> <span class="n">pupil_real</span><span class="o">.</span><span class="n">pupil_diameter</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="n">pupil_real</span><span class="o">.</span><span class="n">pupil_diameter</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+
+<span class="c1"># Apply preprocessing pipeline</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Applying preprocessing pipeline:&quot;</span><span class="p">)</span>
+
+<span class="c1"># 1. Blink detection and removal</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. Detecting and removing blinks...&quot;</span><span class="p">)</span>
+<span class="n">pupil_clean</span> <span class="o">=</span> <span class="n">pupil_real</span><span class="o">.</span><span class="n">remove_blinks</span><span class="p">(</span><span class="n">threshold</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Removed </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">pupil_real</span><span class="o">.</span><span class="n">pupil_diameter</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">len</span><span class="p">(</span><span class="n">pupil_clean</span><span class="o">.</span><span class="n">pupil_diameter</span><span class="p">)</span><span class="si">}</span><span class="s2"> data points&quot;</span><span class="p">)</span>
+
+<span class="c1"># 2. Apply filtering</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2. Applying smoothing filter...&quot;</span><span class="p">)</span>
+<span class="n">pupil_filtered</span> <span class="o">=</span> <span class="n">pupil_clean</span><span class="o">.</span><span class="n">apply_filter</span><span class="p">(</span><span class="n">filter_type</span><span class="o">=</span><span class="s1">&#39;lowpass&#39;</span><span class="p">,</span> <span class="n">cutoff</span><span class="o">=</span><span class="mf">4.0</span><span class="p">)</span>
+
+<span class="c1"># 3. Baseline correction</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;3. Applying baseline correction...&quot;</span><span class="p">)</span>
+<span class="n">pupil_corrected</span> <span class="o">=</span> <span class="n">pupil_filtered</span><span class="o">.</span><span class="n">baseline_correct</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Preprocessed data range:&quot;</span><span class="p">,</span> <span class="n">pupil_corrected</span><span class="o">.</span><span class="n">pupil_diameter</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="n">pupil_corrected</span><span class="o">.</span><span class="n">pupil_diameter</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+
+<span class="c1"># Plot comparison</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Original data</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pupil_real</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">pupil_real</span><span class="o">.</span><span class="n">pupil_diameter</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Original Data&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Pupil Diameter (mm)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># After blink removal</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pupil_clean</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">pupil_clean</span><span class="o">.</span><span class="n">pupil_diameter</span><span class="p">,</span> <span class="s1">&#39;g-&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;After Blink Removal&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Pupil Diameter (mm)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># After filtering</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pupil_filtered</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">pupil_filtered</span><span class="o">.</span><span class="n">pupil_diameter</span><span class="p">,</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;After Filtering&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Pupil Diameter (mm)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Final preprocessed data</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pupil_corrected</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">pupil_corrected</span><span class="o">.</span><span class="n">pupil_diameter</span><span class="p">,</span> <span class="s1">&#39;purple&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Final Preprocessed Data&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Pupil Diameter (mm)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="step-7-advanced-analysis-and-summary">
+<h1>Step 7: Advanced Analysis and Summary<a class="headerlink" href="#step-7-advanced-analysis-and-summary" title="Link to this heading"></a></h1>
+<p>Now let’s perform comprehensive analysis on our cleaned data and compare different analysis approaches.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compare different analysis approaches on cleaned data</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pypipr.analysis.fitting</span><span class="w"> </span><span class="kn">import</span> <span class="n">PupilFit</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== ADVANCED ANALYSIS COMPARISON ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Method 1: Comprehensive fitting (our new approach)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. COMPREHENSIVE FITTING ANALYSIS&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">comprehensive_fit</span> <span class="o">=</span> <span class="n">PupilFit</span><span class="o">.</span><span class="n">from_measurement</span><span class="p">(</span><span class="n">pupil_corrected</span><span class="p">)</span>
+<span class="n">comprehensive_fit</span><span class="o">.</span><span class="n">fit_all</span><span class="p">()</span>
+
+<span class="n">comp_params</span> <span class="o">=</span> <span class="n">comprehensive_fit</span><span class="o">.</span><span class="n">get_all_params</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Baseline diameter: </span><span class="si">{</span><span class="n">comp_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;baseline_diameter&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;N/A&#39;</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Maximum constriction: </span><span class="si">{</span><span class="n">comp_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;max_constriction_amplitude&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;N/A&#39;</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Constriction velocity: </span><span class="si">{</span><span class="n">comp_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;max_constriction_velocity&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;N/A&#39;</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> mm/s&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Time to max constriction: </span><span class="si">{</span><span class="n">comp_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;time_to_max_constriction&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;N/A&#39;</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> s&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Redilation time constant: </span><span class="si">{</span><span class="n">comp_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;redilation_tau&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;N/A&#39;</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> s&quot;</span><span class="p">)</span>
+
+<span class="c1"># Method 2: Traditional metrics</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">2. TRADITIONAL METRICS ANALYSIS&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
+<span class="n">baseline_traditional</span> <span class="o">=</span> <span class="n">pupil_corrected</span><span class="o">.</span><span class="n">calculate_baseline</span><span class="p">()</span>
+<span class="n">max_constr_traditional</span> <span class="o">=</span> <span class="n">pupil_corrected</span><span class="o">.</span><span class="n">calculate_max_constriction</span><span class="p">()</span>
+<span class="n">latency_traditional</span> <span class="o">=</span> <span class="n">pupil_corrected</span><span class="o">.</span><span class="n">calculate_latency</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Baseline diameter: </span><span class="si">{</span><span class="n">baseline_traditional</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Maximum constriction: </span><span class="si">{</span><span class="n">max_constr_traditional</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Response latency: </span><span class="si">{</span><span class="n">latency_traditional</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> s&quot;</span><span class="p">)</span>
+
+<span class="c1"># Method 3: Custom time windows</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">3. CUSTOM TIME WINDOW ANALYSIS&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">40</span><span class="p">)</span>
+<span class="c1"># Define custom analysis windows</span>
+<span class="n">baseline_window</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># First 1 second</span>
+<span class="n">response_window</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>  <span class="c1"># Response period</span>
+<span class="n">recovery_window</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>  <span class="c1"># Recovery period</span>
+
+<span class="n">baseline_custom</span> <span class="o">=</span> <span class="n">pupil_corrected</span><span class="o">.</span><span class="n">calculate_baseline</span><span class="p">(</span><span class="n">time_window</span><span class="o">=</span><span class="n">baseline_window</span><span class="p">)</span>
+<span class="n">response_metrics</span> <span class="o">=</span> <span class="n">pupil_corrected</span><span class="o">.</span><span class="n">analyze_time_window</span><span class="p">(</span><span class="n">response_window</span><span class="p">)</span>
+<span class="n">recovery_metrics</span> <span class="o">=</span> <span class="n">pupil_corrected</span><span class="o">.</span><span class="n">analyze_time_window</span><span class="p">(</span><span class="n">recovery_window</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Baseline (0-1s): </span><span class="si">{</span><span class="n">baseline_custom</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Response period variability: </span><span class="si">{</span><span class="n">response_metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;std&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;N/A&#39;</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Recovery period mean: </span><span class="si">{</span><span class="n">recovery_metrics</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;N/A&#39;</span><span class="p">)</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+
+<span class="c1"># Visual comparison</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Plot 1: Data with comprehensive fit</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pupil_corrected</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">pupil_corrected</span><span class="o">.</span><span class="n">pupil_diameter</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data&#39;</span><span class="p">)</span>
+<span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">comprehensive_fit</span><span class="p">,</span> <span class="s1">&#39;predict&#39;</span><span class="p">):</span>
+    <span class="n">fit_prediction</span> <span class="o">=</span> <span class="n">comprehensive_fit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">pupil_corrected</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pupil_corrected</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">fit_prediction</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Comprehensive Fit&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">baseline_traditional</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Baseline: </span><span class="si">{</span><span class="n">baseline_traditional</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">mm&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Comprehensive Fitting Approach&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Pupil Diameter (mm)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Plot 2: Traditional metrics visualization</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pupil_corrected</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">pupil_corrected</span><span class="o">.</span><span class="n">pupil_diameter</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">baseline_traditional</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Baseline: </span><span class="si">{</span><span class="n">baseline_traditional</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">mm&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">baseline_traditional</span> <span class="o">-</span> <span class="n">max_constr_traditional</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> 
+                 <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Max Constriction: </span><span class="si">{</span><span class="n">max_constr_traditional</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">mm&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">latency_traditional</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> 
+                 <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Latency: </span><span class="si">{</span><span class="n">latency_traditional</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">s&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Traditional Metrics&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Pupil Diameter (mm)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Plot 3: Time windows analysis</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pupil_corrected</span><span class="o">.</span><span class="n">time</span><span class="p">,</span> <span class="n">pupil_corrected</span><span class="o">.</span><span class="n">pupil_diameter</span><span class="p">,</span> <span class="s1">&#39;b-&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.6</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">baseline_window</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">baseline_window</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Baseline Window&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">response_window</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">response_window</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Response Window&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">recovery_window</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">recovery_window</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Recovery Window&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Custom Time Windows&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Time (s)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Pupil Diameter (mm)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Plot 4: Summary comparison</span>
+<span class="n">methods</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Comprehensive</span><span class="se">\n</span><span class="s1">Fitting&#39;</span><span class="p">,</span> <span class="s1">&#39;Traditional</span><span class="se">\n</span><span class="s1">Metrics&#39;</span><span class="p">,</span> <span class="s1">&#39;Custom</span><span class="se">\n</span><span class="s1">Windows&#39;</span><span class="p">]</span>
+<span class="n">baselines</span> <span class="o">=</span> <span class="p">[</span><span class="n">comp_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;baseline_diameter&#39;</span><span class="p">,</span> <span class="n">baseline_traditional</span><span class="p">),</span> 
+            <span class="n">baseline_traditional</span><span class="p">,</span> <span class="n">baseline_custom</span><span class="p">]</span>
+<span class="n">max_constrs</span> <span class="o">=</span> <span class="p">[</span><span class="n">comp_params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;max_constriction_amplitude&#39;</span><span class="p">,</span> <span class="n">max_constr_traditional</span><span class="p">),</span>
+              <span class="n">max_constr_traditional</span><span class="p">,</span> <span class="n">max_constr_traditional</span><span class="p">]</span>  <span class="c1"># Using same for custom as example</span>
+
+<span class="n">x_pos</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">methods</span><span class="p">))</span>
+<span class="n">width</span> <span class="o">=</span> <span class="mf">0.35</span>
+
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="n">p</span> <span class="o">-</span> <span class="n">width</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">x_pos</span><span class="p">],</span> <span class="n">baselines</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Baseline Diameter&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">([</span><span class="n">p</span> <span class="o">+</span> <span class="n">width</span><span class="o">/</span><span class="mi">2</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">x_pos</span><span class="p">],</span> <span class="n">max_constrs</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Max Constriction&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Method Comparison&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Analysis Method&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Diameter (mm)&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">x_pos</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">methods</span><span class="p">)</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== ANALYSIS COMPLETE ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;This example demonstrated the complete pypipr analysis pipeline:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;• Data loading from examples (simulated and real data)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;• Preprocessing pipeline (blink removal, filtering, baseline correction)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;• Multiple analysis approaches (comprehensive fitting, traditional metrics, custom windows)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;• Series analysis for multiple trials&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;• Visualization and comparison tools&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">The pypipr package provides flexible tools for pupillometry analysis!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split the series into individual measurements around each stimulus</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Splitting series into individual measurements...&quot;</span><span class="p">)</span>
+<span class="n">pupil_measurements</span> <span class="o">=</span> <span class="n">series_final</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">prepulse_duration</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">postpulse_duration</span><span class="o">=</span><span class="mf">30.0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Created </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">pupil_measurements</span><span class="p">)</span><span class="si">}</span><span class="s2"> individual measurements&quot;</span><span class="p">)</span>
+
+<span class="c1"># Create comprehensive fits for each measurement</span>
+<span class="n">fits</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">measurement</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">pupil_measurements</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fitting measurement </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">...&quot;</span><span class="p">)</span>
+    <span class="n">fit</span> <span class="o">=</span> <span class="n">PupilFit</span><span class="o">.</span><span class="n">from_measurement</span><span class="p">(</span><span class="n">measurement</span><span class="p">)</span>
+    <span class="n">fit</span><span class="o">.</span><span class="n">fit_all</span><span class="p">()</span>
+    <span class="n">fits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fit</span><span class="p">)</span>
+
+<span class="c1"># Plot each individual measurement with its fit</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">pupil_measurements</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">pupil_measurements</span><span class="p">)),</span> 
+                        <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pupil_measurements</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="n">axes</span> <span class="o">=</span> <span class="p">[</span><span class="n">axes</span><span class="p">]</span>  <span class="c1"># Make it iterable for single subplot</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">measurement</span><span class="p">,</span> <span class="n">fit</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">pupil_measurements</span><span class="p">,</span> <span class="n">fits</span><span class="p">)):</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    
+    <span class="c1"># Plot raw measurement</span>
+    <span class="n">measurement</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Measurement </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+    
+    <span class="c1"># Plot light stimulus</span>
+    <span class="n">measurement</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimulus&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Plot comprehensive fit</span>
+    <span class="n">time_fit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">measurement</span><span class="o">.</span><span class="n">get_time</span><span class="p">()[</span><span class="mi">0</span><span class="p">],</span> <span class="n">measurement</span><span class="o">.</span><span class="n">get_time</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">500</span><span class="p">)</span>
+    <span class="n">prediction</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">time_fit</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_fit</span><span class="p">,</span> <span class="n">prediction</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Complete Fit&quot;</span><span class="p">)</span>
+    
+    <span class="c1"># Get parameters for this fit</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">get_all_params</span><span class="p">()</span>
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Measurement </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> - Individual Pupil Light Response&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Pupil Size (mm)&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+    
+    <span class="c1"># Print key parameters</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Measurement </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> Parameters:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">phase</span><span class="p">,</span> <span class="n">phase_params</span> <span class="ow">in</span> <span class="n">params</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;  </span><span class="si">{</span><span class="n">phase</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">phase_params</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">axes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of pupil measurements: 6
+</pre></div>
+</div>
+<img alt="../../_images/31efd1f50ab4bb4c7f1a4fa8972864fed376c47f5fa318c8f860a6d71e33094f.png" src="../../_images/31efd1f50ab4bb4c7f1a4fa8972864fed376c47f5fa318c8f860a6d71e33094f.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Summary Analysis</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== PUPILLOMETRY ANALYSIS SUMMARY ===</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1. SIMULATED DATA ANALYSIS:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Blue light baseline: </span><span class="si">{</span><span class="n">blue_baseline</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Red light baseline: </span><span class="si">{</span><span class="n">red_baseline</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+
+<span class="c1"># Get metrics from the comprehensive fit</span>
+<span class="n">blue_params</span> <span class="o">=</span> <span class="n">blue_fit</span><span class="o">.</span><span class="n">get_all_params</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Blue light fit quality: All phases fitted&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">2. REAL DATA SERIES ANALYSIS:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Total recording duration: </span><span class="si">{</span><span class="n">series</span><span class="o">.</span><span class="n">get_time</span><span class="p">()[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">series</span><span class="o">.</span><span class="n">get_time</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> seconds&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Number of stimuli: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">pupil_measurements</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Data points before preprocessing: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">get_time</span><span class="p">())</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Data points after preprocessing: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">series_final</span><span class="o">.</span><span class="n">get_time</span><span class="p">())</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">3. INDIVIDUAL MEASUREMENT ANALYSIS:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">fit</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fits</span><span class="p">):</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">fit</span><span class="o">.</span><span class="n">get_all_params</span><span class="p">()</span>
+    <span class="n">baseline_param</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;baseline&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;   Measurement </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2"> baseline: </span><span class="si">{</span><span class="n">baseline_param</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">4. PACKAGE CAPABILITIES DEMONSTRATED:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   ✓ Data loading (simulated and real data)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   ✓ Preprocessing (rate limiting, smoothing)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   ✓ Baseline correction&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   ✓ Comprehensive phase fitting&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   ✓ Series splitting and individual analysis&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;   ✓ Visualization with light stimulus overlay&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Analysis complete! 🎉&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, S. Belgers.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
