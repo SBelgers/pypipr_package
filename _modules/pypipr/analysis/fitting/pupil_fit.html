@@ -56,7 +56,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../examples/example_ipynb/pupil_measurement/04_preprocessing_filtering.html">Preprocessing and Filtering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../examples/example_ipynb/pupil_measurement/05_baseline_correction.html">Baseline Correction Techniques</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../examples/example_ipynb/pupil_measurement/07_pupil_metrics.html">Pupil Metrics Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html#phases">Phases:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html#notes">Notes:</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../examples/example_ipynb/pupil_measurement/09_blue_vs_red_light.html">Blue vs Red Light Comparison</a></li>
 </ul>
 </li>
@@ -144,6 +148,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_time"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_time()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_size"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_size()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_fits"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_fits()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.predict"><code class="docutils literal notranslate"><span class="pre">PupilFit.predict()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_param"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_param()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_all_params"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_all_params()</span></code></a></li>
@@ -226,7 +231,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">...core.pupil_measurement</span><span class="w"> </span><span class="kn">import</span> <span class="n">PupilBase</span><span class="p">,</span> <span class="n">PupilMeasurement</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">...utils.light_stimuli</span><span class="w"> </span><span class="kn">import</span> <span class="n">LightStimulus</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">.phase_fits</span><span class="w"> </span><span class="kn">import</span> <span class="n">FitBaseline</span><span class="p">,</span> <span class="n">FitConstrict</span><span class="p">,</span> <span class="n">FitRedilation</span><span class="p">,</span> <span class="n">FitSustain</span>
-
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
 <span class="c1"># TODO Update to new formulas.</span>
 
 
@@ -306,15 +311,20 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">baseline_fit</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">constrict_fit</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">sustain_fit</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sustain_fit</span><span class="o">.</span><span class="n">_set_params</span><span class="p">(</span><span class="o">*</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sustain_fit</span><span class="o">.</span><span class="n">get_param_names</span><span class="p">())))</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;Automatic sustain fit is not yet implemented. Defaulting to NaN.&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">redilation_fit</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
 
-    <span class="k">def</span><span class="w"> </span><span class="nf">_get_fits</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">FitBaseline</span><span class="p">,</span> <span class="n">FitConstrict</span><span class="p">,</span> <span class="n">FitSustain</span><span class="p">,</span> <span class="n">FitRedilation</span><span class="p">]:</span>
+<div class="viewcode-block" id="PupilFit.get_fits">
+<a class="viewcode-back" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_fits">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_fits</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">FitBaseline</span><span class="p">,</span> <span class="n">FitConstrict</span><span class="p">,</span> <span class="n">FitSustain</span><span class="p">,</span> <span class="n">FitRedilation</span><span class="p">]:</span>
         <span class="k">return</span> <span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">baseline_fit</span><span class="p">,</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">constrict_fit</span><span class="p">,</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">sustain_fit</span><span class="p">,</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">redilation_fit</span><span class="p">,</span>
-        <span class="p">)</span>
+        <span class="p">)</span></div>
+
 
 <div class="viewcode-block" id="PupilFit.predict">
 <a class="viewcode-back" href="../../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.predict">[docs]</a>
@@ -327,7 +337,7 @@
 <span class="sd">        Returns:</span>
 <span class="sd">            np.ndarray: Predicted pupil sizes</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">baseline_fit</span><span class="p">,</span> <span class="n">constrict_fit</span><span class="p">,</span> <span class="n">sustain_fit</span><span class="p">,</span> <span class="n">redilation_fit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_fits</span><span class="p">()</span>
+        <span class="n">baseline_fit</span><span class="p">,</span> <span class="n">constrict_fit</span><span class="p">,</span> <span class="n">sustain_fit</span><span class="p">,</span> <span class="n">redilation_fit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fits</span><span class="p">()</span>
 
         <span class="n">size</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full_like</span><span class="p">(</span><span class="n">time_data</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
 
@@ -402,7 +412,7 @@
 <span class="sd">        Returns:</span>
 <span class="sd">            dict[str, dict[str, float]]: Dictionary with phase names as keys and parameter dictionaries as values</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">baseline_fit</span><span class="p">,</span> <span class="n">constrict_fit</span><span class="p">,</span> <span class="n">sustain_fit</span><span class="p">,</span> <span class="n">redilation_fit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_fits</span><span class="p">()</span>
+        <span class="n">baseline_fit</span><span class="p">,</span> <span class="n">constrict_fit</span><span class="p">,</span> <span class="n">sustain_fit</span><span class="p">,</span> <span class="n">redilation_fit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fits</span><span class="p">()</span>
         <span class="k">return</span> <span class="p">{</span>
             <span class="s2">&quot;baseline&quot;</span><span class="p">:</span> <span class="nb">dict</span><span class="p">(</span>
                 <span class="nb">zip</span><span class="p">(</span><span class="n">baseline_fit</span><span class="o">.</span><span class="n">get_param_names</span><span class="p">(),</span> <span class="n">baseline_fit</span><span class="o">.</span><span class="n">get_params</span><span class="p">())</span>
@@ -433,7 +443,7 @@
 <span class="sd">        Returns:</span>
 <span class="sd">            str: Formatted string</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">baseline_fit</span><span class="p">,</span> <span class="n">constrict_fit</span><span class="p">,</span> <span class="n">sustain_fit</span><span class="p">,</span> <span class="n">redilation_fit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_fits</span><span class="p">()</span>
+        <span class="n">baseline_fit</span><span class="p">,</span> <span class="n">constrict_fit</span><span class="p">,</span> <span class="n">sustain_fit</span><span class="p">,</span> <span class="n">redilation_fit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_fits</span><span class="p">()</span>
         <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;Formula:</span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="n">string</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">Baseline: </span><span class="si">{</span><span class="n">baseline_fit</span><span class="o">.</span><span class="n">get_formula_string</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
         <span class="n">string</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">Constriction: </span><span class="si">{</span><span class="n">constrict_fit</span><span class="o">.</span><span class="n">get_formula_string</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>

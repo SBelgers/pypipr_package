@@ -59,7 +59,11 @@
 <li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html">Preprocessing and Filtering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html">Baseline Correction Techniques</a></li>
 <li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html">Pupil Metrics Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="08_comprehensive_fitting.html#phases">Phases:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="08_comprehensive_fitting.html#notes">Notes:</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="09_blue_vs_red_light.html">Blue vs Red Light Comparison</a></li>
 </ul>
 </li>
@@ -147,6 +151,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_time"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_time()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_size"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_size()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_fits"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_fits()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.predict"><code class="docutils literal notranslate"><span class="pre">PupilFit.predict()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_param"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_param()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilFit.html#pypipr.PupilFit.get_all_params"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_all_params()</span></code></a></li>
@@ -246,29 +251,36 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loading from built-in data</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 
-<span class="n">pm</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">load_simulated_pupil</span><span class="p">()</span>
-<span class="n">pm</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-<span class="n">pm</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">pm_blue</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">load_simulated_pupil</span><span class="p">(</span><span class="n">blue_or_red</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">pm_blue</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+
+
+<span class="n">pm_red</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">load_simulated_pupil</span><span class="p">(</span><span class="n">blue_or_red</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">pm_red</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+
+<span class="n">pm_red</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;Time (s)&#39;, ylabel=&#39;Pupil Diameter&#39;&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1e2ffb2b250&gt;
 </pre></div>
 </div>
-<img alt="../../../_images/01d229009a0e706e0c85ffd97eaa46396885b8ab43d658d0e1cb9ea7c56a9d3c.png" src="../../../_images/01d229009a0e706e0c85ffd97eaa46396885b8ab43d658d0e1cb9ea7c56a9d3c.png" />
+<img alt="../../../_images/4f383d9e6f4bcd4545d3456ecea5e768e353d4373f9b24a5164b7a799346b18a.png" src="../../../_images/4f383d9e6f4bcd4545d3456ecea5e768e353d4373f9b24a5164b7a799346b18a.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating &quot;random&quot; data from arrays</span>
 <span class="n">time_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="n">size</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">time_data</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">time_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">size_data</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">time_data</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">time_data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 
 <span class="c1"># Creating a new PupilMeasurement from arrays</span>
-<span class="n">sin_pm</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">PupilMeasurement</span><span class="p">(</span><span class="n">time_data</span><span class="o">=</span><span class="n">time_data</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
+<span class="n">sin_pm</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">PupilMeasurement</span><span class="p">(</span><span class="n">time_data</span><span class="o">=</span><span class="n">time_data</span><span class="p">,</span> <span class="n">size_data</span><span class="o">=</span><span class="n">size_data</span><span class="p">)</span>
 
 <span class="c1"># Plotting the created PupilMeasurement</span>
 <span class="n">sin_pm</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -279,26 +291,26 @@
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;Time (s)&#39;, ylabel=&#39;Pupil Diameter&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../../_images/d9888d3cb6e7774196e0a6ee0981103e8e6e1db80c7dde34792ed37baf26ca4f.png" src="../../../_images/d9888d3cb6e7774196e0a6ee0981103e8e6e1db80c7dde34792ed37baf26ca4f.png" />
+<img alt="../../../_images/19cfe81acf7296bcd8417226b37ad2f08260cbc8d52c31b1c4632cb807e5fc6a.png" src="../../../_images/19cfe81acf7296bcd8417226b37ad2f08260cbc8d52c31b1c4632cb807e5fc6a.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We get the time data and pupil size data from the previous example, to work with more realistic data. This array can contain your real data.</span>
-<span class="n">time_data</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span>
-<span class="n">size</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span>
+<span class="n">time_data</span> <span class="o">=</span> <span class="n">pm_blue</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span>
+<span class="n">size_data</span> <span class="o">=</span> <span class="n">pm_blue</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span>
 
 <span class="c1"># Let&#39;s show that it&#39;s a regular numpy array</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Type and shape of arrays&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type of time_data: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">time_data</span><span class="p">)</span><span class="si">}</span><span class="s2">, shape of time_data: </span><span class="si">{</span><span class="n">time_data</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type of size     : </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">size</span><span class="p">)</span><span class="si">}</span><span class="s2">, shape of size     : </span><span class="si">{</span><span class="n">size</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Type of size_data: </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">size_data</span><span class="p">)</span><span class="si">}</span><span class="s2">, shape of size_data: </span><span class="si">{</span><span class="n">size_data</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First few elements of data:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Index: &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Time:  &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">time_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size:  &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">size</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Size:  &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">size_data</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="se">\t</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]))</span>
 <span class="c1"># Creating a new PupilMeasurement from arrays</span>
-<span class="n">pm</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">PupilMeasurement</span><span class="p">(</span><span class="n">time_data</span><span class="o">=</span><span class="n">time_data</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">size</span><span class="p">)</span>
+<span class="n">pm</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">PupilMeasurement</span><span class="p">(</span><span class="n">time_data</span><span class="o">=</span><span class="n">time_data</span><span class="p">,</span> <span class="n">size_data</span><span class="o">=</span><span class="n">size_data</span><span class="p">)</span>
 
 <span class="c1"># Plotting the created PupilMeasurement</span>
 <span class="n">pm</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
@@ -308,18 +320,18 @@
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Type and shape of arrays
 Type of time_data: &lt;class &#39;numpy.ndarray&#39;&gt;, shape of time_data: (15999,)
-Type of size     : &lt;class &#39;numpy.ndarray&#39;&gt;, shape of size     : (15999,)
+Type of size_data: &lt;class &#39;numpy.ndarray&#39;&gt;, shape of size_data: (15999,)
 
 First few elements of data:
 Index:  0	1	2	3	4	
-Time:   -5.000	-4.999	-4.998	-4.997	-4.996	
-Size:   8.001	8.001	8.002	8.004	8.004	
+Time:   -6.000	-5.999	-5.998	-5.997	-5.996	
+Size:   8.001	8.002	8.002	8.001	8.000	
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;Time (s)&#39;, ylabel=&#39;Pupil Diameter&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../../_images/f9ed169c092aafa9d836e22aed85b854c672d0ca996e76ef91a85dec1ee7171b.png" src="../../../_images/f9ed169c092aafa9d836e22aed85b854c672d0ca996e76ef91a85dec1ee7171b.png" />
+<img alt="../../../_images/117e61a4529ef602bff7be84ede7f9f7db6961ffe57b85e6c1b37968ac2679e2.png" src="../../../_images/117e61a4529ef602bff7be84ede7f9f7db6961ffe57b85e6c1b37968ac2679e2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -337,7 +349,7 @@ Size:   8.001	8.001	8.002	8.004	8.004
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;Time (s)&#39;, ylabel=&#39;Pupil Diameter&#39;&gt;
 </pre></div>
 </div>
-<img alt="../../../_images/01d229009a0e706e0c85ffd97eaa46396885b8ab43d658d0e1cb9ea7c56a9d3c.png" src="../../../_images/01d229009a0e706e0c85ffd97eaa46396885b8ab43d658d0e1cb9ea7c56a9d3c.png" />
+<img alt="../../../_images/d02d6e1d15d4f2180e43d1940854a3eff4567036060649a7a7453ae34646608c.png" src="../../../_images/d02d6e1d15d4f2180e43d1940854a3eff4567036060649a7a7453ae34646608c.png" />
 </div>
 </div>
 </section>

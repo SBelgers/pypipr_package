@@ -22,6 +22,7 @@
       ~PupilFit.get_all_params
       ~PupilFit.get_average_size
       ~PupilFit.get_blinks
+      ~PupilFit.get_fits
       ~PupilFit.get_formula_strings
       ~PupilFit.get_light_stimulus
       ~PupilFit.get_param

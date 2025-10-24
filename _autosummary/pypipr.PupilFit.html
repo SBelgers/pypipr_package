@@ -59,7 +59,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/04_preprocessing_filtering.html">Preprocessing and Filtering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/05_baseline_correction.html">Baseline Correction Techniques</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/07_pupil_metrics.html">Pupil Metrics Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html#phases">Phases:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html#notes">Notes:</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/09_blue_vs_red_light.html">Blue vs Red Light Comparison</a></li>
 </ul>
 </li>
@@ -147,6 +151,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilFit.get_time"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_time()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilFit.get_size"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_size()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilFit.get_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilFit.get_fits"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_fits()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilFit.predict"><code class="docutils literal notranslate"><span class="pre">PupilFit.predict()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilFit.get_param"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_param()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilFit.get_all_params"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_all_params()</span></code></a></li>
@@ -270,67 +275,70 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_blinks</span></code>()</p></td>
 <td><p>Get the blink periods.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilFit.get_formula_strings" title="pypipr.PupilFit.get_formula_strings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_formula_strings</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilFit.get_fits" title="pypipr.PupilFit.get_fits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_fits</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilFit.get_formula_strings" title="pypipr.PupilFit.get_formula_strings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_formula_strings</span></code></a>()</p></td>
 <td><p>Get formula strings for all fitted models.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilFit.get_light_stimulus" title="pypipr.PupilFit.get_light_stimulus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_light_stimulus</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilFit.get_light_stimulus" title="pypipr.PupilFit.get_light_stimulus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_light_stimulus</span></code></a>()</p></td>
 <td><p>Get the light stimulus object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilFit.get_param" title="pypipr.PupilFit.get_param"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_param</span></code></a>(phase_name, param_name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilFit.get_param" title="pypipr.PupilFit.get_param"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_param</span></code></a>(phase_name, param_name)</p></td>
 <td><p>Get a specific parameter from a specific phase.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_rate_of_change</span></code>([n_back])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_rate_of_change</span></code>([n_back])</p></td>
 <td><p>Wrapper for get rate of change method.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilFit.get_size" title="pypipr.PupilFit.get_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_size</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilFit.get_size" title="pypipr.PupilFit.get_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_size</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilFit.get_time" title="pypipr.PupilFit.get_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilFit.get_time" title="pypipr.PupilFit.get_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time</span></code></a>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code>(new_time)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code>(new_time)</p></td>
 <td><p>Interpolate pupil size data to a new time array using np.interp.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">limit_rate_of_change</span></code>(max_rate_of_change[, ...])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">limit_rate_of_change</span></code>(max_rate_of_change[, ...])</p></td>
 <td><p>Wrapper for limit rate of change method.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code>([ax, show, scatter])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code>([ax, show, scatter])</p></td>
 <td><p>Plot pupil size over time.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_light_stimulus</span></code>([ax, show])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_light_stimulus</span></code>([ax, show])</p></td>
 <td><p>Plot the light stimulus period.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilFit.predict" title="pypipr.PupilFit.predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></a>(time_data)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilFit.predict" title="pypipr.PupilFit.predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></a>(time_data)</p></td>
 <td><p>Predict pupil size for given time points using the fitted models.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_blinks</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_blinks</span></code>()</p></td>
 <td><p>Remove blinks from the pupil size data by setting them to NaN.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_filter</span></code>(func, time_window)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_filter</span></code>(func, time_window)</p></td>
 <td><p>Wrapper for rolling filter method.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_mean</span></code>(time_window)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_mean</span></code>(time_window)</p></td>
 <td><p>Wrapper for rolling mean method.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_median</span></code>(time_window)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_median</span></code>(time_window)</p></td>
 <td><p>Wrapper for rolling median method.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_blinks</span></code>(blink_list)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_blinks</span></code>(blink_list)</p></td>
 <td><p>Set the blink periods.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_light_stimulus</span></code>(start, end)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_light_stimulus</span></code>(start, end)</p></td>
 <td><p>Set the light stimulus period.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_and_size</span></code>(time_data, size)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_and_size</span></code>(time_data, size)</p></td>
 <td><p>Set time and size arrays with validation.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_offset</span></code>(offset)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_offset</span></code>(offset)</p></td>
 <td><p>Set a time offset for the measurement.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_size</span></code>(min_size, max_size, *[, ...])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_size</span></code>(min_size, max_size, *[, ...])</p></td>
 <td><p>Trim the size data to a specific range.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_time</span></code>(start, end[, drop])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_time</span></code>(start, end[, drop])</p></td>
 <td><p>Trim the time and size data to a specific interval.</p></td>
 </tr>
 </tbody>
@@ -369,6 +377,11 @@
 </dd>
 </dl>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pypipr.PupilFit.get_fits">
+<span class="sig-name descname"><span class="pre">get_fits</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><span class="pre">FitBaseline</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FitConstrict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FitSustain</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FitRedilation</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/pypipr/analysis/fitting/pupil_fit.html#PupilFit.get_fits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilFit.get_fits" title="Link to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pypipr.PupilFit.predict">
