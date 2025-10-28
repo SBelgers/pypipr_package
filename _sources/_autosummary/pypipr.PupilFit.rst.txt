@@ -15,7 +15,11 @@
    
       ~PupilFit.__init__
       ~PupilFit.apply_baseline_correction
+      ~PupilFit.auc_early
+      ~PupilFit.auc_late
+      ~PupilFit.baseline
       ~PupilFit.calculate_baseline
+      ~PupilFit.constriction_v
       ~PupilFit.copy
       ~PupilFit.drop_nan
       ~PupilFit.find_blinks
@@ -31,9 +35,18 @@
       ~PupilFit.get_time
       ~PupilFit.interpolate
       ~PupilFit.limit_rate_of_change
+      ~PupilFit.net_pipr
+      ~PupilFit.peak_constriction
+      ~PupilFit.pipr_6s
+      ~PupilFit.pipr_duration
+      ~PupilFit.pipr_xs
+      ~PupilFit.plateau
       ~PupilFit.plot
       ~PupilFit.plot_light_stimulus
+      ~PupilFit.plr_latency
       ~PupilFit.predict
+      ~PupilFit.pupil_escape
+      ~PupilFit.redilation_v
       ~PupilFit.remove_blinks
       ~PupilFit.rolling_filter
       ~PupilFit.rolling_mean
@@ -42,6 +55,8 @@
       ~PupilFit.set_light_stimulus
       ~PupilFit.set_time_and_size
       ~PupilFit.set_time_offset
+      ~PupilFit.time_to_peak
+      ~PupilFit.transient_plr
       ~PupilFit.trim_size
       ~PupilFit.trim_time
    

@@ -15,7 +15,11 @@
    
       ~PupilMeasurement.__init__
       ~PupilMeasurement.apply_baseline_correction
+      ~PupilMeasurement.auc_early
+      ~PupilMeasurement.auc_late
+      ~PupilMeasurement.baseline
       ~PupilMeasurement.calculate_baseline
+      ~PupilMeasurement.constriction_v
       ~PupilMeasurement.copy
       ~PupilMeasurement.drop_nan
       ~PupilMeasurement.find_blinks
@@ -27,8 +31,17 @@
       ~PupilMeasurement.get_time
       ~PupilMeasurement.interpolate
       ~PupilMeasurement.limit_rate_of_change
+      ~PupilMeasurement.net_pipr
+      ~PupilMeasurement.peak_constriction
+      ~PupilMeasurement.pipr_6s
+      ~PupilMeasurement.pipr_duration
+      ~PupilMeasurement.pipr_xs
+      ~PupilMeasurement.plateau
       ~PupilMeasurement.plot
       ~PupilMeasurement.plot_light_stimulus
+      ~PupilMeasurement.plr_latency
+      ~PupilMeasurement.pupil_escape
+      ~PupilMeasurement.redilation_v
       ~PupilMeasurement.remove_blinks
       ~PupilMeasurement.rolling_filter
       ~PupilMeasurement.rolling_mean
@@ -37,6 +50,8 @@
       ~PupilMeasurement.set_light_stimulus
       ~PupilMeasurement.set_time_and_size
       ~PupilMeasurement.set_time_offset
+      ~PupilMeasurement.time_to_peak
+      ~PupilMeasurement.transient_plr
       ~PupilMeasurement.trim_size
       ~PupilMeasurement.trim_time
    

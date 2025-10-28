@@ -59,13 +59,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/04_preprocessing_filtering.html">Preprocessing and Filtering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/05_baseline_correction.html">Baseline Correction Techniques</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/07_pupil_metrics.html">Pupil Metrics Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html#phases">Phases:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html#notes">Notes:</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/pupil_fit.html">Pupil Fitting Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/pupil_fit.html#overview">Overview</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/pupil_series.html">Pupil Series Examples</a><ul>
@@ -110,17 +109,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.set_time_offset"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_time_offset()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.interpolate"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.interpolate()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.drop_nan"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.drop_nan()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.trim_time"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.trim_time()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.trim_size"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.trim_size()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.rolling_filter"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.rolling_filter()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.rolling_mean"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.rolling_mean()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.rolling_median"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.rolling_median()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.get_rate_of_change"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_rate_of_change()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.limit_rate_of_change"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.limit_rate_of_change()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.get_average_size"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_average_size()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.calculate_baseline"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.calculate_baseline()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.apply_baseline_correction"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.apply_baseline_correction()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.find_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.find_blinks()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.set_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_blinks()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.get_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_blinks()</span></code></a></li>
@@ -256,23 +244,35 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#id0" title="pypipr.PupilMeasurement.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(time_data, size_data)</p></td>
 <td><p>Initialize PupilMeasurement with time and size data.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.apply_baseline_correction" title="pypipr.PupilMeasurement.apply_baseline_correction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_baseline_correction</span></code></a>([duration])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_baseline_correction</span></code>([duration])</p></td>
 <td><p>Apply baseline correction to pupil size data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.calculate_baseline" title="pypipr.PupilMeasurement.calculate_baseline"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_baseline</span></code></a>([duration])</p></td>
-<td><p>Wrapper for calculate baseline method.</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">auc_early</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">auc_late</span></code>()</p></td>
+<td><p>_summary_</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">baseline</span></code>([duration])</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_baseline</span></code>([duration])</p></td>
+<td><p>Calculate baseline pupil diameter from prestimulus period.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">constriction_v</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code>()</p></td>
 <td><p>Create a deep copy of this object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.drop_nan" title="pypipr.PupilMeasurement.drop_nan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drop_nan</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">drop_nan</span></code>()</p></td>
 <td><p>Remove NaN values from the time and size data.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.find_blinks" title="pypipr.PupilMeasurement.find_blinks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_blinks</span></code></a>()</p></td>
 <td><p>Find blinks in the pupil size data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.get_average_size" title="pypipr.PupilMeasurement.get_average_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_average_size</span></code></a>(start_time, end_time)</p></td>
-<td><p>Wrapper for get average size method.</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_average_size</span></code>(start_time, end_time)</p></td>
+<td><p>Calculate average pupil size within a time range.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.get_blinks" title="pypipr.PupilMeasurement.get_blinks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_blinks</span></code></a>()</p></td>
 <td><p>Get the blink periods.</p></td>
@@ -280,8 +280,8 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_light_stimulus</span></code>()</p></td>
 <td><p>Get the light stimulus object.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.get_rate_of_change" title="pypipr.PupilMeasurement.get_rate_of_change"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_rate_of_change</span></code></a>([n_back])</p></td>
-<td><p>Wrapper for get rate of change method.</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_rate_of_change</span></code>([n_back])</p></td>
+<td><p>Calculates the rate of change of the pupil size.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_size</span></code>()</p></td>
 <td><p></p></td>
@@ -292,8 +292,26 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.interpolate" title="pypipr.PupilMeasurement.interpolate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code></a>(new_time)</p></td>
 <td><p>Interpolate pupil size data to a new time array using np.interp.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.limit_rate_of_change" title="pypipr.PupilMeasurement.limit_rate_of_change"><code class="xref py py-obj docutils literal notranslate"><span class="pre">limit_rate_of_change</span></code></a>(max_rate_of_change[, ...])</p></td>
-<td><p>Wrapper for limit rate of change method.</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">limit_rate_of_change</span></code>(max_rate_of_change[, ...])</p></td>
+<td><p>Limits the rate of change of the pupil size.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">net_pipr</span></code>(other)</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">peak_constriction</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipr_6s</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipr_duration</span></code>()</p></td>
+<td><p>_summary_</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipr_xs</span></code>(start, end)</p></td>
+<td><p>The x second PIPR amplitude between start and end time after light offset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plateau</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code>([ax, show, scatter])</p></td>
 <td><p>Plot pupil size over time.</p></td>
@@ -301,34 +319,49 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_light_stimulus</span></code>([ax, show])</p></td>
 <td><p>Plot the light stimulus period.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.remove_blinks" title="pypipr.PupilMeasurement.remove_blinks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_blinks</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plr_latency</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pupil_escape</span></code>()</p></td>
+<td><p>_summary_</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">redilation_v</span></code>()</p></td>
+<td><p>_summary_</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.remove_blinks" title="pypipr.PupilMeasurement.remove_blinks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_blinks</span></code></a>()</p></td>
 <td><p>Remove blinks from the pupil size data by setting them to NaN.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.rolling_filter" title="pypipr.PupilMeasurement.rolling_filter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_filter</span></code></a>(func, time_window)</p></td>
-<td><p>Wrapper for rolling filter method.</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_filter</span></code>(func, time_window)</p></td>
+<td><p>Applies a rolling filter to the pupil data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.rolling_mean" title="pypipr.PupilMeasurement.rolling_mean"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_mean</span></code></a>(time_window)</p></td>
-<td><p>Wrapper for rolling mean method.</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_mean</span></code>(time_window)</p></td>
+<td><p>Applies a rolling mean filter to the pupil data.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.rolling_median" title="pypipr.PupilMeasurement.rolling_median"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_median</span></code></a>(time_window)</p></td>
-<td><p>Wrapper for rolling median method.</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_median</span></code>(time_window)</p></td>
+<td><p>Applies a rolling median filter to the pupil data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.set_blinks" title="pypipr.PupilMeasurement.set_blinks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_blinks</span></code></a>(blink_list)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.set_blinks" title="pypipr.PupilMeasurement.set_blinks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_blinks</span></code></a>(blink_list)</p></td>
 <td><p>Set the blink periods.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_light_stimulus</span></code>(start, end)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_light_stimulus</span></code>(start, end)</p></td>
 <td><p>Set the light stimulus period.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_and_size</span></code>(time_data, size)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_and_size</span></code>(time_data, size)</p></td>
 <td><p>Set time and size arrays with validation.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.set_time_offset" title="pypipr.PupilMeasurement.set_time_offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_offset</span></code></a>(offset)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.set_time_offset" title="pypipr.PupilMeasurement.set_time_offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_offset</span></code></a>(offset)</p></td>
 <td><p>Set a time offset for the measurement.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.trim_size" title="pypipr.PupilMeasurement.trim_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_size</span></code></a>(min_size, max_size, *[, ...])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_to_peak</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">transient_plr</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_size</span></code>(min_size, max_size, *[, ...])</p></td>
 <td><p>Trim the size data to a specific range.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.trim_time" title="pypipr.PupilMeasurement.trim_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_time</span></code></a>(start, end[, drop])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_time</span></code>(start, end[, drop])</p></td>
 <td><p>Trim the time and size data to a specific interval.</p></td>
 </tr>
 </tbody>
@@ -369,100 +402,6 @@ Can be used to shift the time data by a certain amount.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>new_time</strong> (<em>NDArray</em><em>[</em><em>np.number</em><em>]</em>) – Array of new time points for interpolation.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pypipr.PupilMeasurement.drop_nan">
-<span class="sig-name descname"><span class="pre">drop_nan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.drop_nan"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.drop_nan" title="Link to this definition"></a></dt>
-<dd><p>Remove NaN values from the time and size data.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pypipr.PupilMeasurement.trim_time">
-<span class="sig-name descname"><span class="pre">trim_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.trim_time"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.trim_time" title="Link to this definition"></a></dt>
-<dd><p>Trim the time and size data to a specific interval.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The start time of the interval to keep.</p></li>
-<li><p><strong>end</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The end time of the interval to keep.</p></li>
-<li><p><strong>drop</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to drop NaN values after trimming. Defaults to True.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pypipr.PupilMeasurement.trim_size">
-<span class="sig-name descname"><span class="pre">trim_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.trim_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.trim_size" title="Link to this definition"></a></dt>
-<dd><p>Trim the size data to a specific range.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>min_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The minimum size of the interval to keep.</p></li>
-<li><p><strong>max_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The maximum size of the interval to keep.</p></li>
-<li><p><strong>drop</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to drop NaN values after trimming. Defaults to False.</p></li>
-<li><p><strong>start_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a><em>, </em><em>optional</em>) – The start time of the interval to keep. Defaults to None.</p></li>
-<li><p><strong>end_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a><em>, </em><em>optional</em>) – The end time of the interval to keep. Defaults to None.</p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pypipr.PupilMeasurement.rolling_filter">
-<span class="sig-name descname"><span class="pre">rolling_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><span class="pre">Callable</span></a><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.number" title="(in NumPy v2.3)"><span class="pre">number</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_window</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.rolling_filter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.rolling_filter" title="Link to this definition"></a></dt>
-<dd><p>Wrapper for rolling filter method. See <cite>filtering.rolling_filter</cite> for details.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pypipr.PupilMeasurement.rolling_mean">
-<span class="sig-name descname"><span class="pre">rolling_mean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_window</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.rolling_mean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.rolling_mean" title="Link to this definition"></a></dt>
-<dd><p>Wrapper for rolling mean method. See <cite>filtering.rolling_mean</cite> for details.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pypipr.PupilMeasurement.rolling_median">
-<span class="sig-name descname"><span class="pre">rolling_median</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_window</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.rolling_median"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.rolling_median" title="Link to this definition"></a></dt>
-<dd><p>Wrapper for rolling median method. See <cite>filtering.rolling_median</cite> for details.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pypipr.PupilMeasurement.get_rate_of_change">
-<span class="sig-name descname"><span class="pre">get_rate_of_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_back</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.number" title="(in NumPy v2.3)"><span class="pre">number</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.get_rate_of_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.get_rate_of_change" title="Link to this definition"></a></dt>
-<dd><p>Wrapper for get rate of change method. See <cite>filtering.get_rate_of_change</cite> for details.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pypipr.PupilMeasurement.limit_rate_of_change">
-<span class="sig-name descname"><span class="pre">limit_rate_of_change</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_rate_of_change</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_back</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.limit_rate_of_change"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.limit_rate_of_change" title="Link to this definition"></a></dt>
-<dd><p>Wrapper for limit rate of change method. See <cite>filtering.limit_rate_of_change</cite> for details.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pypipr.PupilMeasurement.get_average_size">
-<span class="sig-name descname"><span class="pre">get_average_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.get_average_size"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.get_average_size" title="Link to this definition"></a></dt>
-<dd><p>Wrapper for get average size method. See <cite>pupil_metrics.get_average_size</cite> for details.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pypipr.PupilMeasurement.calculate_baseline">
-<span class="sig-name descname"><span class="pre">calculate_baseline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.calculate_baseline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.calculate_baseline" title="Link to this definition"></a></dt>
-<dd><p>Wrapper for calculate baseline method. See <cite>pupil_metrics.calculate_baseline</cite> for details.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pypipr.PupilMeasurement.apply_baseline_correction">
-<span class="sig-name descname"><span class="pre">apply_baseline_correction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.apply_baseline_correction"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.apply_baseline_correction" title="Link to this definition"></a></dt>
-<dd><p>Apply baseline correction to pupil size data.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pupil</strong> (<a class="reference internal" href="#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><em>PupilMeasurement</em></a>) – The pupil measurement object to correct</p></li>
-<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – Duration for baseline calculation</p></li>
-</ul>
 </dd>
 </dl>
 </dd></dl>

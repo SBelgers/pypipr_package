@@ -59,13 +59,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/04_preprocessing_filtering.html">Preprocessing and Filtering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/05_baseline_correction.html">Baseline Correction Techniques</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/07_pupil_metrics.html">Pupil Metrics Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html#phases">Phases:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/08_comprehensive_fitting.html#notes">Notes:</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/pupil_fit.html">Pupil Fitting Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/pupil_fit.html#overview">Overview</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../examples/pupil_series.html">Pupil Series Examples</a><ul>
@@ -110,17 +109,6 @@
 <li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#id0"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_time_offset"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_time_offset()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.interpolate"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.interpolate()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.drop_nan"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.drop_nan()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.trim_time"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.trim_time()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.trim_size"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.trim_size()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.rolling_filter"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.rolling_filter()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.rolling_mean"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.rolling_mean()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.rolling_median"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.rolling_median()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.get_rate_of_change"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_rate_of_change()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.limit_rate_of_change"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.limit_rate_of_change()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.get_average_size"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_average_size()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.calculate_baseline"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.calculate_baseline()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.apply_baseline_correction"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.apply_baseline_correction()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.find_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.find_blinks()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_blinks()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.get_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_blinks()</span></code></a></li>
@@ -253,8 +241,20 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_baseline_correction</span></code>([duration])</p></td>
 <td><p>Apply baseline correction to pupil size data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_baseline</span></code>([duration])</p></td>
-<td><p>Wrapper for calculate baseline method.</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">auc_early</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">auc_late</span></code>()</p></td>
+<td><p>_summary_</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">baseline</span></code>([duration])</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_baseline</span></code>([duration])</p></td>
+<td><p>Calculate baseline pupil diameter from prestimulus period.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">constriction_v</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code>()</p></td>
 <td><p>Create a deep copy of this object.</p></td>
@@ -269,7 +269,7 @@
 <td><p>Get all fitted parameters organized by phase.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_average_size</span></code>(start_time, end_time)</p></td>
-<td><p>Wrapper for get average size method.</p></td>
+<td><p>Calculate average pupil size within a time range.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_blinks</span></code>()</p></td>
 <td><p>Get the blink periods.</p></td>
@@ -287,7 +287,7 @@
 <td><p>Get a specific parameter from a specific phase.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_rate_of_change</span></code>([n_back])</p></td>
-<td><p>Wrapper for get rate of change method.</p></td>
+<td><p>Calculates the rate of change of the pupil size.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilFit.get_size" title="pypipr.PupilFit.get_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_size</span></code></a>()</p></td>
 <td><p></p></td>
@@ -299,7 +299,25 @@
 <td><p>Interpolate pupil size data to a new time array using np.interp.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">limit_rate_of_change</span></code>(max_rate_of_change[, ...])</p></td>
-<td><p>Wrapper for limit rate of change method.</p></td>
+<td><p>Limits the rate of change of the pupil size.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">net_pipr</span></code>(other)</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">peak_constriction</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipr_6s</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipr_duration</span></code>()</p></td>
+<td><p>_summary_</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pipr_xs</span></code>(start, end)</p></td>
+<td><p>The x second PIPR amplitude between start and end time after light offset.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plateau</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code>([ax, show, scatter])</p></td>
 <td><p>Plot pupil size over time.</p></td>
@@ -307,37 +325,52 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_light_stimulus</span></code>([ax, show])</p></td>
 <td><p>Plot the light stimulus period.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilFit.predict" title="pypipr.PupilFit.predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></a>(time_data)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">plr_latency</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#pypipr.PupilFit.predict" title="pypipr.PupilFit.predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></a>(time_data)</p></td>
 <td><p>Predict pupil size for given time points using the fitted models.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_blinks</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">pupil_escape</span></code>()</p></td>
+<td><p>_summary_</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">redilation_v</span></code>()</p></td>
+<td><p>_summary_</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_blinks</span></code>()</p></td>
 <td><p>Remove blinks from the pupil size data by setting them to NaN.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_filter</span></code>(func, time_window)</p></td>
-<td><p>Wrapper for rolling filter method.</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_filter</span></code>(func, time_window)</p></td>
+<td><p>Applies a rolling filter to the pupil data.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_mean</span></code>(time_window)</p></td>
-<td><p>Wrapper for rolling mean method.</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_mean</span></code>(time_window)</p></td>
+<td><p>Applies a rolling mean filter to the pupil data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_median</span></code>(time_window)</p></td>
-<td><p>Wrapper for rolling median method.</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">rolling_median</span></code>(time_window)</p></td>
+<td><p>Applies a rolling median filter to the pupil data.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_blinks</span></code>(blink_list)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_blinks</span></code>(blink_list)</p></td>
 <td><p>Set the blink periods.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_light_stimulus</span></code>(start, end)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_light_stimulus</span></code>(start, end)</p></td>
 <td><p>Set the light stimulus period.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_and_size</span></code>(time_data, size)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_and_size</span></code>(time_data, size)</p></td>
 <td><p>Set time and size arrays with validation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_offset</span></code>(offset)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_offset</span></code>(offset)</p></td>
 <td><p>Set a time offset for the measurement.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_size</span></code>(min_size, max_size, *[, ...])</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_to_peak</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">transient_plr</span></code>()</p></td>
+<td><p>Metrics as described by Adhikari et al. (2015), table 2:</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_size</span></code>(min_size, max_size, *[, ...])</p></td>
 <td><p>Trim the size data to a specific range.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_time</span></code>(start, end[, drop])</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_time</span></code>(start, end[, drop])</p></td>
 <td><p>Trim the time and size data to a specific interval.</p></td>
 </tr>
 </tbody>
