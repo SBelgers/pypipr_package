@@ -113,9 +113,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/pupil_series.html">Pupil Series Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../examples/pupil_series.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../examples/pupil_series.html#workflow">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/pupil_series.html">Pupil Measurement Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example_ipynb/pupil_series/01_series_loading.html">Series loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example_ipynb/pupil_series/02_series_exploration.html">Series Data Exploration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example_ipynb/pupil_series/03_series_splitting.html">Series Splitting and Individual Measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example_ipynb/pupil_series/04_series_fitting.html">Batch Preprocessing of Series Data</a></li>
 </ul>
 </li>
 </ul>
@@ -153,8 +155,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#pypipr.PupilMeasurement"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.__init__"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.set_time_offset"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_time_offset()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.interpolate"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.interpolate()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.find_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.find_blinks()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.set_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_blinks()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pypipr.PupilMeasurement.get_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_blinks()</span></code></a></li>
@@ -335,7 +335,7 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time</span></code>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.interpolate" title="pypipr.PupilMeasurement.interpolate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code></a>(new_time)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code>(new_time)</p></td>
 <td><p>Interpolate pupil size data to a new time array using np.interp.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">limit_rate_of_change</span></code>(max_rate_of_change[, ...])</p></td>
@@ -395,7 +395,7 @@
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_and_size</span></code>(time_data, size)</p></td>
 <td><p>Set time and size arrays with validation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#pypipr.PupilMeasurement.set_time_offset" title="pypipr.PupilMeasurement.set_time_offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_offset</span></code></a>(offset)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_offset</span></code>(offset)</p></td>
 <td><p>Set a time offset for the measurement.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_to_peak</span></code>()</p></td>
@@ -425,29 +425,6 @@
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If the time and size arrays do not have the same length.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pypipr.PupilMeasurement.set_time_offset">
-<span class="sig-name descname"><span class="pre">set_time_offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.set_time_offset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.set_time_offset" title="Link to this definition"></a></dt>
-<dd><p>Set a time offset for the measurement.
-Can be used to shift the time data by a certain amount.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>offset</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The offset to add to the time data.</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pypipr.PupilMeasurement.interpolate">
-<span class="sig-name descname"><span class="pre">interpolate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.dtype.html#numpy.dtype" title="(in NumPy v2.3)"><span class="pre">dtype</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.number" title="(in NumPy v2.3)"><span class="pre">number</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/pypipr/core/pupil_measurement.html#PupilMeasurement.interpolate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pypipr.PupilMeasurement.interpolate" title="Link to this definition"></a></dt>
-<dd><p>Interpolate pupil size data to a new time array using np.interp.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>new_time</strong> (<em>NDArray</em><em>[</em><em>np.number</em><em>]</em>) – Array of new time points for interpolation.</p>
 </dd>
 </dl>
 </dd></dl>

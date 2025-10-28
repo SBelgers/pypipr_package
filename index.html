@@ -112,9 +112,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="examples/pupil_series.html">Pupil Series Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples/pupil_series.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples/pupil_series.html#workflow">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/pupil_series.html">Pupil Measurement Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/example_ipynb/pupil_series/01_series_loading.html">Series loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/example_ipynb/pupil_series/02_series_exploration.html">Series Data Exploration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/example_ipynb/pupil_series/03_series_splitting.html">Series Splitting and Individual Measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/example_ipynb/pupil_series/04_series_fitting.html">Batch Preprocessing of Series Data</a></li>
 </ul>
 </li>
 </ul>
@@ -152,8 +154,6 @@
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.__init__"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#id0"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_time_offset"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_time_offset()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.interpolate"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.interpolate()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.find_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.find_blinks()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_blinks()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.get_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_blinks()</span></code></a></li>
@@ -306,9 +306,11 @@ pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </s
 <li class="toctree-l2"><a class="reference internal" href="examples/pupil_fit.html#overview">Overview</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="examples/pupil_series.html">Pupil Series Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples/pupil_series.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples/pupil_series.html#workflow">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/pupil_series.html">Pupil Measurement Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/example_ipynb/pupil_series/01_series_loading.html">Series loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/example_ipynb/pupil_series/02_series_exploration.html">Series Data Exploration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/example_ipynb/pupil_series/03_series_splitting.html">Series Splitting and Individual Measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/example_ipynb/pupil_series/04_series_fitting.html">Batch Preprocessing of Series Data</a></li>
 </ul>
 </li>
 </ul>
@@ -335,7 +337,7 @@ pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </s
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement" title="pypipr.PupilMeasurement"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pypipr.PupilMeasurement</span></code></a>(time_data, size_data)</p></td>
 <td><p>A class representing a single pupil measurement with time series data.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries" title="pypipr.PupilSeries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pypipr.PupilSeries</span></code></a>(time_data, size, stimuli_list)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries" title="pypipr.PupilSeries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pypipr.PupilSeries</span></code></a>(time_data, size_data, ...)</p></td>
 <td><p>A class representing a series of pupil measurements with multiple light stimuli.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="_autosummary/pypipr.PupilFit.html#pypipr.PupilFit" title="pypipr.PupilFit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pypipr.PupilFit</span></code></a>(pupil_measurement)</p></td>

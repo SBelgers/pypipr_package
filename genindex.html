@@ -110,9 +110,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="examples/pupil_series.html">Pupil Series Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples/pupil_series.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples/pupil_series.html#workflow">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/pupil_series.html">Pupil Measurement Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/example_ipynb/pupil_series/01_series_loading.html">Series loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/example_ipynb/pupil_series/02_series_exploration.html">Series Data Exploration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/example_ipynb/pupil_series/03_series_splitting.html">Series Splitting and Individual Measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/example_ipynb/pupil_series/04_series_fitting.html">Batch Preprocessing of Series Data</a></li>
 </ul>
 </li>
 </ul>
@@ -150,8 +152,6 @@
 <li class="toctree-l2"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.__init__"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#id0"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_time_offset"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_time_offset()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.interpolate"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.interpolate()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.find_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.find_blinks()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_blinks()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.get_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_blinks()</span></code></a></li>
@@ -266,7 +266,6 @@
  | <a href="#C"><strong>C</strong></a>
  | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
- | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
@@ -357,14 +356,6 @@
   </ul></td>
 </tr></table>
 
-<h2 id="I">I</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.interpolate">interpolate() (pypipr.PupilMeasurement method)</a>
-</li>
-  </ul></td>
-</tr></table>
-
 <h2 id="L">L</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -422,16 +413,14 @@
 </li>
       <li><a href="_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.set_light_stimulus">set_light_stimulus() (pypipr.PupilSeries method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.set_time_offset">set_time_offset() (pypipr.LightStimuliSeries method)</a>
 
       <ul>
         <li><a href="_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.set_time_offset">(pypipr.LightStimulus method)</a>
 </li>
-        <li><a href="_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_time_offset">(pypipr.PupilMeasurement method)</a>
-</li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_autosummary/pypipr.simulate_pupil_measurement.html#pypipr.simulate_pupil_measurement">simulate_pupil_measurement() (in module pypipr)</a>
 </li>
       <li><a href="_autosummary/pypipr.PupilSeries.html#pypipr.PupilSeries.split">split() (pypipr.PupilSeries method)</a>

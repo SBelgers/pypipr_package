@@ -110,9 +110,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../examples/pupil_series.html">Pupil Series Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples/pupil_series.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../examples/pupil_series.html#workflow">Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples/pupil_series.html">Pupil Measurement Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_ipynb/pupil_series/01_series_loading.html">Series loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_ipynb/pupil_series/02_series_exploration.html">Series Data Exploration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_ipynb/pupil_series/03_series_splitting.html">Series Splitting and Individual Measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../examples/example_ipynb/pupil_series/04_series_fitting.html">Batch Preprocessing of Series Data</a></li>
 </ul>
 </li>
 </ul>
@@ -150,8 +152,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.__init__"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#id0"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_time_offset"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_time_offset()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.interpolate"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.interpolate()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.find_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.find_blinks()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_blinks()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.get_blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_blinks()</span></code></a></li>
@@ -298,43 +298,6 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">set_time_and_size</span><span class="p">(</span><span class="n">time_data</span><span class="p">,</span> <span class="n">size_data</span><span class="p">)</span></div>
 
 
-    <span class="c1"># ============================================================================</span>
-    <span class="c1"># BASIC DATA MANIPULATION</span>
-    <span class="c1"># ============================================================================</span>
-
-<div class="viewcode-block" id="PupilMeasurement.set_time_offset">
-<a class="viewcode-back" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.set_time_offset">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">set_time_offset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">offset</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Set a time offset for the measurement.</span>
-<span class="sd">        Can be used to shift the time data by a certain amount.</span>
-
-<span class="sd">        Args:</span>
-<span class="sd">            offset (float): The offset to add to the time data.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">set_time_and_size</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_size</span><span class="p">())</span>
-        <span class="n">light_stimulus</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_light_stimulus</span><span class="p">()</span>
-        <span class="k">if</span> <span class="n">light_stimulus</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-            <span class="n">light_stimulus</span><span class="o">.</span><span class="n">set_time_offset</span><span class="p">(</span><span class="n">offset</span><span class="p">)</span></div>
-
-
-<div class="viewcode-block" id="PupilMeasurement.interpolate">
-<a class="viewcode-back" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement.interpolate">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">interpolate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">new_time</span><span class="p">:</span> <span class="n">NDArray</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">number</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Interpolate pupil size data to a new time array using np.interp.</span>
-
-<span class="sd">        Args:</span>
-<span class="sd">            new_time (NDArray[np.number]): Array of new time points for interpolation.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">time_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span>
-        <span class="n">size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span>
-        <span class="n">new_size</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span>  <span class="c1"># type: ignore</span>
-            <span class="n">x</span><span class="o">=</span><span class="n">new_time</span><span class="p">,</span>  <span class="c1"># type: ignore</span>
-            <span class="n">xp</span><span class="o">=</span><span class="n">time_data</span><span class="p">,</span>
-            <span class="n">fp</span><span class="o">=</span><span class="n">size</span><span class="p">,</span>
-            <span class="n">left</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
-            <span class="n">right</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span>
-        <span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">set_time_and_size</span><span class="p">(</span><span class="n">new_time</span><span class="p">,</span> <span class="n">new_size</span><span class="p">)</span>  <span class="c1"># type: ignore</span></div>
 
 
 
