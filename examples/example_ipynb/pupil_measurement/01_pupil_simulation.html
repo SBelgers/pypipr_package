@@ -46,25 +46,71 @@
               <p class="caption" role="heading"><span class="caption-text">Examples:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../pupil_measurement.html">Pupil Measurement Examples</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../pupil_measurement.html#overview">Overview</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Pupillary Light Response Simulation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#basic-pupil-response-simulation">1. Basic Pupil Response Simulation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#customizing-simulation-parameters">2. Customizing Simulation Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#customizing-response-parameters">3. Customizing Response Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#comparing-different-stimulus-conditions">4. Comparing Different Stimulus Conditions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#adding-realistic-noise-and-variations">5. Adding Realistic Noise and Variations</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Pupillary Light Response Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-pupil-response-simulation">1. Basic Pupil Response Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#customizing-simulation-parameters">2. Customizing Simulation Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#timing-parameters">Timing Parameters:</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html">Data Loading Techniques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html">Preprocessing and Filtering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html">Baseline Correction Techniques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html">Pupil Metrics Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#customizing-response-parameters">3. Customizing Response Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#response-shape-parameters">Response Shape Parameters:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#comparing-different-stimulus-conditions">4. Comparing Different Stimulus Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-realistic-noise-and-variations">5. Adding Realistic Noise and Variations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_data_loading.html">Data Loading Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#loading-built-in-simulated-data">Loading built-in (simulated) data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#creating-synthetic-data-from-arrays">Creating synthetic data from arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#working-with-existing-measurement-arrays">Working with existing measurement arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#setting-and-plotting-light-stimuli">Setting and plotting light stimuli</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_preprocessing_filtering.html">Preprocessing and Filtering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#generate-a-noisy-example-signal">Generate a noisy example signal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#apply-simple-smoothing-filters">Apply simple smoothing filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#inject-synthetic-blinks">Inject synthetic blinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#try-smoothing-after-blink-injection">Try smoothing after blink injection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#remove-blinks-by-marking-and-deleting-segments">Remove blinks by marking and deleting segments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#trim-by-pupil-size">Trim by pupil size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#limit-sudden-rates-of-change">Limit sudden rates of change</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_baseline_correction.html">Baseline Correction Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html#setup-and-requirements">Setup and requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html#load-a-sample-measurement">Load a sample measurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html#compute-and-apply-baseline-correction">Compute and apply baseline correction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07_pupil_metrics.html">Pupil Metrics Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#quick-note">Quick note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#peak-constriction-and-time-to-peak">Peak constriction and time-to-peak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#pipr-and-average-size-at-fixed-windows">PIPR and average-size at fixed windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#shifted-stimulus-example-and-multiple-pipr-windows">Shifted-stimulus example and multiple PIPR windows</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../pupil_fit.html">Pupil Fitting Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../pupil_fit.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pupil_fit.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#phases">Phases:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#notes">Notes:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#baseline-fitting">Baseline fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#constriction-sustain-fitting">Constriction / sustain fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#redilation-fitting">Redilation fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#summary-show-all-fits">Summary: show all fits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#convenience-wrapper-pupilfit">Convenience wrapper: PupilFit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#compare-metrics-from-data-vs-fit">Compare metrics from data vs fit</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../pupil_series.html">Pupil Series Examples</a><ul>
@@ -242,7 +288,7 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">simulate_pupil_measurement</span></code> function creates a realistic pupillary light response with different phases:</p>
 <ul class="simple">
 <li><p><strong>Baseline</strong>: Stable pupil size before light onset</p></li>
-<li><p><strong>Latency</strong>: Brief delay after light onset (Currently undefined)</p></li>
+<li><p><strong>Latency</strong>: Brief delay after light onset</p></li>
 <li><p><strong>Constriction</strong>: Rapid pupil size reduction</p></li>
 <li><p><strong>Sustained</strong>: Maintained constriction during light exposure</p></li>
 <li><p><strong>Redilation</strong>: Exponential recovery after light offset</p></li>
@@ -252,22 +298,33 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a basic simulated pupil measurement with default parameters</span>
 <span class="n">pupil_measurement</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">()</span>
 
-<span class="c1"># Plot the simulated pupil response</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Pupil Size&quot;</span><span class="p">)</span>
-<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span>
-    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimulus&quot;</span>
+<span class="c1"># Initialize the figure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># Plot the pupil measurement and light stimulus</span>
+<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Pupil Size&quot;</span>
 <span class="p">)</span>
+
+<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimulus&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Simulated Pupil Response&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x22a1f412270&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/22c11dee7923103e458eefb83463e8e80443b7abdec19cd128b36c1ec5fc43de.png" src="../../../_images/22c11dee7923103e458eefb83463e8e80443b7abdec19cd128b36c1ec5fc43de.png" />
+<img alt="../../../_images/e0a8736c2c6ae9fb652d562ac6cf02967a9f78dfb91b7c5246c183ed104d8835.png" src="../../../_images/e0a8736c2c6ae9fb652d562ac6cf02967a9f78dfb91b7c5246c183ed104d8835.png" />
 </div>
 </div>
 </section>
@@ -285,25 +342,40 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a simulation with custom timing parameters</span>
 <span class="n">pupil_measurement</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span>
-    <span class="n">t_start</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">t_end</span><span class="o">=</span><span class="mf">16.0</span><span class="p">,</span> <span class="n">t_light_onset</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">t_light_offset</span><span class="o">=</span><span class="mf">6.0</span><span class="p">,</span> <span class="n">num_samples</span><span class="o">=</span><span class="mi">1000</span>
+    <span class="n">t_start</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">t_end</span><span class="o">=</span><span class="mf">16.0</span><span class="p">,</span>
+    <span class="n">t_light_onset</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
+    <span class="n">t_light_offset</span><span class="o">=</span><span class="mf">6.0</span><span class="p">,</span>
+    <span class="n">num_samples</span><span class="o">=</span><span class="mi">1000</span>
 <span class="p">)</span>
 
-<span class="c1"># Plot the simulated pupil response</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Pupil Size&quot;</span><span class="p">)</span>
-<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span>
-    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimulus&quot;</span>
+<span class="c1"># Initialize the figure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># Plot the pupil measurement and light stimulus</span>
+<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Pupil Size&quot;</span>
 <span class="p">)</span>
+
+<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> 
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimulus&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Simulated Pupil Response with Custom Timing&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x22a217d8690&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/aff59c506a6b6882575ac2f07bf3333f369c629df7d7209325f1d7d3ded24e4a.png" src="../../../_images/aff59c506a6b6882575ac2f07bf3333f369c629df7d7209325f1d7d3ded24e4a.png" />
+<img alt="../../../_images/943127cbe0c4ffb5b620a19623aaa04c1cbe1fd16faf913720795bf01737230e.png" src="../../../_images/943127cbe0c4ffb5b620a19623aaa04c1cbe1fd16faf913720795bf01737230e.png" />
 </div>
 </div>
 </section>
@@ -334,23 +406,34 @@
     <span class="n">redilation_param_p</span><span class="o">=</span><span class="mf">6.2</span><span class="p">,</span>  <span class="c1"># Redilation shape parameter</span>
 <span class="p">)</span>
 
-<span class="c1"># Plot the simulated pupil response</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Pupil Size&quot;</span><span class="p">)</span>
-<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span>
-    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimulus&quot;</span>
+<span class="c1"># Initialize the figure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># Plot the pupil measurement and light stimulus</span>
+<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Pupil Size&quot;</span>
 <span class="p">)</span>
+
+<span class="n">pupil_measurement</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Light Stimulus&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Simulated Pupil Response with Custom Parameters&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x22a21a99950&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/1b3be72fcfa16f0ebc2e2d20a6b18b552d6fcd36789f94e6f47f69b8753ca07e.png" src="../../../_images/1b3be72fcfa16f0ebc2e2d20a6b18b552d6fcd36789f94e6f47f69b8753ca07e.png" />
+<img alt="../../../_images/e11d4840174080bfeb41b6ab69f114d825c6eed0212ea5dd3af3280673992ec3.png" src="../../../_images/e11d4840174080bfeb41b6ab69f114d825c6eed0212ea5dd3af3280673992ec3.png" />
 </div>
 </div>
 </section>
@@ -360,30 +443,53 @@
 <p>Let’s simulate and compare different light stimulus conditions to understand how parameters affect the pupil response:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create simulations with different stimulus durations and intensities</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create simulations with different stimulus durations and intensities (Red vs. Blue)</span>
 <span class="n">red_stim</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span>
     <span class="n">constrict_param_cv</span><span class="o">=-</span><span class="mf">2.9</span><span class="p">,</span>
     <span class="n">t_peak_constrict_rel_to_light_onset</span><span class="o">=</span><span class="mf">0.22</span><span class="p">,</span>
     <span class="n">redilation_param_k</span><span class="o">=-</span><span class="mf">0.8</span><span class="p">,</span>
 <span class="p">)</span>
-<span class="n">blue_stim</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">()</span>
 
-<span class="c1"># Plot comparison</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">blue_stim</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span>
+    <span class="n">constrict_param_cv</span><span class="o">=-</span><span class="mf">3.0</span><span class="p">,</span>
+    <span class="n">t_peak_constrict_rel_to_light_onset</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span>
+    <span class="n">redilation_param_k</span><span class="o">=-</span><span class="mf">0.4</span><span class="p">,</span>
+<span class="p">)</span>
 
-<span class="c1"># Short stimulus</span>
-<span class="n">red_stim</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Red stimulus&quot;</span><span class="p">)</span>
-<span class="n">red_stim</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="c1"># Initialize the figure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 
-<span class="c1"># Long stimulus</span>
-<span class="n">blue_stim</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Blue stimulus&quot;</span><span class="p">)</span>
-<span class="n">blue_stim</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Light Stimulus comparison&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="c1"># Show red stimulus</span>
+<span class="n">red_stim</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Red stimulus&quot;</span>
+<span class="p">)</span>
 
+<span class="n">red_stim</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span>
+<span class="p">)</span>
+
+<span class="c1"># Show blue stimulus</span>
+<span class="n">blue_stim</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Blue stimulus&quot;</span>
+<span class="p">)</span>
+
+<span class="c1"># Print comparison of maximum constriction</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stimulus comparison:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Short stimulus - Max constriction: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">red_stim</span><span class="o">.</span><span class="n">get_size</span><span class="p">())</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Long stimulus - Max constriction: </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">nanmin</span><span class="p">(</span><span class="n">blue_stim</span><span class="o">.</span><span class="n">get_size</span><span class="p">())</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
+
+<span class="c1"># Show the plot</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Light Stimulus comparison&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -393,7 +499,7 @@ Short stimulus - Max constriction: 0.65 mm
 Long stimulus - Max constriction: 0.55 mm
 </pre></div>
 </div>
-<img alt="../../../_images/4ad6cff5ccc617cad96d6d1e9cc72c009199768cde6ba4388b2dafc36ae48d7f.png" src="../../../_images/4ad6cff5ccc617cad96d6d1e9cc72c009199768cde6ba4388b2dafc36ae48d7f.png" />
+<img alt="../../../_images/819d215516aa84e074526293e63e3dfb76228f644f38e04333f94bf9038f2cbe.png" src="../../../_images/819d215516aa84e074526293e63e3dfb76228f644f38e04333f94bf9038f2cbe.png" />
 </div>
 </div>
 </section>
@@ -402,29 +508,52 @@ Long stimulus - Max constriction: 0.55 mm
 <p>Real pupillometry measurements contain noise from various sources. The simulation function allows you to add realistic noise components:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set random seed for reproducibility</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
 <span class="c1"># Create simulations with different noise levels</span>
-<span class="n">clean_signal</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span><span class="n">noise_std</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">trend_std</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span>
-<span class="n">clean_signal</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;No noise&quot;</span><span class="p">)</span>
+<span class="n">clean_signal</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span>
+    <span class="n">noise_std</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">trend_std</span><span class="o">=</span><span class="mf">0.0</span>
+<span class="p">)</span>
+
+<span class="n">noisy_signal</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span>
+    <span class="n">noise_std</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> 
+    <span class="n">trend_std</span><span class="o">=</span><span class="mf">0.001</span>
+<span class="p">)</span>
+<span class="n">very_noisy_signal</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span>
+    <span class="n">noise_std</span><span class="o">=</span><span class="mf">0.005</span><span class="p">,</span>
+    <span class="n">trend_std</span><span class="o">=</span><span class="mf">0.005</span>
+<span class="p">)</span>
+
+<span class="c1"># Initialize the figure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+
+<span class="c1"># Plot noise comparison</span>
+<span class="n">clean_signal</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;No noise&quot;</span>
+<span class="p">)</span>
+
+<span class="n">noisy_signal</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+    <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span>
+    <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span>
+    <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Moderate noise&quot;</span>
+    <span class="p">)</span>
+<span class="n">very_noisy_signal</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;High noise&quot;</span><span class="p">)</span>
+
 <span class="n">clean_signal</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 
-<span class="n">noisy_signal</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span><span class="n">noise_std</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">trend_std</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>
-<span class="n">noisy_signal</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Moderate noise&quot;</span><span class="p">)</span>
-
-<span class="n">very_noisy_signal</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span><span class="n">noise_std</span><span class="o">=</span><span class="mf">0.005</span><span class="p">,</span> <span class="n">trend_std</span><span class="o">=</span><span class="mf">0.005</span><span class="p">)</span>
-<span class="n">very_noisy_signal</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;High noise&quot;</span><span class="p">)</span>
-<span class="c1"># Plot noise comparison</span>
-
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x22a21b67ed0&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/357797af642c368428f64a350e0d03d2ba3512859e1e4b97e2e942b14c03a491.png" src="../../../_images/357797af642c368428f64a350e0d03d2ba3512859e1e4b97e2e942b14c03a491.png" />
+<img alt="../../../_images/a6d62bd00286dfc80b493ea4d62313ef8cdca399899d7cd0270cea2f33e50416.png" src="../../../_images/a6d62bd00286dfc80b493ea4d62313ef8cdca399899d7cd0270cea2f33e50416.png" />
 </div>
 </div>
 </section>

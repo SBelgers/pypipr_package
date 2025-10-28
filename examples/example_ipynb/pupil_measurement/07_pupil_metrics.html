@@ -46,25 +46,71 @@
               <p class="caption" role="heading"><span class="caption-text">Examples:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../pupil_measurement.html">Pupil Measurement Examples</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../pupil_measurement.html#overview">Overview</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html">Pupillary Light Response Simulation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#basic-pupil-response-simulation">1. Basic Pupil Response Simulation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#customizing-simulation-parameters">2. Customizing Simulation Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#customizing-response-parameters">3. Customizing Response Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#comparing-different-stimulus-conditions">4. Comparing Different Stimulus Conditions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#adding-realistic-noise-and-variations">5. Adding Realistic Noise and Variations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_pupil_simulation.html">Pupillary Light Response Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#basic-pupil-response-simulation">1. Basic Pupil Response Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#customizing-simulation-parameters">2. Customizing Simulation Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#timing-parameters">Timing Parameters:</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html">Data Loading Techniques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html">Preprocessing and Filtering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html">Baseline Correction Techniques</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Pupil Metrics Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#customizing-response-parameters">3. Customizing Response Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#response-shape-parameters">Response Shape Parameters:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#comparing-different-stimulus-conditions">4. Comparing Different Stimulus Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#adding-realistic-noise-and-variations">5. Adding Realistic Noise and Variations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_data_loading.html">Data Loading Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#loading-built-in-simulated-data">Loading built-in (simulated) data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#creating-synthetic-data-from-arrays">Creating synthetic data from arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#working-with-existing-measurement-arrays">Working with existing measurement arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#setting-and-plotting-light-stimuli">Setting and plotting light stimuli</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_preprocessing_filtering.html">Preprocessing and Filtering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#generate-a-noisy-example-signal">Generate a noisy example signal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#apply-simple-smoothing-filters">Apply simple smoothing filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#inject-synthetic-blinks">Inject synthetic blinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#try-smoothing-after-blink-injection">Try smoothing after blink injection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#remove-blinks-by-marking-and-deleting-segments">Remove blinks by marking and deleting segments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#trim-by-pupil-size">Trim by pupil size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#limit-sudden-rates-of-change">Limit sudden rates of change</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_baseline_correction.html">Baseline Correction Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html#setup-and-requirements">Setup and requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html#load-a-sample-measurement">Load a sample measurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html#compute-and-apply-baseline-correction">Compute and apply baseline correction</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Pupil Metrics Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quick-note">Quick note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#peak-constriction-and-time-to-peak">Peak constriction and time-to-peak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pipr-and-average-size-at-fixed-windows">PIPR and average-size at fixed windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shifted-stimulus-example-and-multiple-pipr-windows">Shifted-stimulus example and multiple PIPR windows</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../pupil_fit.html">Pupil Fitting Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../pupil_fit.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pupil_fit.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#phases">Phases:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#notes">Notes:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#baseline-fitting">Baseline fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#constriction-sustain-fitting">Constriction / sustain fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#redilation-fitting">Redilation fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#summary-show-all-fits">Summary: show all fits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#convenience-wrapper-pupilfit">Convenience wrapper: PupilFit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#compare-metrics-from-data-vs-fit">Compare metrics from data vs fit</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../pupil_series.html">Pupil Series Examples</a><ul>
@@ -225,66 +271,89 @@
 <li><p>Baseline measurements</p></li>
 <li><p>Peak constriction analysis</p></li>
 </ul>
+<section id="how-to-use-this-notebook">
+<h2>How to use this notebook<a class="headerlink" href="#how-to-use-this-notebook" title="Link to this heading"></a></h2>
+<p>Run the notebook top-to-bottom. The examples use <code class="docutils literal notranslate"><span class="pre">pypipr</span></code>’s simulated data and helper functions to compute common pupil metrics. Replace the simulated <code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code> with your own recordings to apply the same analysis to real data.</p>
+<p>+Note: many metric functions expect a light-stimulus to be set on the <code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code> object so post-stimulus windows (e.g., 2s, 6s) are measured relative to stimulus onset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">pypipr</span>
 </pre></div>
 </div>
 </div>
 </div>
+</section>
+<section id="quick-note">
+<h2>Quick note<a class="headerlink" href="#quick-note" title="Link to this heading"></a></h2>
+<p>The examples below compute peak constriction, time-to-peak, PIPR and average pupil sizes at fixed windows. Metric functions expect a <code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code> with a light-stimulus set so post-stimulus windows are measured relative to stimulus onset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Placeholder cell — proceed to the examples below</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="peak-constriction-and-time-to-peak">
+<h2>Peak constriction and time-to-peak<a class="headerlink" href="#peak-constriction-and-time-to-peak" title="Link to this heading"></a></h2>
+<p>This example computes the maximum constriction (peak change) and the time to reach it after stimulus onset. The point is overlaid on the trace for visual confirmation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load sample data</span>
 <span class="n">pm</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">load_simulated_pupil</span><span class="p">()</span>
 <span class="c1"># Basic metrics computation</span>
-<span class="n">peak_constriction</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">pupil_metrics</span><span class="o">.</span><span class="n">peak_constriction</span><span class="p">(</span><span class="n">pm</span><span class="p">)</span>
-<span class="n">time_to_peak</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">pupil_metrics</span><span class="o">.</span><span class="n">time_to_peak</span><span class="p">(</span><span class="n">pm</span><span class="p">)</span>
+<span class="n">peak_constriction</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">peak_constriction</span><span class="p">()</span>
+<span class="n">time_to_peak</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">time_to_peak</span><span class="p">()</span>
 <span class="n">time_of_peak</span> <span class="o">=</span> <span class="n">time_to_peak</span> <span class="o">+</span> <span class="n">pm</span><span class="o">.</span><span class="n">get_light_stimulus</span><span class="p">()</span><span class="o">.</span><span class="n">get_time</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Peak Constriction: </span><span class="si">{</span><span class="n">peak_constriction</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Time to reach peak constriction: </span><span class="si">{</span><span class="n">time_to_peak</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> s&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Time of peak constriction: </span><span class="si">{</span><span class="n">time_of_peak</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> s&#39;</span><span class="p">)</span>
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">pm</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Pupil Size&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
 <span class="n">pm</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">time_of_peak</span><span class="p">,</span> <span class="n">peak_constriction</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Peak Constriction&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\20182727\OneDrive - TU Eindhoven\Documents\Tools\pypipr_package\pypipr\analysis\pupil_metrics.py:152: UserWarning: The peak constriction function assumes the size is already relative to the baseline.
+  warnings.warn(
+C:\Users\20182727\OneDrive - TU Eindhoven\Documents\Tools\pypipr_package\pypipr\analysis\pupil_metrics.py:194: UserWarning: This does not correctly account for the pupil escape.
+  warnings.warn(&quot;This does not correctly account for the pupil escape.&quot;)
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Peak Constriction: 4.01 mm
 Time to reach peak constriction: 0.93 s
 Time of peak constriction: -0.07 s
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\20182727\OneDrive - TU Eindhoven\Documents\Tools\pypipr_package\pypipr\analysis\pupil_metrics.py:152: UserWarning: The peak constriction function assumes the size is already relative to the baseline.
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x19dbab7a660&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/d03030251e129b42458e2356f54a75d620348bc513950a76f61548b173ddbfcd.png" src="../../../_images/d03030251e129b42458e2356f54a75d620348bc513950a76f61548b173ddbfcd.png" />
+<img alt="../../../_images/f751c88b954a7a9bdfbfff7036260ab238d9e7fe7f84e0bd32c37884ba5f962d.png" src="../../../_images/f751c88b954a7a9bdfbfff7036260ab238d9e7fe7f84e0bd32c37884ba5f962d.png" />
 </div>
 </div>
+</section>
+<section id="pipr-and-average-size-at-fixed-windows">
+<h2>PIPR and average-size at fixed windows<a class="headerlink" href="#pipr-and-average-size-at-fixed-windows" title="Link to this heading"></a></h2>
+<p>PIPR metrics measure pupil size at specific times after the stimulus (for example, 6s-PIPR). This section shows how to compute the average size at a time window and the predefined 6s PIPR.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load sample data</span>
 <span class="n">pm</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">load_simulated_pupil</span><span class="p">()</span>
 <span class="c1"># Average size</span>
 <span class="c1"># The average size can be determined from the pupil size data.</span>
-<span class="n">average_size_6s</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">pupil_metrics</span><span class="o">.</span><span class="n">get_average_size</span><span class="p">(</span><span class="n">pm</span><span class="p">,</span> <span class="n">start_time</span><span class="o">=</span><span class="mf">5.5</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="mf">6.5</span><span class="p">)</span>
+<span class="n">average_size_6s</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">get_average_size</span><span class="p">(</span><span class="n">start_time</span><span class="o">=</span><span class="mf">5.5</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="mf">6.5</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average pupil size at 6 seconds post-stimulus: </span><span class="si">{</span><span class="n">average_size_6s</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
 <span class="c1"># Getting the 6s-pipr is very similar to getting the average size, but uses predefined time windows.</span>
-<span class="n">pipr_6s</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">pupil_metrics</span><span class="o">.</span><span class="n">pipr_6s</span><span class="p">(</span><span class="n">pm</span><span class="p">)</span>
+<span class="n">pipr_6s</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">pipr_6s</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;6s-PIPR: </span><span class="si">{</span><span class="n">pipr_6s</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
 
 <span class="c1"># Visualization</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">pm</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Pupil Size&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
 <span class="n">pm</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Pupil Size&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
@@ -311,12 +380,16 @@ Time of peak constriction: -0.07 s
 6s-PIPR: 6.57 mm
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x19dbccbe990&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x2a2ed652c10&gt;
 </pre></div>
 </div>
-<img alt="../../../_images/31ff30ae4b1b31320422142cb3b7ecd443ed42db4823efc4d76e0406e6732671.png" src="../../../_images/31ff30ae4b1b31320422142cb3b7ecd443ed42db4823efc4d76e0406e6732671.png" />
+<img alt="../../../_images/90f3a2b54fd8fe2122322fce5ccdcaddd855980890a64eae06deb36b59580fcc.png" src="../../../_images/90f3a2b54fd8fe2122322fce5ccdcaddd855980890a64eae06deb36b59580fcc.png" />
 </div>
 </div>
+</section>
+<section id="shifted-stimulus-example-and-multiple-pipr-windows">
+<h2>Shifted-stimulus example and multiple PIPR windows<a class="headerlink" href="#shifted-stimulus-example-and-multiple-pipr-windows" title="Link to this heading"></a></h2>
+<p>This example shifts the time base and sets a stimulus so we can compute PIPR values at different post-stimulus windows (2s, 6s, 8s). It also shows how the averages change when the stimulus timing is altered.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let&#39;s create a pupil measurement where the light stimulus is from 1 to 2 seconds.</span>
@@ -331,10 +404,10 @@ Time of peak constriction: -0.07 s
 <span class="c1"># Now let&#39;s calculate the PIPR at 2, 6, and 8 seconds post-stimulus.</span>
 
 <span class="c1"># There is a short hand for the 6s pipr.</span>
-<span class="n">pipr_6s</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">pupil_metrics</span><span class="o">.</span><span class="n">pipr_6s</span><span class="p">(</span><span class="n">pm</span><span class="p">)</span>
+<span class="n">pipr_6s</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">pipr_6s</span><span class="p">()</span>
 <span class="c1"># Other times need to be manually defined.</span>
-<span class="n">pipr_2s</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">pupil_metrics</span><span class="o">.</span><span class="n">pipr_xs</span><span class="p">(</span><span class="n">pm</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
-<span class="n">pipr_8s</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">pupil_metrics</span><span class="o">.</span><span class="n">pipr_xs</span><span class="p">(</span><span class="n">pm</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mf">7.5</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mf">8.5</span><span class="p">)</span>
+<span class="n">pipr_2s</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">pipr_xs</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+<span class="n">pipr_8s</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">pipr_xs</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mf">7.5</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mf">8.5</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PIPR at 2 seconds post-stimulus: </span><span class="si">{</span><span class="n">pipr_2s</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PIPR at 6 seconds post-stimulus: </span><span class="si">{</span><span class="n">pipr_6s</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
@@ -342,9 +415,9 @@ Time of peak constriction: -0.07 s
 
 
 <span class="c1"># The average is different now that the stimulus timing has changed.</span>
-<span class="n">average_2s</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">pupil_metrics</span><span class="o">.</span><span class="n">get_average_size</span><span class="p">(</span><span class="n">pm</span><span class="p">,</span> <span class="n">start_time</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
-<span class="n">average_6s</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">pupil_metrics</span><span class="o">.</span><span class="n">get_average_size</span><span class="p">(</span><span class="n">pm</span><span class="p">,</span> <span class="n">start_time</span><span class="o">=</span><span class="mf">5.5</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="mf">6.5</span><span class="p">)</span>
-<span class="n">average_8s</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">pupil_metrics</span><span class="o">.</span><span class="n">get_average_size</span><span class="p">(</span><span class="n">pm</span><span class="p">,</span> <span class="n">start_time</span><span class="o">=</span><span class="mf">7.5</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="mf">8.5</span><span class="p">)</span>
+<span class="n">average_2s</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">get_average_size</span><span class="p">(</span><span class="n">start_time</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="mf">2.5</span><span class="p">)</span>
+<span class="n">average_6s</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">get_average_size</span><span class="p">(</span><span class="n">start_time</span><span class="o">=</span><span class="mf">5.5</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="mf">6.5</span><span class="p">)</span>
+<span class="n">average_8s</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">get_average_size</span><span class="p">(</span><span class="n">start_time</span><span class="o">=</span><span class="mf">7.5</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="mf">8.5</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average pupil size at 2 seconds: </span><span class="si">{</span><span class="n">average_2s</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average pupil size at 6 seconds: </span><span class="si">{</span><span class="n">average_6s</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average pupil size at 8 seconds: </span><span class="si">{</span><span class="n">average_8s</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
@@ -378,12 +451,13 @@ Average pupil size at 6 seconds: 6.11 mm
 Average pupil size at 8 seconds: 6.57 mm
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x19dbddca0d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x2a2ed6e3d90&gt;
 </pre></div>
 </div>
 <img alt="../../../_images/059bb5f625fc5d24ac6400adb6032c9badc2ad4b20e14bf50c2909d52d862660.png" src="../../../_images/059bb5f625fc5d24ac6400adb6032c9badc2ad4b20e14bf50c2909d52d862660.png" />
 </div>
 </div>
+</section>
 </section>
 
 

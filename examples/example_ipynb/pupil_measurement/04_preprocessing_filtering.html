@@ -46,25 +46,71 @@
               <p class="caption" role="heading"><span class="caption-text">Examples:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../pupil_measurement.html">Pupil Measurement Examples</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../pupil_measurement.html#overview">Overview</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html">Pupillary Light Response Simulation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#basic-pupil-response-simulation">1. Basic Pupil Response Simulation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#customizing-simulation-parameters">2. Customizing Simulation Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#customizing-response-parameters">3. Customizing Response Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#comparing-different-stimulus-conditions">4. Comparing Different Stimulus Conditions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#adding-realistic-noise-and-variations">5. Adding Realistic Noise and Variations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_pupil_simulation.html">Pupillary Light Response Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#basic-pupil-response-simulation">1. Basic Pupil Response Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#customizing-simulation-parameters">2. Customizing Simulation Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#timing-parameters">Timing Parameters:</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html">Data Loading Techniques</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Preprocessing and Filtering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html">Baseline Correction Techniques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html">Pupil Metrics Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#customizing-response-parameters">3. Customizing Response Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#response-shape-parameters">Response Shape Parameters:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#comparing-different-stimulus-conditions">4. Comparing Different Stimulus Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#adding-realistic-noise-and-variations">5. Adding Realistic Noise and Variations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_data_loading.html">Data Loading Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#loading-built-in-simulated-data">Loading built-in (simulated) data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#creating-synthetic-data-from-arrays">Creating synthetic data from arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#working-with-existing-measurement-arrays">Working with existing measurement arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_data_loading.html#setting-and-plotting-light-stimuli">Setting and plotting light stimuli</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Preprocessing and Filtering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generate-a-noisy-example-signal">Generate a noisy example signal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#apply-simple-smoothing-filters">Apply simple smoothing filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inject-synthetic-blinks">Inject synthetic blinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#try-smoothing-after-blink-injection">Try smoothing after blink injection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remove-blinks-by-marking-and-deleting-segments">Remove blinks by marking and deleting segments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trim-by-pupil-size">Trim by pupil size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#limit-sudden-rates-of-change">Limit sudden rates of change</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_baseline_correction.html">Baseline Correction Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html#setup-and-requirements">Setup and requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html#load-a-sample-measurement">Load a sample measurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html#compute-and-apply-baseline-correction">Compute and apply baseline correction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07_pupil_metrics.html">Pupil Metrics Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#quick-note">Quick note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#peak-constriction-and-time-to-peak">Peak constriction and time-to-peak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#pipr-and-average-size-at-fixed-windows">PIPR and average-size at fixed windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#shifted-stimulus-example-and-multiple-pipr-windows">Shifted-stimulus example and multiple PIPR windows</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../pupil_fit.html">Pupil Fitting Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../pupil_fit.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pupil_fit.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#phases">Phases:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#notes">Notes:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#baseline-fitting">Baseline fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#constriction-sustain-fitting">Constriction / sustain fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#redilation-fitting">Redilation fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#summary-show-all-fits">Summary: show all fits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#convenience-wrapper-pupilfit">Convenience wrapper: PupilFit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#compare-metrics-from-data-vs-fit">Compare metrics from data vs fit</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../pupil_series.html">Pupil Series Examples</a><ul>
@@ -225,6 +271,10 @@
 <li><p>Handling missing values</p></li>
 <li><p>Rate limiting and outlier removal</p></li>
 </ul>
+<section id="how-to-use-this-notebook">
+<h2>How to use this notebook<a class="headerlink" href="#how-to-use-this-notebook" title="Link to this heading"></a></h2>
+<p>Run cells from top to bottom to follow a realistic preprocessing workflow: load simulated data, apply smoothing filters, inject synthetic blinks, and explore different strategies to handle them (filtering, removal, interpolation, trimming, rate limiting).</p>
+<p>Note: the examples use <code class="docutils literal notranslate"><span class="pre">pypipr</span></code>’s helper functions and small simulated datasets so you can experiment without real recordings. Replace simulated signals with your own <code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code> objects as needed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
@@ -236,6 +286,10 @@
 </div>
 </div>
 </div>
+</section>
+<section id="generate-a-noisy-example-signal">
+<h2>Generate a noisy example signal<a class="headerlink" href="#generate-a-noisy-example-signal" title="Link to this heading"></a></h2>
+<p>We create a simulated pupil measurement with moderate noise. This is the starting point for testing smoothing and artifact handling strategies. The plot shows the raw noisy trace with the light stimulus overlay.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -243,20 +297,22 @@
 <span class="n">noisy_signal</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">simulate_pupil_measurement</span><span class="p">(</span><span class="n">noise_std</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">trend_std</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>
 
 <span class="c1"># Plot the data</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">12</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="n">noisy_signal</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Moderate noise&quot;</span><span class="p">)</span>
 <span class="n">noisy_signal</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1f91aa52270&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/6e5c3e3251dd01ad0ec2988ffe7ab21b5d9ce03ca12820bc520b03969836a0bd.png" src="../../../_images/6e5c3e3251dd01ad0ec2988ffe7ab21b5d9ce03ca12820bc520b03969836a0bd.png" />
+<img alt="../../../_images/cab1fedf6caf81e1a0566b810d97eab763d72dc3b7b158d084972fef2627c246.png" src="../../../_images/cab1fedf6caf81e1a0566b810d97eab763d72dc3b7b158d084972fef2627c246.png" />
 </div>
 </div>
+</section>
+<section id="apply-simple-smoothing-filters">
+<h2>Apply simple smoothing filters<a class="headerlink" href="#apply-simple-smoothing-filters" title="Link to this heading"></a></h2>
+<p>Rolling mean and rolling median are two quick smoothing strategies. Compare their effect visually to decide which preserves features you care about (e.g., constriction transients). Adjust <code class="docutils literal notranslate"><span class="pre">time_window</span></code> to change smoothing strength.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Let&#39;s apply a few filters to the noisy signal</span>
@@ -283,12 +339,16 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1f91d122990&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1bc3746d590&gt;
 </pre></div>
 </div>
 <img alt="../../../_images/05bdbfd5ba6e94fc8f1cb13e3f3bed955728cfc907cbb0151774e5d75d4cfe68.png" src="../../../_images/05bdbfd5ba6e94fc8f1cb13e3f3bed955728cfc907cbb0151774e5d75d4cfe68.png" />
 </div>
 </div>
+</section>
+<section id="inject-synthetic-blinks">
+<h2>Inject synthetic blinks<a class="headerlink" href="#inject-synthetic-blinks" title="Link to this heading"></a></h2>
+<p>To test blink-handling routines we add synthetic blink artifacts to the signal. The following code replaces parts of the trace with smooth quadratic shapes to simulate blinks and shows a comparison plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now let&#39;s add two blinks to the noisy data.</span>
@@ -319,16 +379,18 @@
 <span class="n">blink_signal</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1f91cbba350&gt;
-</pre></div>
-</div>
 <img alt="../../../_images/c6851d12133cd6f4caa2ab0e7965ebb4761749ffa6488c49311a9c503452a2f6.png" src="../../../_images/c6851d12133cd6f4caa2ab0e7965ebb4761749ffa6488c49311a9c503452a2f6.png" />
 </div>
 </div>
+</section>
+<section id="try-smoothing-after-blink-injection">
+<h2>Try smoothing after blink injection<a class="headerlink" href="#try-smoothing-after-blink-injection" title="Link to this heading"></a></h2>
+<p>Apply the same mean/median filters to the blink-containing trace to see how well smoothing handles large artifacts. Often you’ll need additional strategies (removal or interpolation) when blinks are severe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now we can try to filter the blinks using the mean and median filters again</span>
@@ -349,16 +411,18 @@
 <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1f91cd09a90&gt;
-</pre></div>
-</div>
 <img alt="../../../_images/85409692db5279f7087914e59ff7b7f1121a46d7c6c56f722f4bc89ddbd8cccd.png" src="../../../_images/85409692db5279f7087914e59ff7b7f1121a46d7c6c56f722f4bc89ddbd8cccd.png" />
 </div>
 </div>
+</section>
+<section id="remove-blinks-by-marking-and-deleting-segments">
+<h2>Remove blinks by marking and deleting segments<a class="headerlink" href="#remove-blinks-by-marking-and-deleting-segments" title="Link to this heading"></a></h2>
+<p>If smoothing doesn’t remove large artifacts, mark blink intervals and remove them. You can then interpolate the missing sections to reconstruct a continuous trace. The example below shows marking, removal, and interpolation steps.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># If filtering is not sufficient, we can also remove the blinks.</span>
@@ -389,6 +453,7 @@
 <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -398,12 +463,13 @@ Blink 2: Start at -3.0 s, end at -2.6 s
 Blink 3: Start at 2.0 s, end at 2.3 s
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1f91e587b10&gt;
-</pre></div>
-</div>
 <img alt="../../../_images/4eac6992628e0b46cedb8cec5dc72eaa8597821eb3bd5415a894693614212bf2.png" src="../../../_images/4eac6992628e0b46cedb8cec5dc72eaa8597821eb3bd5415a894693614212bf2.png" />
 </div>
 </div>
+</section>
+<section id="trim-by-pupil-size">
+<h2>Trim by pupil size<a class="headerlink" href="#trim-by-pupil-size" title="Link to this heading"></a></h2>
+<p>An alternative is to trim data by size thresholds around suspected blink times. This can be faster when you know expected pupil ranges. The snippet below demonstrates trimming specific intervals by size range.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Another way to remove blinks or other outliers is by trimming the size.</span>
@@ -426,12 +492,16 @@ Blink 3: Start at 2.0 s, end at 2.3 s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1f91e85d090&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1bc38b80190&gt;
 </pre></div>
 </div>
 <img alt="../../../_images/501a721ef824ae1e51efa43c3df359a984ec2fb4ade682765eba7b286c6ebced.png" src="../../../_images/501a721ef824ae1e51efa43c3df359a984ec2fb4ade682765eba7b286c6ebced.png" />
 </div>
 </div>
+</section>
+<section id="limit-sudden-rates-of-change">
+<h2>Limit sudden rates of change<a class="headerlink" href="#limit-sudden-rates-of-change" title="Link to this heading"></a></h2>
+<p>Finally, limiting the maximum rate of change can suppress abrupt blink-like transitions while preserving physiologically plausible pupil dynamics around stimulus periods. Use <code class="docutils literal notranslate"><span class="pre">limit_rate_of_change</span></code> selectively so you don’t remove real fast responses.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Finally, we can remove blinks by limiting the rate of change.</span>
@@ -455,12 +525,13 @@ Blink 3: Start at 2.0 s, end at 2.3 s
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1f91ce9bc50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1bc37683390&gt;
 </pre></div>
 </div>
 <img alt="../../../_images/c8223a05bfa17be34b9027168abaec947d1dd87aabac226a58742e7672283703.png" src="../../../_images/c8223a05bfa17be34b9027168abaec947d1dd87aabac226a58742e7672283703.png" />
 </div>
 </div>
+</section>
 </section>
 
 

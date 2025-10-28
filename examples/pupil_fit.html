@@ -20,7 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Pupil Series Examples" href="pupil_series.html" />
+    <link rel="next" title="Comprehensive Fitting with PupilFit" href="example_ipynb/pupil_fitting/08_comprehensive_fitting.html" />
     <link rel="prev" title="Pupil Metrics Analysis" href="example_ipynb/pupil_measurement/07_pupil_metrics.html" /> 
 </head>
 
@@ -46,25 +46,71 @@
               <p class="caption" role="heading"><span class="caption-text">Examples:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="pupil_measurement.html">Pupil Measurement Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="pupil_measurement.html#overview">Overview</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html">Pupillary Light Response Simulation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html#basic-pupil-response-simulation">1. Basic Pupil Response Simulation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html#customizing-simulation-parameters">2. Customizing Simulation Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html#customizing-response-parameters">3. Customizing Response Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html#comparing-different-stimulus-conditions">4. Comparing Different Stimulus Conditions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html#adding-realistic-noise-and-variations">5. Adding Realistic Noise and Variations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html">Pupillary Light Response Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html#basic-pupil-response-simulation">1. Basic Pupil Response Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html#customizing-simulation-parameters">2. Customizing Simulation Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html#timing-parameters">Timing Parameters:</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/02_data_loading.html">Data Loading Techniques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/04_preprocessing_filtering.html">Preprocessing and Filtering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/05_baseline_correction.html">Baseline Correction Techniques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/07_pupil_metrics.html">Pupil Metrics Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html#customizing-response-parameters">3. Customizing Response Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html#response-shape-parameters">Response Shape Parameters:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html#comparing-different-stimulus-conditions">4. Comparing Different Stimulus Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/01_pupil_simulation.html#adding-realistic-noise-and-variations">5. Adding Realistic Noise and Variations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="example_ipynb/pupil_measurement/02_data_loading.html">Data Loading Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/02_data_loading.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/02_data_loading.html#loading-built-in-simulated-data">Loading built-in (simulated) data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/02_data_loading.html#creating-synthetic-data-from-arrays">Creating synthetic data from arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/02_data_loading.html#working-with-existing-measurement-arrays">Working with existing measurement arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/02_data_loading.html#setting-and-plotting-light-stimuli">Setting and plotting light stimuli</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="example_ipynb/pupil_measurement/04_preprocessing_filtering.html">Preprocessing and Filtering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/04_preprocessing_filtering.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/04_preprocessing_filtering.html#generate-a-noisy-example-signal">Generate a noisy example signal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/04_preprocessing_filtering.html#apply-simple-smoothing-filters">Apply simple smoothing filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/04_preprocessing_filtering.html#inject-synthetic-blinks">Inject synthetic blinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/04_preprocessing_filtering.html#try-smoothing-after-blink-injection">Try smoothing after blink injection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/04_preprocessing_filtering.html#remove-blinks-by-marking-and-deleting-segments">Remove blinks by marking and deleting segments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/04_preprocessing_filtering.html#trim-by-pupil-size">Trim by pupil size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/04_preprocessing_filtering.html#limit-sudden-rates-of-change">Limit sudden rates of change</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="example_ipynb/pupil_measurement/05_baseline_correction.html">Baseline Correction Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/05_baseline_correction.html#setup-and-requirements">Setup and requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/05_baseline_correction.html#load-a-sample-measurement">Load a sample measurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/05_baseline_correction.html#compute-and-apply-baseline-correction">Compute and apply baseline correction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="example_ipynb/pupil_measurement/07_pupil_metrics.html">Pupil Metrics Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/07_pupil_metrics.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/07_pupil_metrics.html#quick-note">Quick note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/07_pupil_metrics.html#peak-constriction-and-time-to-peak">Peak constriction and time-to-peak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/07_pupil_metrics.html#pipr-and-average-size-at-fixed-windows">PIPR and average-size at fixed windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_measurement/07_pupil_metrics.html#shifted-stimulus-example-and-multiple-pipr-windows">Shifted-stimulus example and multiple PIPR windows</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Pupil Fitting Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="example_ipynb/pupil_fitting/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_fitting/08_comprehensive_fitting.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_fitting/08_comprehensive_fitting.html#phases">Phases:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_fitting/08_comprehensive_fitting.html#notes">Notes:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_fitting/08_comprehensive_fitting.html#baseline-fitting">Baseline fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_fitting/08_comprehensive_fitting.html#constriction-sustain-fitting">Constriction / sustain fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_fitting/08_comprehensive_fitting.html#redilation-fitting">Redilation fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_fitting/08_comprehensive_fitting.html#summary-show-all-fits">Summary: show all fits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_fitting/08_comprehensive_fitting.html#convenience-wrapper-pupilfit">Convenience wrapper: PupilFit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="example_ipynb/pupil_fitting/08_comprehensive_fitting.html#compare-metrics-from-data-vs-fit">Compare metrics from data vs fit</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pupil_series.html">Pupil Series Examples</a><ul>
@@ -223,14 +269,11 @@
 <p>Start with the first notebook to understand the basic concepts, then progress through
 the examples based on your specific analysis needs. Each notebook builds upon
 concepts from previous examples while remaining self-contained.</p>
-<p>.
-.. toctree:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">maxdepth</span><span class="p">:</span> <span class="mi">1</span>
-<span class="p">:</span><span class="n">caption</span><span class="p">:</span> <span class="n">Fit</span><span class="p">:</span>
-<span class="p">:</span><span class="n">glob</span><span class="p">:</span>
-
-<span class="n">example_ipynb</span><span class="o">/</span><span class="n">pupil_measurement</span><span class="o">/</span><span class="mi">08</span><span class="n">_comprehensive_fitting</span><span class="o">.</span><span class="n">ipynb</span>
-</pre></div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Fit:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="example_ipynb/pupil_fitting/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a></li>
+</ul>
 </div>
 </section>
 </section>
@@ -240,7 +283,7 @@ concepts from previous examples while remaining self-contained.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="example_ipynb/pupil_measurement/07_pupil_metrics.html" class="btn btn-neutral float-left" title="Pupil Metrics Analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pupil_series.html" class="btn btn-neutral float-right" title="Pupil Series Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="example_ipynb/pupil_fitting/08_comprehensive_fitting.html" class="btn btn-neutral float-right" title="Comprehensive Fitting with PupilFit" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

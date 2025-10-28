@@ -46,25 +46,71 @@
               <p class="caption" role="heading"><span class="caption-text">Examples:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../../pupil_measurement.html">Pupil Measurement Examples</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../pupil_measurement.html#overview">Overview</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html">Pupillary Light Response Simulation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#basic-pupil-response-simulation">1. Basic Pupil Response Simulation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#customizing-simulation-parameters">2. Customizing Simulation Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#customizing-response-parameters">3. Customizing Response Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#comparing-different-stimulus-conditions">4. Comparing Different Stimulus Conditions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#adding-realistic-noise-and-variations">5. Adding Realistic Noise and Variations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_pupil_simulation.html">Pupillary Light Response Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#basic-pupil-response-simulation">1. Basic Pupil Response Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#customizing-simulation-parameters">2. Customizing Simulation Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#timing-parameters">Timing Parameters:</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Data Loading Techniques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html">Preprocessing and Filtering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html">Baseline Correction Techniques</a></li>
-<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html">Pupil Metrics Analysis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#customizing-response-parameters">3. Customizing Response Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="01_pupil_simulation.html#response-shape-parameters">Response Shape Parameters:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#comparing-different-stimulus-conditions">4. Comparing Different Stimulus Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="01_pupil_simulation.html#adding-realistic-noise-and-variations">5. Adding Realistic Noise and Variations</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data Loading Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loading-built-in-simulated-data">Loading built-in (simulated) data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-synthetic-data-from-arrays">Creating synthetic data from arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#working-with-existing-measurement-arrays">Working with existing measurement arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-and-plotting-light-stimuli">Setting and plotting light stimuli</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_preprocessing_filtering.html">Preprocessing and Filtering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#generate-a-noisy-example-signal">Generate a noisy example signal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#apply-simple-smoothing-filters">Apply simple smoothing filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#inject-synthetic-blinks">Inject synthetic blinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#try-smoothing-after-blink-injection">Try smoothing after blink injection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#remove-blinks-by-marking-and-deleting-segments">Remove blinks by marking and deleting segments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#trim-by-pupil-size">Trim by pupil size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_preprocessing_filtering.html#limit-sudden-rates-of-change">Limit sudden rates of change</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_baseline_correction.html">Baseline Correction Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html#setup-and-requirements">Setup and requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html#load-a-sample-measurement">Load a sample measurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_baseline_correction.html#compute-and-apply-baseline-correction">Compute and apply baseline correction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="07_pupil_metrics.html">Pupil Metrics Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#quick-note">Quick note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#peak-constriction-and-time-to-peak">Peak constriction and time-to-peak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#pipr-and-average-size-at-fixed-windows">PIPR and average-size at fixed windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="07_pupil_metrics.html#shifted-stimulus-example-and-multiple-pipr-windows">Shifted-stimulus example and multiple PIPR windows</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../pupil_fit.html">Pupil Fitting Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../pupil_fit.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../pupil_fit.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#phases">Phases:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#notes">Notes:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#baseline-fitting">Baseline fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#constriction-sustain-fitting">Constriction / sustain fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#redilation-fitting">Redilation fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#summary-show-all-fits">Summary: show all fits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#convenience-wrapper-pupilfit">Convenience wrapper: PupilFit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../pupil_fitting/08_comprehensive_fitting.html#compare-metrics-from-data-vs-fit">Compare metrics from data vs fit</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../pupil_series.html">Pupil Series Examples</a><ul>
@@ -225,6 +271,11 @@
 <li><p>Setting light stimuli</p></li>
 <li><p>Data validation</p></li>
 </ul>
+<section id="how-to-use-this-notebook">
+<h2>How to use this notebook<a class="headerlink" href="#how-to-use-this-notebook" title="Link to this heading"></a></h2>
+<p>Run the cells top-to-bottom. The examples use <code class="docutils literal notranslate"><span class="pre">pypipr</span></code>’s small simulated dataset and synthetic data to show common workflows.</p>
+<p>Requirements: <code class="docutils literal notranslate"><span class="pre">pypipr</span></code>, <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, and <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> should be available in your environment. If you are using the project virtualenv, these are already installed.</p>
+<p>Tip: you can replace the simulated data calls with your own time and size arrays to work with real recordings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
@@ -235,6 +286,11 @@
 </div>
 </div>
 </div>
+</section>
+<section id="loading-built-in-simulated-data">
+<h2>Loading built-in (simulated) data<a class="headerlink" href="#loading-built-in-simulated-data" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">pypipr</span></code> provides a small simulated pupil dataset useful for examples and tests. The call below shows how to load those simulated measurements and plot them.</p>
+<p>You will see two sample measurements plotted together and the light-stimulus interval overlaid.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Loading from built-in data</span>
@@ -250,16 +306,19 @@
 <span class="n">pm_red</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;yellow&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x1e2ffb2b250&gt;
-</pre></div>
-</div>
 <img alt="../../../_images/4f383d9e6f4bcd4545d3456ecea5e768e353d4373f9b24a5164b7a799346b18a.png" src="../../../_images/4f383d9e6f4bcd4545d3456ecea5e768e353d4373f9b24a5164b7a799346b18a.png" />
 </div>
 </div>
+</section>
+<section id="creating-synthetic-data-from-arrays">
+<h2>Creating synthetic data from arrays<a class="headerlink" href="#creating-synthetic-data-from-arrays" title="Link to this heading"></a></h2>
+<p>Sometimes you want to build a <code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code> directly from time and size arrays (for example, after preprocessing or simulation). The snippet below creates a sinusoidal + noise pupil size series and constructs a <code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code> object from it.</p>
+<p>Replace the generated arrays with your real <code class="docutils literal notranslate"><span class="pre">time</span></code> and <code class="docutils literal notranslate"><span class="pre">size</span></code> data when ready.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creating &quot;random&quot; data from arrays</span>
@@ -270,17 +329,21 @@
 <span class="n">sin_pm</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">PupilMeasurement</span><span class="p">(</span><span class="n">time_data</span><span class="o">=</span><span class="n">time_data</span><span class="p">,</span> <span class="n">size_data</span><span class="o">=</span><span class="n">size_data</span><span class="p">)</span>
 
 <span class="c1"># Plotting the created PupilMeasurement</span>
-<span class="n">sin_pm</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">sin_pm</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;Time (s)&#39;, ylabel=&#39;Pupil Diameter&#39;&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/19cfe81acf7296bcd8417226b37ad2f08260cbc8d52c31b1c4632cb807e5fc6a.png" src="../../../_images/19cfe81acf7296bcd8417226b37ad2f08260cbc8d52c31b1c4632cb807e5fc6a.png" />
+<img alt="../../../_images/dbef4f75e6ad74fa88585da20376aee433981f21da1540cdb5a59286dc5b5cfa.png" src="../../../_images/dbef4f75e6ad74fa88585da20376aee433981f21da1540cdb5a59286dc5b5cfa.png" />
 </div>
 </div>
+</section>
+<section id="working-with-existing-measurement-arrays">
+<h2>Working with existing measurement arrays<a class="headerlink" href="#working-with-existing-measurement-arrays" title="Link to this heading"></a></h2>
+<p>You can extract raw arrays from an existing <code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code> (for example, the simulated <code class="docutils literal notranslate"><span class="pre">pm_blue</span></code>) using <code class="docutils literal notranslate"><span class="pre">get_time()</span></code> and <code class="docutils literal notranslate"><span class="pre">get_size()</span></code>. Those arrays are plain <code class="docutils literal notranslate"><span class="pre">numpy</span></code> arrays which you can inspect, modify, or save. The example below prints the types and first elements, rebuilds a <code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code> from them, and plots the result.</p>
+<p>This is useful when you have a pipeline that outputs arrays and you want to re-wrap them into <code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code> for convenience.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We get the time data and pupil size data from the previous example, to work with more realistic data. This array can contain your real data.</span>
@@ -300,7 +363,9 @@
 <span class="n">pm</span> <span class="o">=</span> <span class="n">pypipr</span><span class="o">.</span><span class="n">PupilMeasurement</span><span class="p">(</span><span class="n">time_data</span><span class="o">=</span><span class="n">time_data</span><span class="p">,</span> <span class="n">size_data</span><span class="o">=</span><span class="n">size_data</span><span class="p">)</span>
 
 <span class="c1"># Plotting the created PupilMeasurement</span>
-<span class="n">pm</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">pm</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -315,30 +380,31 @@ Time:   -6.000	-5.999	-5.998	-5.997	-5.996
 Size:   8.001	8.002	8.002	8.001	8.000	
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;Time (s)&#39;, ylabel=&#39;Pupil Diameter&#39;&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/117e61a4529ef602bff7be84ede7f9f7db6961ffe57b85e6c1b37968ac2679e2.png" src="../../../_images/117e61a4529ef602bff7be84ede7f9f7db6961ffe57b85e6c1b37968ac2679e2.png" />
+<img alt="../../../_images/6d57225debd9841449cc463e5f555a169ac4ccc40eded03e8c7a146d91e193da.png" src="../../../_images/6d57225debd9841449cc463e5f555a169ac4ccc40eded03e8c7a146d91e193da.png" />
 </div>
 </div>
+</section>
+<section id="setting-and-plotting-light-stimuli">
+<h2>Setting and plotting light stimuli<a class="headerlink" href="#setting-and-plotting-light-stimuli" title="Link to this heading"></a></h2>
+<p>You can add a light-stimulus interval to a <code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code> using <code class="docutils literal notranslate"><span class="pre">set_light_stimulus(start,</span> <span class="pre">end)</span></code>. The <code class="docutils literal notranslate"><span class="pre">plot_light_stimulus</span></code> helper overlays that interval on your figure. Adjust <code class="docutils literal notranslate"><span class="pre">start</span></code>/<code class="docutils literal notranslate"><span class="pre">end</span></code> to match your experiment timing.</p>
+<p>The example below sets a stimulus from <code class="docutils literal notranslate"><span class="pre">-1</span></code> to <code class="docutils literal notranslate"><span class="pre">0</span></code> (relative to the measurement’s time base) and shows the overlay.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Setting light stimuli</span>
 <span class="n">pm</span><span class="o">.</span><span class="n">set_light_stimulus</span><span class="p">(</span><span class="n">start</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="n">pm</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <span class="n">pm</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: xlabel=&#39;Time (s)&#39;, ylabel=&#39;Pupil Diameter&#39;&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/d02d6e1d15d4f2180e43d1940854a3eff4567036060649a7a7453ae34646608c.png" src="../../../_images/d02d6e1d15d4f2180e43d1940854a3eff4567036060649a7a7453ae34646608c.png" />
+<img alt="../../../_images/22c284b5b994ef8754123bdeb0de5030349701d29fdbc432f412c44e30b010f2.png" src="../../../_images/22c284b5b994ef8754123bdeb0de5030349701d29fdbc432f412c44e30b010f2.png" />
 </div>
 </div>
+</section>
 </section>
 
 
