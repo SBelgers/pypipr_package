@@ -266,9 +266,10 @@
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">numpy.typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">NDArray</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">.pupil_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">PupilBase</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">..preprocessing.filtering</span><span class="w"> </span><span class="kn">import</span> <span class="n">FilterMixin</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">..analysis.pupil_metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">PupilMetricsMixin</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">..preprocessing.filtering</span><span class="w"> </span><span class="kn">import</span> <span class="n">FilterMixin</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.pupil_base</span><span class="w"> </span><span class="kn">import</span> <span class="n">PupilBase</span>
+
 
 <div class="viewcode-block" id="PupilMeasurement">
 <a class="viewcode-back" href="../../../_autosummary/pypipr.PupilMeasurement.html#pypipr.PupilMeasurement">[docs]</a>
@@ -296,11 +297,6 @@
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">size_data</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">time_data</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Size and time_data must have the same length&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_time_and_size</span><span class="p">(</span><span class="n">time_data</span><span class="p">,</span> <span class="n">size_data</span><span class="p">)</span></div>
-
-
-
-
-
 
 
     <span class="c1"># ============================================================================</span>

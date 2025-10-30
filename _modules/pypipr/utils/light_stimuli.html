@@ -259,14 +259,17 @@
            <div itemprop="articleBody">
              
   <h1>Source code for pypipr.utils.light_stimuli</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Any</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.axes</span><span class="w"> </span><span class="kn">import</span> <span class="n">Axes</span>
+<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span>
+
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.axes</span><span class="w"> </span><span class="kn">import</span> <span class="n">Axes</span>
+
+
 <div class="viewcode-block" id="LightStimulus">
 <a class="viewcode-back" href="../../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LightStimulus</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents a light stimulus with a start time, end time, and color.</span>
-<span class="sd">    &quot;&quot;&quot;</span>    
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents a light stimulus with a start time, end time, and color.&quot;&quot;&quot;</span>
+
 <div class="viewcode-block" id="LightStimulus.__init__">
 <a class="viewcode-back" href="../../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
@@ -283,15 +286,20 @@
 <span class="sd">            duration (Optional[float], optional): The duration of the stimulus. Defaults to None.</span>
 <span class="sd">            end_time (Optional[float], optional): The end time of the stimulus. Defaults to None.</span>
 <span class="sd">            colour (Optional[str], optional): The color of the stimulus. Defaults to None.</span>
-<span class="sd">        &quot;&quot;&quot;</span>        
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_set_time</span><span class="p">(</span><span class="n">start_time</span><span class="o">=</span><span class="n">start_time</span><span class="p">,</span> <span class="n">duration</span><span class="o">=</span><span class="n">duration</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_set_color</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">colour</span><span class="p">)</span></div>
 
-    
+
     <span class="k">def</span><span class="w"> </span><span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;LightStimulus(start_time=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">start_time</span><span class="si">}</span><span class="s2">, end_time=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">end_time</span><span class="si">}</span><span class="s2">, color=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">color</span><span class="si">}</span><span class="s2">)&quot;</span>
-        
-    <span class="k">def</span><span class="w"> </span><span class="nf">_set_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_time</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">duration</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">end_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">_set_time</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">start_time</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">duration</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">end_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">end_time</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">duration</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Either duration or end_time must be specified.&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">end_time</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">duration</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -304,28 +312,22 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">end_time</span> <span class="o">=</span> <span class="n">start_time</span> <span class="o">+</span> <span class="n">duration</span>
             <span class="k">return</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid parameters for setting time.&quot;</span><span class="p">)</span>
-    
+
     <span class="k">def</span><span class="w"> </span><span class="nf">_set_color</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">color</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">color</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.colors</span><span class="w"> </span><span class="kn">import</span> <span class="n">is_color_like</span>
+
             <span class="k">if</span> <span class="ow">not</span> <span class="n">is_color_like</span><span class="p">(</span><span class="n">color</span><span class="p">):</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Invalid colour: </span><span class="si">{</span><span class="n">color</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;yellow&quot;</span>
-        
-    <span class="c1"># def _set_intensity(self, intensity: Optional[float]) -&gt; None:</span>
-    <span class="c1">#     if intensity is None:</span>
-    <span class="c1">#         self.intensity = 1</span>
-    <span class="c1">#         return</span>
-    <span class="c1">#     if intensity &lt; 0 or intensity &gt; 1:</span>
-    <span class="c1">#         raise ValueError(&quot;Intensity must be between 0 and 1.&quot;)</span>
-    <span class="c1">#     self.intensity = intensity</span>
-    
+
 <div class="viewcode-block" id="LightStimulus.get_time">
 <a class="viewcode-back" href="../../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.get_time">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_time</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">start_time</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">end_time</span></div>
+
 
 <div class="viewcode-block" id="LightStimulus.get_color">
 <a class="viewcode-back" href="../../../_autosummary/pypipr.LightStimulus.html#pypipr.LightStimulus.get_color">[docs]</a>
@@ -340,7 +342,7 @@
 
 <span class="sd">        Args:</span>
 <span class="sd">            offset (float): The offset to apply to the start and end times.</span>
-<span class="sd">        &quot;&quot;&quot;</span>        
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_set_time</span><span class="p">(</span><span class="n">start_time</span><span class="o">=</span><span class="n">start_time</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span> <span class="o">+</span> <span class="n">offset</span><span class="p">)</span></div>
 
@@ -361,17 +363,21 @@
 
 <span class="sd">        Returns:</span>
 <span class="sd">            Axes: _description_</span>
-<span class="sd">        &quot;&quot;&quot;</span>        
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>  <span class="c1"># type: ignore</span>
         <span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span>
-        <span class="k">if</span> <span class="s1">&#39;label&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
-            <span class="n">label</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;label&#39;</span><span class="p">,</span> <span class="s1">&#39;Light Stimulus&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;label&quot;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;label&quot;</span><span class="p">,</span> <span class="s2">&quot;Light Stimulus&quot;</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Light Stimulus&#39;</span>
+            <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Light Stimulus&quot;</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="n">end_time</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">get_color</span><span class="p">(),</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">start_time</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;_Light Onset&#39;</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
-        <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">end_time</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;_Light Offset&#39;</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span>  <span class="c1"># type: ignore</span>
+            <span class="n">start_time</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;_Light Onset&quot;</span>
+        <span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span>  <span class="c1"># type: ignore</span>
+            <span class="n">end_time</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;_Light Offset&quot;</span>
+        <span class="p">)</span>
         <span class="k">if</span> <span class="n">show</span><span class="p">:</span>
             <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>  <span class="c1"># type: ignore</span>
         <span class="k">return</span> <span class="n">ax</span></div>
@@ -382,22 +388,27 @@
 <div class="viewcode-block" id="LightStimuliSeries">
 <a class="viewcode-back" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">LightStimuliSeries</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents a series of light stimuli.</span>
-<span class="sd">    &quot;&quot;&quot;</span>    
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Represents a series of light stimuli.&quot;&quot;&quot;</span>
+
 <div class="viewcode-block" id="LightStimuliSeries.__init__">
 <a class="viewcode-back" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize a LightStimuliSeries object.</span>
-<span class="sd">        &quot;&quot;&quot;</span>        
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize a LightStimuliSeries object.&quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">stimuli</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">LightStimulus</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span></div>
 
-        
+
     <span class="k">def</span><span class="w"> </span><span class="nf">_add_stimulus_from_class</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stimulus</span><span class="p">:</span> <span class="n">LightStimulus</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">stimuli</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stimulus</span><span class="p">)</span>
-        
+
 <div class="viewcode-block" id="LightStimuliSeries.add_stimulus">
 <a class="viewcode-back" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.add_stimulus">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="nf">add_stimulus</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_time</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">duration</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">end_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">colour</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_stimulus</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">start_time</span><span class="p">:</span> <span class="nb">float</span><span class="p">,</span>
+        <span class="n">duration</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">end_time</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">colour</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Add a light stimulus to the series.</span>
 
 <span class="sd">        Args:</span>
@@ -405,28 +416,31 @@
 <span class="sd">            duration (Optional[float], optional): The duration of the light stimulus. Defaults to None.</span>
 <span class="sd">            end_time (Optional[float], optional): The end time of the light stimulus. Defaults to None.</span>
 <span class="sd">            colour (Optional[str], optional): The color of the light stimulus. Defaults to None.</span>
-<span class="sd">        &quot;&quot;&quot;</span>        
-        <span class="n">stimulus</span> <span class="o">=</span> <span class="n">LightStimulus</span><span class="p">(</span><span class="n">start_time</span><span class="o">=</span><span class="n">start_time</span><span class="p">,</span> <span class="n">duration</span><span class="o">=</span><span class="n">duration</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="n">colour</span><span class="p">)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">stimulus</span> <span class="o">=</span> <span class="n">LightStimulus</span><span class="p">(</span>
+            <span class="n">start_time</span><span class="o">=</span><span class="n">start_time</span><span class="p">,</span> <span class="n">duration</span><span class="o">=</span><span class="n">duration</span><span class="p">,</span> <span class="n">end_time</span><span class="o">=</span><span class="n">end_time</span><span class="p">,</span> <span class="n">colour</span><span class="o">=</span><span class="n">colour</span>
+        <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_add_stimulus_from_class</span><span class="p">(</span><span class="n">stimulus</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="LightStimuliSeries.get_stimuli">
 <a class="viewcode-back" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.get_stimuli">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_stimuli</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="n">LightStimulus</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the list of light stimuli in the series. &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the list of light stimuli in the series.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">stimuli</span></div>
 
-    
+
 <div class="viewcode-block" id="LightStimuliSeries.get_times">
 <a class="viewcode-back" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.get_times">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_times</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the start and end times of all light stimuli in the series. &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the start and end times of all light stimuli in the series.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">stimulus</span><span class="o">.</span><span class="n">get_time</span><span class="p">()</span> <span class="k">for</span> <span class="n">stimulus</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">stimuli</span><span class="p">]</span></div>
+
 
 <div class="viewcode-block" id="LightStimuliSeries.get_colors">
 <a class="viewcode-back" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.get_colors">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">get_colors</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the colors of all light stimuli in the series. &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Get the colors of all light stimuli in the series.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="p">[</span><span class="n">stimulus</span><span class="o">.</span><span class="n">get_color</span><span class="p">()</span> <span class="k">for</span> <span class="n">stimulus</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">stimuli</span><span class="p">]</span></div>
 
 
@@ -437,6 +451,7 @@
         <span class="k">for</span> <span class="n">stimulus</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">stimuli</span><span class="p">:</span>
             <span class="n">stimulus</span><span class="o">.</span><span class="n">set_time_offset</span><span class="p">(</span><span class="n">offset</span><span class="p">)</span></div>
 
+
 <div class="viewcode-block" id="LightStimuliSeries.plot">
 <a class="viewcode-back" href="../../../_autosummary/pypipr.LightStimuliSeries.html#pypipr.LightStimuliSeries.plot">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="nf">plot</span><span class="p">(</span>
@@ -445,13 +460,13 @@
         <span class="n">show</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Axes</span><span class="p">:</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;Plot all light stimuli in the series on the given axes. &quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Plot all light stimuli in the series on the given axes.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>  <span class="c1"># type: ignore</span>
         <span class="k">for</span> <span class="n">stimulus</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">stimuli</span><span class="p">:</span>
             <span class="n">stimulus</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">show</span><span class="p">:</span>
-            <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1"># type: ignore</span>
+            <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>  <span class="c1"># type: ignore</span>
         <span class="k">return</span> <span class="n">ax</span></div>
 </div>
 
