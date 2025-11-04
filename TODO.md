@@ -67,6 +67,11 @@
 ### docs & examples (⚠️ Partially Implemented)
 - ⚠️ Need check on completeness, structure, and relevance of information 
 - ⚠️ Example notebooks live in `docs/source/examples/example_ipynb/` and include measurement and series example sets. Need extra formatting changes and explanations.
+- ⚠️ Check for plt.show() in examples.
+- ⚠️ Ensure each code block is independently runnable.
+- Pupil series incorrectly called pupil measurements 
+- path/usernames uit warnings
+- 
 
 ### tests
 - ⚠️ `tests/` exists with unit tests. Completeness needs to be determined.
