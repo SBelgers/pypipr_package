@@ -16,6 +16,8 @@
       ~PupilSeries.__init__
       ~PupilSeries.copy
       ~PupilSeries.drop_nan
+      ~PupilSeries.find_blinks
+      ~PupilSeries.get_blinks
       ~PupilSeries.get_light_stimuli
       ~PupilSeries.get_light_stimulus
       ~PupilSeries.get_rate_of_change
@@ -25,9 +27,11 @@
       ~PupilSeries.limit_rate_of_change
       ~PupilSeries.plot
       ~PupilSeries.plot_light_stimulus
+      ~PupilSeries.remove_blinks
       ~PupilSeries.rolling_filter
       ~PupilSeries.rolling_mean
       ~PupilSeries.rolling_median
+      ~PupilSeries.set_blinks
       ~PupilSeries.set_light_stimuli_from_list
       ~PupilSeries.set_light_stimulus
       ~PupilSeries.set_time_and_size
