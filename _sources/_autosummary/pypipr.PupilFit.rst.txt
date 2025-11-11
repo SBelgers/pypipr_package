@@ -42,6 +42,7 @@
       ~PupilFit.pipr_xs
       ~PupilFit.plateau
       ~PupilFit.plot
+      ~PupilFit.plot_blinks
       ~PupilFit.plot_light_stimulus
       ~PupilFit.plr_latency
       ~PupilFit.predict

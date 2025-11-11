@@ -38,6 +38,7 @@
       ~PupilMeasurement.pipr_xs
       ~PupilMeasurement.plateau
       ~PupilMeasurement.plot
+      ~PupilMeasurement.plot_blinks
       ~PupilMeasurement.plot_light_stimulus
       ~PupilMeasurement.plr_latency
       ~PupilMeasurement.pupil_escape
