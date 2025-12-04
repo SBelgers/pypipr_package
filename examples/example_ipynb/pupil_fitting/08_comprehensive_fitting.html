@@ -310,6 +310,26 @@
 <section id="how-to-use-this-notebook">
 <h2>How to use this notebook<a class="headerlink" href="#how-to-use-this-notebook" title="Link to this heading"></a></h2>
 <p>Run the notebook top-to-bottom to follow a full fitting workflow: fit a baseline model, fit the sustained constriction phase, fit redilation, and extract parameters. Each section contains a short explanation and example plots. Replace the simulated <code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code> with your real data to apply these steps to actual recordings.</p>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">custom_formatwarning</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">category</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">lineno</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;[</span><span class="si">{</span><span class="n">category</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">] </span><span class="si">{</span><span class="n">msg</span><span class="si">}</span><span class="s2"> (in </span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">lineno</span><span class="si">}</span><span class="s2">)</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+
+<span class="n">warnings</span><span class="o">.</span><span class="n">formatwarning</span> <span class="o">=</span> <span class="n">custom_formatwarning</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import necessary libraries</span>
@@ -320,10 +340,11 @@
 </div>
 </div>
 </div>
-<p>“””
-Pupillary Light Response Model</p>
+<section id="pupillary-light-response-model">
+<h3>Pupillary Light Response Model<a class="headerlink" href="#pupillary-light-response-model" title="Link to this heading"></a></h3>
 <p>Models pupil diameter changes in response to light stimuli using linear and
 exponential functions, based on Feigl et al. (2011).</p>
+</section>
 </section>
 <section id="phases">
 <h2>Phases:<a class="headerlink" href="#phases" title="Link to this heading"></a></h2>
@@ -418,8 +439,7 @@ exponential functions, based on Feigl et al. (2011).</p>
 <section id="notes">
 <h2>Notes:<a class="headerlink" href="#notes" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>All time values (x) are in seconds.
-“””</p></li>
+<li><p>All time values (x) are in seconds.</p></li>
 </ul>
 </section>
 <section id="baseline-fitting">
@@ -451,6 +471,7 @@ exponential functions, based on Feigl et al. (2011).</p>
 <span class="n">pm</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <span class="n">baseline_fit</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Fit&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -501,6 +522,7 @@ y = 8.0879 from -inf to -1.0000
 <span class="n">pm</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <span class="n">sustain_fit</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Sustain Fit&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -548,6 +570,7 @@ y = -0.0230 * (x + -0.7000) + 4.0201 from -0.7000 to 0.0000
 <span class="n">pm</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <span class="n">redilation_fit</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Fit&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -580,6 +603,7 @@ y = -3.6542 * exp(--0.2005 * (x + 0.0000)) + 7.7167 from 0.0000 to inf
 <span class="n">sustain_fit</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Sustain Fit&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
 <span class="n">redilation_fit</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Redilation Fit&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -621,6 +645,7 @@ y = -3.6542 * exp(--0.2005 * (x + 0.0000)) + 7.7167 from 0.0000 to inf
 <span class="n">pm</span><span class="o">.</span><span class="n">plot_light_stimulus</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <span class="n">pupil_fit</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -664,11 +689,8 @@ C:\Users\20182727\OneDrive - TU Eindhoven\Documents\Tools\pypipr_package\pypipr\
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This pupil_fit object can now also be used to calculate pupil metrics.</span>
-<span class="n">pipr_6s</span> <span class="o">=</span> <span class="n">pm</span><span class="o">.</span><span class="n">pipr_6s</span><span class="p">()</span>
-<span class="n">pipr_6s_fit</span> <span class="o">=</span> <span class="n">pupil_fit</span><span class="o">.</span><span class="n">pipr_6s</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PIPR 6s (data): </span><span class="si">{</span><span class="n">pipr_6s</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PIPR 6s (fit ): </span><span class="si">{</span><span class="n">pipr_6s_fit</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PIPR 6s (data): </span><span class="si">{</span><span class="n">pm</span><span class="o">.</span><span class="n">pipr_6s</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PIPR 6s (fit ): </span><span class="si">{</span><span class="n">pupil_fit</span><span class="o">.</span><span class="n">pipr_6s</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
