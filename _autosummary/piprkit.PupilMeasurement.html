@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>piprkit.PupilMeasurement &mdash; Pypipr 0.0.16</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=c7cdf6fe"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="piprkit.PupilSeries" href="piprkit.PupilSeries.html" />
+    <link rel="prev" title="Batch Preprocessing of Series Data" href="../examples/example_ipynb/pupil_series/04_series_fitting.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Pypipr
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Examples:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/pupil_measurement.html">Pupil Measurement Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/01_pupil_simulation.html">Pupillary Light Response Simulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/01_pupil_simulation.html#basic-pupil-response-simulation">1. Basic Pupil Response Simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/01_pupil_simulation.html#customizing-simulation-parameters">2. Customizing Simulation Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/01_pupil_simulation.html#timing-parameters">Timing Parameters:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/01_pupil_simulation.html#customizing-response-parameters">3. Customizing Response Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/01_pupil_simulation.html#response-shape-parameters">Response Shape Parameters:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/01_pupil_simulation.html#comparing-different-stimulus-conditions">4. Comparing Different Stimulus Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/01_pupil_simulation.html#adding-realistic-noise-and-variations">5. Adding Realistic Noise and Variations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/02_data_loading.html">Data Loading Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/02_data_loading.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/02_data_loading.html#loading-built-in-simulated-data">Loading built-in (simulated) data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/02_data_loading.html#creating-synthetic-data-from-arrays">Creating synthetic data from arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/02_data_loading.html#working-with-existing-measurement-arrays">Working with existing measurement arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/02_data_loading.html#setting-and-plotting-light-stimuli">Setting and plotting light stimuli</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/04_preprocessing_filtering.html">Preprocessing and Filtering</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/04_preprocessing_filtering.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/04_preprocessing_filtering.html#generate-a-noisy-example-signal">Generate a noisy example signal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/04_preprocessing_filtering.html#apply-simple-smoothing-filters">Apply simple smoothing filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/04_preprocessing_filtering.html#inject-synthetic-blinks">Inject synthetic blinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/04_preprocessing_filtering.html#try-smoothing-after-blink-injection">Try smoothing after blink injection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/04_preprocessing_filtering.html#remove-blinks-by-marking-and-deleting-segments">Remove blinks by marking and deleting segments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/04_preprocessing_filtering.html#trim-by-pupil-size">Trim by pupil size</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/04_preprocessing_filtering.html#limit-sudden-rates-of-change">Limit sudden rates of change</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/05_baseline_correction.html">Baseline Correction Techniques</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/05_baseline_correction.html#setup-and-requirements">Setup and requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/05_baseline_correction.html#load-a-sample-measurement">Load a sample measurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/05_baseline_correction.html#compute-and-apply-baseline-correction">Compute and apply baseline correction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/07_pupil_metrics.html">Pupil Metrics Analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/07_pupil_metrics.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/07_pupil_metrics.html#quick-note">Quick note</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/07_pupil_metrics.html#peak-constriction-and-time-to-peak">Peak constriction and time-to-peak</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/07_pupil_metrics.html#pipr-and-average-size-at-fixed-windows">PIPR and average-size at fixed windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_measurement/07_pupil_metrics.html#shifted-stimulus-example-and-multiple-pipr-windows">Shifted-stimulus example and multiple PIPR windows</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/pupil_fit.html">Pupil Fitting Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/pupil_fit.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../examples/example_ipynb/pupil_fitting/08_comprehensive_fitting.html">Comprehensive Fitting with PupilFit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_fitting/08_comprehensive_fitting.html#how-to-use-this-notebook">How to use this notebook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_fitting/08_comprehensive_fitting.html#phases">Phases:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_fitting/08_comprehensive_fitting.html#notes">Notes:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_fitting/08_comprehensive_fitting.html#baseline-fitting">Baseline fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_fitting/08_comprehensive_fitting.html#constriction-sustain-fitting">Constriction / sustain fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_fitting/08_comprehensive_fitting.html#redilation-fitting">Redilation fitting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_fitting/08_comprehensive_fitting.html#summary-show-all-fits">Summary: show all fits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_fitting/08_comprehensive_fitting.html#convenience-wrapper-pupilfit">Convenience wrapper: PupilFit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../examples/example_ipynb/pupil_fitting/08_comprehensive_fitting.html#compare-metrics-from-data-vs-fit">Compare metrics from data vs fit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/pupil_series.html">Pupil Measurement Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example_ipynb/pupil_series/01_series_loading.html">Series loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example_ipynb/pupil_series/02_series_exploration.html">Series Data Exploration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example_ipynb/pupil_series/03_series_splitting.html">Series Splitting and Individual Measurements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../examples/example_ipynb/pupil_series/04_series_fitting.html">Batch Preprocessing of Series Data</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Main Classes and Functions</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">piprkit.PupilMeasurement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#piprkit.PupilMeasurement"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.__init__"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.metrics"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.metrics</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.filters"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.filters</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.blinks"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.blinks</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.copy"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.drop_nan"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.drop_nan()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.get_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.get_size"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.get_time"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.get_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.interpolate"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.interpolate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.plot"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.plot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.plot_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.plot_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.set_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.set_time_and_size"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_time_and_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.set_time_offset"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.set_time_offset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.trim_size"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.trim_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piprkit.PupilMeasurement.trim_time"><code class="docutils literal notranslate"><span class="pre">PupilMeasurement.trim_time()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="piprkit.PupilSeries.html">piprkit.PupilSeries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries"><code class="docutils literal notranslate"><span class="pre">PupilSeries</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.__init__"><code class="docutils literal notranslate"><span class="pre">PupilSeries.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#id0"><code class="docutils literal notranslate"><span class="pre">PupilSeries.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.set_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilSeries.set_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.get_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilSeries.get_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.set_light_stimuli_from_list"><code class="docutils literal notranslate"><span class="pre">PupilSeries.set_light_stimuli_from_list()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.get_light_stimuli"><code class="docutils literal notranslate"><span class="pre">PupilSeries.get_light_stimuli()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.split"><code class="docutils literal notranslate"><span class="pre">PupilSeries.split()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.plot_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilSeries.plot_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.blinks"><code class="docutils literal notranslate"><span class="pre">PupilSeries.blinks</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.copy"><code class="docutils literal notranslate"><span class="pre">PupilSeries.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.drop_nan"><code class="docutils literal notranslate"><span class="pre">PupilSeries.drop_nan()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.filters"><code class="docutils literal notranslate"><span class="pre">PupilSeries.filters</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.get_size"><code class="docutils literal notranslate"><span class="pre">PupilSeries.get_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.get_time"><code class="docutils literal notranslate"><span class="pre">PupilSeries.get_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.interpolate"><code class="docutils literal notranslate"><span class="pre">PupilSeries.interpolate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.metrics"><code class="docutils literal notranslate"><span class="pre">PupilSeries.metrics</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.plot"><code class="docutils literal notranslate"><span class="pre">PupilSeries.plot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.set_time_and_size"><code class="docutils literal notranslate"><span class="pre">PupilSeries.set_time_and_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.set_time_offset"><code class="docutils literal notranslate"><span class="pre">PupilSeries.set_time_offset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.trim_size"><code class="docutils literal notranslate"><span class="pre">PupilSeries.trim_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilSeries.html#piprkit.PupilSeries.trim_time"><code class="docutils literal notranslate"><span class="pre">PupilSeries.trim_time()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="piprkit.PupilFit.html">piprkit.PupilFit</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit"><code class="docutils literal notranslate"><span class="pre">PupilFit</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.__init__"><code class="docutils literal notranslate"><span class="pre">PupilFit.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#id0"><code class="docutils literal notranslate"><span class="pre">PupilFit.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.get_time"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_time()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.get_size"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.get_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.get_fits"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_fits()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.predict"><code class="docutils literal notranslate"><span class="pre">PupilFit.predict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.get_param"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_param()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.get_all_params"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_all_params()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.get_formula_strings"><code class="docutils literal notranslate"><span class="pre">PupilFit.get_formula_strings()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.blinks"><code class="docutils literal notranslate"><span class="pre">PupilFit.blinks</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.copy"><code class="docutils literal notranslate"><span class="pre">PupilFit.copy()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.drop_nan"><code class="docutils literal notranslate"><span class="pre">PupilFit.drop_nan()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.filters"><code class="docutils literal notranslate"><span class="pre">PupilFit.filters</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.interpolate"><code class="docutils literal notranslate"><span class="pre">PupilFit.interpolate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.metrics"><code class="docutils literal notranslate"><span class="pre">PupilFit.metrics</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.plot"><code class="docutils literal notranslate"><span class="pre">PupilFit.plot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.plot_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilFit.plot_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.set_light_stimulus"><code class="docutils literal notranslate"><span class="pre">PupilFit.set_light_stimulus()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.set_time_and_size"><code class="docutils literal notranslate"><span class="pre">PupilFit.set_time_and_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.set_time_offset"><code class="docutils literal notranslate"><span class="pre">PupilFit.set_time_offset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.trim_size"><code class="docutils literal notranslate"><span class="pre">PupilFit.trim_size()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="piprkit.PupilFit.html#piprkit.PupilFit.trim_time"><code class="docutils literal notranslate"><span class="pre">PupilFit.trim_time()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional Information:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#copyright-information">Copyright Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#license-terms">License Terms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#mit-license">MIT License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../license.html#third-party-dependencies">Third-Party Dependencies</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Pypipr</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">piprkit.PupilMeasurement</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_autosummary/piprkit.PupilMeasurement.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="piprkit-pupilmeasurement">
+<h1>piprkit.PupilMeasurement<a class="headerlink" href="#piprkit-pupilmeasurement" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">piprkit.</span></span><span class="sig-name descname"><span class="pre">PupilMeasurement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">NDArray</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.number" title="(in NumPy v2.5)"><span class="pre">number</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">NDArray</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.number" title="(in NumPy v2.5)"><span class="pre">number</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/piprkit/core/pupil_measurement.html#PupilMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#piprkit.PupilMeasurement" title="Link to this definition"></a></dt>
+<dd><p>A class representing a single pupil measurement with time series data.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">NDArray</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.number" title="(in NumPy v2.5)"><span class="pre">number</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">NDArray</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.number" title="(in NumPy v2.5)"><span class="pre">number</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/piprkit/core/pupil_measurement.html#PupilMeasurement.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#piprkit.PupilMeasurement.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initialize PupilMeasurement with time and size data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time_data</strong> (<em>NDArray</em><em>[</em><em>np.number</em><em>]</em>) – Array of time data.</p></li>
+<li><p><strong>size</strong> (<em>NDArray</em><em>[</em><em>np.number</em><em>]</em>) – Array of size data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If the time and size arrays do not have the same length.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#id0" title="piprkit.PupilMeasurement.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(time_data, size_data)</p></td>
+<td><p>Initialize PupilMeasurement with time and size data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.copy" title="piprkit.PupilMeasurement.copy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy</span></code></a>()</p></td>
+<td><p>Create a deep copy of this object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.drop_nan" title="piprkit.PupilMeasurement.drop_nan"><code class="xref py py-obj docutils literal notranslate"><span class="pre">drop_nan</span></code></a>()</p></td>
+<td><p>Remove NaN values from the time and size data.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.get_light_stimulus" title="piprkit.PupilMeasurement.get_light_stimulus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_light_stimulus</span></code></a>()</p></td>
+<td><p>Get the light stimulus object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.get_size" title="piprkit.PupilMeasurement.get_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_size</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.get_time" title="piprkit.PupilMeasurement.get_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time</span></code></a>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.interpolate" title="piprkit.PupilMeasurement.interpolate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code></a>(new_time)</p></td>
+<td><p>Interpolate pupil size data to a new time array using np.interp.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.plot" title="piprkit.PupilMeasurement.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([ax, show, scatter])</p></td>
+<td><p>Plot pupil size over time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.plot_light_stimulus" title="piprkit.PupilMeasurement.plot_light_stimulus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_light_stimulus</span></code></a>([ax, show])</p></td>
+<td><p>Plot the light stimulus period.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.set_light_stimulus" title="piprkit.PupilMeasurement.set_light_stimulus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_light_stimulus</span></code></a>(start, end)</p></td>
+<td><p>Set the light stimulus period.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.set_time_and_size" title="piprkit.PupilMeasurement.set_time_and_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_and_size</span></code></a>(time_data, size)</p></td>
+<td><p>Set time and size arrays with validation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.set_time_offset" title="piprkit.PupilMeasurement.set_time_offset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_time_offset</span></code></a>(offset)</p></td>
+<td><p>Set a time offset for the measurement.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.trim_size" title="piprkit.PupilMeasurement.trim_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_size</span></code></a>(min_size, max_size, *[, ...])</p></td>
+<td><p>Trim the size data to a specific range.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.trim_time" title="piprkit.PupilMeasurement.trim_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trim_time</span></code></a>(start, end[, drop])</p></td>
+<td><p>Trim the time and size data to a specific interval.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.blinks" title="piprkit.PupilMeasurement.blinks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">blinks</span></code></a></p></td>
+<td><p>Accessor for blink operations, e.g. <code class="docutils literal notranslate"><span class="pre">pupMeas.blinks.remove_blinks()</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.filters" title="piprkit.PupilMeasurement.filters"><code class="xref py py-obj docutils literal notranslate"><span class="pre">filters</span></code></a></p></td>
+<td><p>Accessor for filtering operations, e.g. <code class="docutils literal notranslate"><span class="pre">pupMeas.filters.rolling_mean(0.1)</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#piprkit.PupilMeasurement.metrics" title="piprkit.PupilMeasurement.metrics"><code class="xref py py-obj docutils literal notranslate"><span class="pre">metrics</span></code></a></p></td>
+<td><p>Accessor for pupil metrics, e.g. <code class="docutils literal notranslate"><span class="pre">pupMeas.metrics.baseline()</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">NDArray</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.number" title="(in NumPy v2.5)"><span class="pre">number</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">NDArray</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.number" title="(in NumPy v2.5)"><span class="pre">number</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="reference internal" href="../_modules/piprkit/core/pupil_measurement.html#PupilMeasurement.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>Initialize PupilMeasurement with time and size data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time_data</strong> (<em>NDArray</em><em>[</em><em>np.number</em><em>]</em>) – Array of time data.</p></li>
+<li><p><strong>size</strong> (<em>NDArray</em><em>[</em><em>np.number</em><em>]</em>) – Array of size data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If the time and size arrays do not have the same length.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.metrics">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">metrics</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PupilMetrics</span></span><a class="headerlink" href="#piprkit.PupilMeasurement.metrics" title="Link to this definition"></a></dt>
+<dd><p>Accessor for pupil metrics, e.g. <code class="docutils literal notranslate"><span class="pre">pupMeas.metrics.baseline()</span></code>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.filters">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">filters</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PupilFilters</span></span><a class="headerlink" href="#piprkit.PupilMeasurement.filters" title="Link to this definition"></a></dt>
+<dd><p>Accessor for filtering operations, e.g. <code class="docutils literal notranslate"><span class="pre">pupMeas.filters.rolling_mean(0.1)</span></code>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.blinks">
+<span class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">blinks</span></span><span class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">PupilBlinks</span></span><a class="headerlink" href="#piprkit.PupilMeasurement.blinks" title="Link to this definition"></a></dt>
+<dd><p>Accessor for blink operations, e.g. <code class="docutils literal notranslate"><span class="pre">pupMeas.blinks.remove_blinks()</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Self" title="(in Python v3.14)"><span class="pre">Self</span></a></span></span><a class="headerlink" href="#piprkit.PupilMeasurement.copy" title="Link to this definition"></a></dt>
+<dd><p>Create a deep copy of this object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A deep copy of the object.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.drop_nan">
+<span class="sig-name descname"><span class="pre">drop_nan</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#piprkit.PupilMeasurement.drop_nan" title="Link to this definition"></a></dt>
+<dd><p>Remove NaN values from the time and size data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.get_light_stimulus">
+<span class="sig-name descname"><span class="pre">get_light_stimulus</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">LightStimulus</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#piprkit.PupilMeasurement.get_light_stimulus" title="Link to this definition"></a></dt>
+<dd><p>Get the light stimulus object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The light stimulus object or None if not set.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Optional[LightStimulus]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.get_size">
+<span class="sig-name descname"><span class="pre">get_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><span class="pre">ndarray</span></a></span></span><a class="headerlink" href="#piprkit.PupilMeasurement.get_size" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.get_time">
+<span class="sig-name descname"><span class="pre">get_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><span class="pre">ndarray</span></a></span></span><a class="headerlink" href="#piprkit.PupilMeasurement.get_time" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.interpolate">
+<span class="sig-name descname"><span class="pre">interpolate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">NDArray</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#numpy.number" title="(in NumPy v2.5)"><span class="pre">number</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#piprkit.PupilMeasurement.interpolate" title="Link to this definition"></a></dt>
+<dd><p>Interpolate pupil size data to a new time array using np.interp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>new_time</strong> (<em>NDArray</em><em>[</em><em>np.number</em><em>]</em>) – Array of new time points for interpolation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.11.0)"><span class="pre">Axes</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scatter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.11.0)"><span class="pre">Axes</span></a></span></span><a class="headerlink" href="#piprkit.PupilMeasurement.plot" title="Link to this definition"></a></dt>
+<dd><p>Plot pupil size over time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax</strong> (<em>Optional</em><em>[</em><em>Axes</em><em>]</em><em>, </em><em>optional</em>) – Matplotlib axes to plot on. Defaults to None.</p></li>
+<li><p><strong>show</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to show the plot. Defaults to False.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.plot_light_stimulus">
+<span class="sig-name descname"><span class="pre">plot_light_stimulus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.11.0)"><span class="pre">Axes</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Any" title="(in Python v3.14)"><span class="pre">Any</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="(in Matplotlib v3.11.0)"><span class="pre">Axes</span></a></span></span><a class="headerlink" href="#piprkit.PupilMeasurement.plot_light_stimulus" title="Link to this definition"></a></dt>
+<dd><p>Plot the light stimulus period.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax</strong> (<em>Optional</em><em>[</em><em>Axes</em><em>]</em><em>, </em><em>optional</em>) – The axes to plot on. Defaults to None.</p></li>
+<li><p><strong>show</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to show the plot. Defaults to False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If the light stimulus is not set.</p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The axes with the light stimulus plotted.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Axes</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.set_light_stimulus">
+<span class="sig-name descname"><span class="pre">set_light_stimulus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#piprkit.PupilMeasurement.set_light_stimulus" title="Link to this definition"></a></dt>
+<dd><p>Set the light stimulus period.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The start time of the light stimulus.</p></li>
+<li><p><strong>end</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The end time of the light stimulus.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.set_time_and_size">
+<span class="sig-name descname"><span class="pre">set_time_and_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><span class="pre">ndarray</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.5)"><span class="pre">ndarray</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#piprkit.PupilMeasurement.set_time_and_size" title="Link to this definition"></a></dt>
+<dd><p>Set time and size arrays with validation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>time_data</strong> (<em>np.ndarray</em>) – Array of time data.</p></li>
+<li><p><strong>size</strong> (<em>np.ndarray</em>) – Array of size data.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.14)"><strong>ValueError</strong></a> – If the time and size arrays do not have the same length.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.set_time_offset">
+<span class="sig-name descname"><span class="pre">set_time_offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#piprkit.PupilMeasurement.set_time_offset" title="Link to this definition"></a></dt>
+<dd><p>Set a time offset for the measurement.
+Can be used to shift the time data by a certain amount.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>offset</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The offset to add to the time data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.trim_size">
+<span class="sig-name descname"><span class="pre">trim_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_time</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#piprkit.PupilMeasurement.trim_size" title="Link to this definition"></a></dt>
+<dd><p>Trim the size data to a specific range.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>min_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The minimum size of the interval to keep.</p></li>
+<li><p><strong>max_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The maximum size of the interval to keep.</p></li>
+<li><p><strong>drop</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to drop NaN values after trimming. Defaults to False.</p></li>
+<li><p><strong>start_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a><em>, </em><em>optional</em>) – The start time of the interval to keep. Defaults to None.</p></li>
+<li><p><strong>end_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a><em>, </em><em>optional</em>) – The end time of the interval to keep. Defaults to None.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="piprkit.PupilMeasurement.trim_time">
+<span class="sig-name descname"><span class="pre">trim_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">drop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#piprkit.PupilMeasurement.trim_time" title="Link to this definition"></a></dt>
+<dd><p>Trim the time and size data to a specific interval.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The start time of the interval to keep.</p></li>
+<li><p><strong>end</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><em>float</em></a>) – The end time of the interval to keep.</p></li>
+<li><p><strong>drop</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><em>bool</em></a><em>, </em><em>optional</em>) – Whether to drop NaN values after trimming. Defaults to True.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../examples/example_ipynb/pupil_series/04_series_fitting.html" class="btn btn-neutral float-left" title="Batch Preprocessing of Series Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="piprkit.PupilSeries.html" class="btn btn-neutral float-right" title="piprkit.PupilSeries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, S. Belgers.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
