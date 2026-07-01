@@ -1,4 +1,4 @@
-# pypipr — Workplan, Feature Inventory & Roadmap
+# piprkit — Workplan, Feature Inventory & Roadmap
 
 ## Current Snapshot
 
@@ -13,7 +13,7 @@
 ---
 ## Detailed inventory (by module)
 
-### pypipr.core
+### piprkit.core
 - `pupil_base.py` (✅ Implemented)  
 	- ✅ Core storage and helpers for time & size arrays.
 	- ✅ Methods: set_time_and_size, get_time, get_size, plot, interpolate, trim_time, trim_size, drop_nan.
@@ -26,26 +26,25 @@
 - `pupil_series.py`(✅ Implemented)  
 	- ✅ `PupilSeries` class: supports multiple stimuli via LightStimuliSeries and `split(prepulse, postpulse)` to produce per-stimulus `PupilMeasurement`s.
 
-### pypipr.utils
+### piprkit.utils
 - `light_stimuli.py` (✅ Implemented)
 	- ✅`LightStimulus` and `LightStimuliSeries` classes: add/get/plot, time offset management implemented.
 
 - `utils.py` (✅ Implemented)  
 	- ✅`check_time_series`: verifies monotonic, non-duplicated time arrays.
 
-### pypipr.data
+### piprkit.data
 - `loaders.py` (⚠️ Partially Implemented)
 	- ✅`load_real_series`, `load_simulated_pupil`: load CSV example data and return `PupilSeries` / `PupilMeasurement`.
 	- ✅`simulate_pupil_measurement`: programmatic simulator using phase model functions from fitting modules.
-	- ⚠️ More options to load pupil data. Currently limited to using two `numpy arrays`. Currently not implemented in `loaders`, but in `pypipr.core` directly.
-	- ⚠️ Currently using protected classes of the `pypipr.analysis.fitting`
+	- ⚠️ More options to load pupil data. Currently limited to using two `numpy arrays`. Currently not implemented in `loaders`, but in `piprkit.core` directly.
 
-### pypipr.preprocessing
+### piprkit.preprocessing
 - `filtering.py` (✅ Implemented)  
 	- ✅ `FilterMixin` with: rolling_filter, rolling_mean, rolling_median, get_rate_of_change, limit_rate_of_change.
     - ⚠️These operate in-place on objects that implement PupilBase API. Optionally, it should return a copy.
 
-### pypipr.analysis
+### piprkit.analysis
 - `analysis/fitting/base_fit.py` (⚠️ Partially Implemented)
 	- ⚠️ `BaseFit` abstract class: infrastructure for param handling and prediction. Goodness_of_fit and an optimization helper need work.
 	- ❌Automatic phase detection is not implemented and raises NotImplementedError if start/end not provided.
@@ -67,7 +66,6 @@
 ### docs & examples (⚠️ Partially Implemented)
 - ⚠️ Need check on completeness, structure, and relevance of information 
 - ⚠️ Example notebooks live in `docs/source/examples/example_ipynb/` and include measurement and series example sets. Need extra formatting changes and explanations.
-- ⚠️ Check for plt.show() in examples.
 - ⚠️ Ensure each code block is independently runnable.
 - Pupil series incorrectly called pupil measurements 
 - path/usernames uit warnings
@@ -78,3 +76,19 @@
 
 ---
 
+# Not implemented Errors:
+- Pupil metrics:
+  - transient_plr
+  - plr_latency
+  - constriction_v
+  - pupil_escape
+  - redilation_v
+  - plateau
+  - auc_early
+  - auc_late
+  - pipr_duration
+  - net_pipr
+- Base fit:
+  - Automatic phase detection
+- Blinks:
+  - find_blinks
