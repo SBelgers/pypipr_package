@@ -20,8 +20,8 @@
 	- ✅ Light stimulus attach/plot helpers (set_light_stimulus, get_light_stimulus, plot_light_stimulus).
 
 - `pupil_measurement.py` (⚠️ Partially Implemented)
-	- ✅`PupilMeasurement` class (mixes in metrics and filters).
-	- ⚠️Blink handling: set_blinks/get_blinks/remove_blinks implemented. `find_blinks()` is NotImplemented and intentionally warns.
+	- ✅`PupilMeasurement` class. Metrics, filters, and blink operations are exposed through composition-based namespace accessors: `.metrics` (`PupilMetrics`), `.filters` (`PupilFilters`), `.blinks` (`PupilBlinks`).
+	- ⚠️Blink handling via `.blinks`: set_blinks/get_blinks/remove_blinks implemented. `find_blinks()` is NotImplemented and intentionally warns.
 
 - `pupil_series.py`(✅ Implemented)  
 	- ✅ `PupilSeries` class: supports multiple stimuli via LightStimuliSeries and `split(prepulse, postpulse)` to produce per-stimulus `PupilMeasurement`s.
@@ -41,8 +41,8 @@
 
 ### piprkit.preprocessing
 - `filtering.py` (✅ Implemented)  
-	- ✅ `FilterMixin` with: rolling_filter, rolling_mean, rolling_median, get_rate_of_change, limit_rate_of_change.
-    - ⚠️These operate in-place on objects that implement PupilBase API. Optionally, it should return a copy.
+	- ✅ `PupilFilters` namespace (accessed via `measurement.filters`) with: rolling_filter, rolling_mean, rolling_median, get_rate_of_change, limit_rate_of_change.
+    - ⚠️These operate in-place on the wrapped PupilMeasurement. Optionally, it should return a copy.
 
 ### piprkit.analysis
 - `analysis/fitting/base_fit.py` (⚠️ Partially Implemented)
